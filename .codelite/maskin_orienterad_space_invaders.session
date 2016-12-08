@@ -4,11 +4,30 @@
   <wxString Value="C:\Users\Arvid\Documents\GitHub\maskin_orienterad_space_invaders\maskin_orienterad_space_invaders.workspace" Name="m_workspaceName"/>
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
-      <wxString Value="C:\Users\Arvid\Documents\GitHub\maskin_orienterad_space_invaders\startup.c" Name="FileName"/>
-      <int Value="4" Name="FirstVisibleLine"/>
-      <int Value="24" Name="CurrentLine"/>
+      <wxString Value="C:\Users\Arvid\Documents\GitHub\maskin_orienterad_space_invaders\space_invaders\startup.c" Name="FileName"/>
+      <int Value="536" Name="FirstVisibleLine"/>
+      <int Value="717" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
-      <IntVector Name="CollapsedFolds"/>
+      <IntVector Name="CollapsedFolds">
+        <IntVectorItem Value="26"/>
+        <IntVectorItem Value="46"/>
+        <IntVectorItem Value="85"/>
+        <IntVectorItem Value="90"/>
+        <IntVectorItem Value="95"/>
+        <IntVectorItem Value="101"/>
+        <IntVectorItem Value="121"/>
+        <IntVectorItem Value="126"/>
+        <IntVectorItem Value="133"/>
+        <IntVectorItem Value="140"/>
+        <IntVectorItem Value="166"/>
+        <IntVectorItem Value="195"/>
+        <IntVectorItem Value="224"/>
+        <IntVectorItem Value="235"/>
+        <IntVectorItem Value="246"/>
+        <IntVectorItem Value="252"/>
+        <IntVectorItem Value="270"/>
+        <IntVectorItem Value="316"/>
+      </IntVector>
     </TabInfo>
   </TabInfoArray>
   <SerializedObject Name="m_breakpoints">

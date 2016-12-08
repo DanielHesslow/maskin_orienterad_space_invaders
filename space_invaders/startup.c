@@ -394,6 +394,58 @@ typedef struct
 	EntityType type;
 } Entity;
 
+typedef struct
+{
+	Vec2 pos, velocity;
+} TurnPoint;
+
+#define ENIMY_SPEED 8
+
+#define TURN_POINTS 24
+#define Y_UPPER 54
+#define Y_LOWER 6
+
+#define START_Y 120
+#define STEP_Y 16
+
+#define LEFT (Vec2){-ENIMY_SPEED, 0}
+#define RIGHT (Vec2){ENIMY_SPEED, 0}
+#define DOWN (Vec2){0, -ENIMY_SPEED}
+
+
+TurnPoint turnPoints[] = 
+{
+{(Vec2){Y_UPPER, START_Y}, RIGHT},
+{(Vec2){Y_UPPER, START_Y}, DOWN},
+{(Vec2){Y_UPPER, START_Y - STEP_Y}, LEFT},
+{(Vec2){Y_LOWER, START_Y - STEP_Y}, DOWN},
+
+{(Vec2){Y_LOWER, START_Y - STEP_Y * 2}, RIGHT},
+{(Vec2){Y_UPPER, START_Y - STEP_Y * 2}, DOWN},
+{(Vec2){Y_UPPER, START_Y - STEP_Y * 3}, LEFT},
+{(Vec2){Y_LOWER, START_Y - STEP_Y * 3}, DOWN},
+
+{(Vec2){Y_LOWER, START_Y - STEP_Y * 2}, RIGHT},
+{(Vec2){Y_UPPER, START_Y - STEP_Y * 2}, DOWN},
+{(Vec2){Y_UPPER, START_Y - STEP_Y * 3}, LEFT},
+{(Vec2){Y_LOWER, START_Y - STEP_Y * 3}, DOWN},
+
+{(Vec2){Y_LOWER, START_Y - STEP_Y * 4}, RIGHT},
+{(Vec2){Y_UPPER, START_Y - STEP_Y * 4}, DOWN},
+{(Vec2){Y_UPPER, START_Y - STEP_Y * 5}, LEFT},
+{(Vec2){Y_LOWER, START_Y - STEP_Y * 5}, DOWN},
+
+{(Vec2){Y_LOWER, START_Y - STEP_Y * 6}, RIGHT},
+{(Vec2){Y_UPPER, START_Y - STEP_Y * 6}, DOWN},
+{(Vec2){Y_UPPER, START_Y - STEP_Y * 7}, LEFT},
+{(Vec2){Y_LOWER, START_Y - STEP_Y * 7}, DOWN},
+
+{(Vec2){Y_LOWER, START_Y - STEP_Y * 8}, RIGHT},
+{(Vec2){Y_UPPER, START_Y - STEP_Y * 8}, DOWN},
+{(Vec2){Y_UPPER, START_Y - STEP_Y * 9}, LEFT},
+{(Vec2){Y_LOWER, START_Y - STEP_Y * 9}, DOWN},
+};
+
 static Sprite sprites[16];
 static Entity entities[128];
 static int num_entities=0;
@@ -562,6 +614,16 @@ void step_physics(bool force)
 {
 	for (int i = 0; i < num_entities; i++)
 	{
+		if(entities[i].type == entity_type_enemy)
+		{
+			for(int tp = 0; tp < TURN_POINTS; tp++)
+			{
+				if(entities[i].pos.x == turnPoints[tp].pos.x && entities[i].pos.y == turnPoints[tp].pos.y)
+				{
+					entities[i].velocity = turnPoints[tp].velocity;
+				}
+			}
+		}
 		if(force || !wall_collision(&entities[i]))
 		{
 			update_entity_pos(&entities[i]);
@@ -646,12 +708,19 @@ int main()
     Sprite *enemy_sprite = make_sprite(enemy_defn,11,10,1);
 
 	int *player_id = make_entity(ship_sprite, entity_type_player,(Vec2){31,4},(Vec2){0,0});
-    make_entity(enemy_sprite,entity_type_enemy,(Vec2){31,100},(Vec2){0,0});
+    
 	set_all(0);
 
     int speed = 2;
+	
+	int frames = 0;
     for(;;)
     {
+		if(!(frames%4))
+		{
+			make_entity(enemy_sprite,entity_type_enemy,(Vec2){Y_LOWER,120},(Vec2){ENIMY_SPEED,0});
+		}
+		
         char c = keyb();
 		Entity *player = entity_from_id(player_id);
         if(c == '6') player->velocity.x = 2;
@@ -688,5 +757,6 @@ int main()
         }
 		render();
 		cleanup_entities();
+		frames++;
     }
 }

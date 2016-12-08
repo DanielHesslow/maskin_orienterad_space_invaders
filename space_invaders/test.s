@@ -2027,34 +2027,134 @@
  1723 08a8 80BD     		pop	{r7, pc}
  1724              		.cfi_endproc
  1725              	.LFE21:
- 1727              		.bss
- 1728              		.align	2
- 1729              	sprites:
- 1730 0400 00000000 		.space	16576
- 1730      00000000 
- 1730      00000000 
- 1730      00000000 
- 1730      00000000 
- 1731              		.align	2
- 1732              	entities:
- 1733 44c0 00000000 		.space	4608
- 1733      00000000 
- 1733      00000000 
- 1733      00000000 
- 1733      00000000 
- 1734              		.align	2
- 1735              	num_entities:
- 1736 56c0 00000000 		.space	4
- 1737              		.align	2
- 1738              	num_sprites:
- 1739 56c4 00000000 		.space	4
- 1740              		.text
- 1741 08aa C046     		.align	2
- 1742              		.global	make_entity
- 1743              		.code	16
- 1744              		.thumb_func
- 1746              	make_entity:
- 1747              	.LFB22:
+ 1727              		.global	turnPoints
+ 1728              		.data
+ 1729 0019 000000   		.align	2
+ 1732              	turnPoints:
+ 1733 001c 36000000 		.word	54
+ 1734 0020 78000000 		.word	120
+ 1735 0024 08000000 		.word	8
+ 1736 0028 00000000 		.word	0
+ 1737 002c 36000000 		.word	54
+ 1738 0030 78000000 		.word	120
+ 1739 0034 00000000 		.word	0
+ 1740 0038 F8FFFFFF 		.word	-8
+ 1741 003c 36000000 		.word	54
+ 1742 0040 68000000 		.word	104
+ 1743 0044 F8FFFFFF 		.word	-8
+ 1744 0048 00000000 		.word	0
+ 1745 004c 06000000 		.word	6
+ 1746 0050 68000000 		.word	104
+ 1747 0054 00000000 		.word	0
+ 1748 0058 F8FFFFFF 		.word	-8
+ 1749 005c 06000000 		.word	6
+ 1750 0060 58000000 		.word	88
+ 1751 0064 08000000 		.word	8
+ 1752 0068 00000000 		.word	0
+ 1753 006c 36000000 		.word	54
+ 1754 0070 58000000 		.word	88
+ 1755 0074 00000000 		.word	0
+ 1756 0078 F8FFFFFF 		.word	-8
+ 1757 007c 36000000 		.word	54
+ 1758 0080 48000000 		.word	72
+ 1759 0084 F8FFFFFF 		.word	-8
+ 1760 0088 00000000 		.word	0
+ 1761 008c 06000000 		.word	6
+ 1762 0090 48000000 		.word	72
+ 1763 0094 00000000 		.word	0
+ 1764 0098 F8FFFFFF 		.word	-8
+ 1765 009c 06000000 		.word	6
+ 1766 00a0 58000000 		.word	88
+ 1767 00a4 08000000 		.word	8
+ 1768 00a8 00000000 		.word	0
+ 1769 00ac 36000000 		.word	54
+ 1770 00b0 58000000 		.word	88
+ 1771 00b4 00000000 		.word	0
+ 1772 00b8 F8FFFFFF 		.word	-8
+ 1773 00bc 36000000 		.word	54
+ 1774 00c0 48000000 		.word	72
+ 1775 00c4 F8FFFFFF 		.word	-8
+ 1776 00c8 00000000 		.word	0
+ 1777 00cc 06000000 		.word	6
+ 1778 00d0 48000000 		.word	72
+ 1779 00d4 00000000 		.word	0
+ 1780 00d8 F8FFFFFF 		.word	-8
+ 1781 00dc 06000000 		.word	6
+ 1782 00e0 38000000 		.word	56
+ 1783 00e4 08000000 		.word	8
+ 1784 00e8 00000000 		.word	0
+ 1785 00ec 36000000 		.word	54
+ 1786 00f0 38000000 		.word	56
+ 1787 00f4 00000000 		.word	0
+ 1788 00f8 F8FFFFFF 		.word	-8
+ 1789 00fc 36000000 		.word	54
+ 1790 0100 28000000 		.word	40
+ 1791 0104 F8FFFFFF 		.word	-8
+ 1792 0108 00000000 		.word	0
+ 1793 010c 06000000 		.word	6
+ 1794 0110 28000000 		.word	40
+ 1795 0114 00000000 		.word	0
+ 1796 0118 F8FFFFFF 		.word	-8
+ 1797 011c 06000000 		.word	6
+ 1798 0120 18000000 		.word	24
+ 1799 0124 08000000 		.word	8
+ 1800 0128 00000000 		.word	0
+ 1801 012c 36000000 		.word	54
+ 1802 0130 18000000 		.word	24
+ 1803 0134 00000000 		.word	0
+ 1804 0138 F8FFFFFF 		.word	-8
+ 1805 013c 36000000 		.word	54
+ 1806 0140 08000000 		.word	8
+ 1807 0144 F8FFFFFF 		.word	-8
+ 1808 0148 00000000 		.word	0
+ 1809 014c 06000000 		.word	6
+ 1810 0150 08000000 		.word	8
+ 1811 0154 00000000 		.word	0
+ 1812 0158 F8FFFFFF 		.word	-8
+ 1813 015c 06000000 		.word	6
+ 1814 0160 F8FFFFFF 		.word	-8
+ 1815 0164 08000000 		.word	8
+ 1816 0168 00000000 		.word	0
+ 1817 016c 36000000 		.word	54
+ 1818 0170 F8FFFFFF 		.word	-8
+ 1819 0174 00000000 		.word	0
+ 1820 0178 F8FFFFFF 		.word	-8
+ 1821 017c 36000000 		.word	54
+ 1822 0180 E8FFFFFF 		.word	-24
+ 1823 0184 F8FFFFFF 		.word	-8
+ 1824 0188 00000000 		.word	0
+ 1825 018c 06000000 		.word	6
+ 1826 0190 E8FFFFFF 		.word	-24
+ 1827 0194 00000000 		.word	0
+ 1828 0198 F8FFFFFF 		.word	-8
+ 1829              		.bss
+ 1830              		.align	2
+ 1831              	sprites:
+ 1832 0400 00000000 		.space	16576
+ 1832      00000000 
+ 1832      00000000 
+ 1832      00000000 
+ 1832      00000000 
+ 1833              		.align	2
+ 1834              	entities:
+ 1835 44c0 00000000 		.space	4608
+ 1835      00000000 
+ 1835      00000000 
+ 1835      00000000 
+ 1835      00000000 
+ 1836              		.align	2
+ 1837              	num_entities:
+ 1838 56c0 00000000 		.space	4
+ 1839              		.align	2
+ 1840              	num_sprites:
+ 1841 56c4 00000000 		.space	4
+ 1842              		.text
+ 1843 08aa C046     		.align	2
+ 1844              		.global	make_entity
+ 1845              		.code	16
+ 1846              		.thumb_func
+ 1848              	make_entity:
+ 1849              	.LFB22:
  359:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
  360:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** typedef struct tPoint
  361:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {
@@ -2093,2208 +2193,2380 @@
  394:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	EntityType type;
  395:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** } Entity;
  396:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
- 397:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** static Sprite sprites[16];
- 398:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** static Entity entities[128];
- 399:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** static int num_entities=0;
- 400:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** static num_sprites = 0;
+ 397:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** typedef struct
+ 398:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {
+ 399:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	Vec2 pos, velocity;
+ 400:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** } TurnPoint;
  401:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
- 402:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** int make_entity(Sprite *sprite, EntityType type, Vec2 pos, Vec2 velocity)
- 403:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {
- 1748              		.loc 1 403 0
- 1749              		.cfi_startproc
- 1750 08ac 90B5     		push	{r4, r7, lr}
- 1751              		.cfi_def_cfa_offset 12
- 1752              		.cfi_offset 4, -12
- 1753              		.cfi_offset 7, -8
- 1754              		.cfi_offset 14, -4
- 1755 08ae 8FB0     		sub	sp, sp, #60
- 1756              		.cfi_def_cfa_offset 72
- 1757 08b0 00AF     		add	r7, sp, #0
- 1758              		.cfi_def_cfa_register 7
- 1759 08b2 F860     		str	r0, [r7, #12]
- 1760 08b4 0800     		movs	r0, r1
- 1761 08b6 3900     		movs	r1, r7
- 1762 08b8 0A60     		str	r2, [r1]
- 1763 08ba 4B60     		str	r3, [r1, #4]
- 1764 08bc 0B23     		movs	r3, #11
- 1765 08be FB18     		adds	r3, r7, r3
- 1766 08c0 021C     		adds	r2, r0, #0
- 1767 08c2 1A70     		strb	r2, [r3]
- 404:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	static id_counter = 0;
- 405:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	Entity *ret = &entities[num_entities++];
- 1768              		.loc 1 405 0
- 1769 08c4 204B     		ldr	r3, .L81
- 1770 08c6 1A68     		ldr	r2, [r3]
- 1771 08c8 511C     		adds	r1, r2, #1
- 1772 08ca 1F4B     		ldr	r3, .L81
- 1773 08cc 1960     		str	r1, [r3]
- 1774 08ce 1300     		movs	r3, r2
- 1775 08d0 DB00     		lsls	r3, r3, #3
- 1776 08d2 9B18     		adds	r3, r3, r2
- 1777 08d4 9B00     		lsls	r3, r3, #2
- 1778 08d6 1D4A     		ldr	r2, .L81+4
- 1779 08d8 9B18     		adds	r3, r3, r2
- 1780 08da 7B63     		str	r3, [r7, #52]
- 406:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	Entity zeroed = {};
- 1781              		.loc 1 406 0
- 1782 08dc 1023     		movs	r3, #16
- 1783 08de FB18     		adds	r3, r7, r3
- 1784 08e0 1800     		movs	r0, r3
- 1785 08e2 2423     		movs	r3, #36
- 1786 08e4 1A00     		movs	r2, r3
- 1787 08e6 0021     		movs	r1, #0
- 1788 08e8 FFF7FEFF 		bl	memset
- 407:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     *ret = zeroed;
- 1789              		.loc 1 407 0
- 1790 08ec 7B6B     		ldr	r3, [r7, #52]
- 1791 08ee 1022     		movs	r2, #16
- 1792 08f0 BA18     		adds	r2, r7, r2
- 1793 08f2 13CA     		ldmia	r2!, {r0, r1, r4}
- 1794 08f4 13C3     		stmia	r3!, {r0, r1, r4}
- 1795 08f6 13CA     		ldmia	r2!, {r0, r1, r4}
- 1796 08f8 13C3     		stmia	r3!, {r0, r1, r4}
- 1797 08fa 13CA     		ldmia	r2!, {r0, r1, r4}
- 1798 08fc 13C3     		stmia	r3!, {r0, r1, r4}
- 408:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	ret->sprite = sprite;
- 1799              		.loc 1 408 0
- 1800 08fe 7B6B     		ldr	r3, [r7, #52]
- 1801 0900 FA68     		ldr	r2, [r7, #12]
- 1802 0902 1A60     		str	r2, [r3]
- 409:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	ret->id = id_counter++;
- 1803              		.loc 1 409 0
- 1804 0904 124B     		ldr	r3, .L81+8
- 1805 0906 1A68     		ldr	r2, [r3]
- 1806 0908 511C     		adds	r1, r2, #1
- 1807 090a 114B     		ldr	r3, .L81+8
- 1808 090c 1960     		str	r1, [r3]
- 1809 090e 7B6B     		ldr	r3, [r7, #52]
- 1810 0910 5A60     		str	r2, [r3, #4]
- 410:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     ret->pos = pos;
- 1811              		.loc 1 410 0
- 1812 0912 7B6B     		ldr	r3, [r7, #52]
- 1813 0914 3A00     		movs	r2, r7
- 1814 0916 0833     		adds	r3, r3, #8
- 1815 0918 03CA     		ldmia	r2!, {r0, r1}
- 1816 091a 03C3     		stmia	r3!, {r0, r1}
- 411:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     ret->velocity = velocity;
- 1817              		.loc 1 411 0
- 1818 091c 7B6B     		ldr	r3, [r7, #52]
- 1819 091e 4022     		movs	r2, #64
- 1820 0920 0821     		movs	r1, #8
- 1821 0922 8C46     		mov	ip, r1
- 1822 0924 BC44     		add	ip, ip, r7
- 1823 0926 6244     		add	r2, r2, ip
- 1824 0928 1033     		adds	r3, r3, #16
- 1825 092a 03CA     		ldmia	r2!, {r0, r1}
- 1826 092c 03C3     		stmia	r3!, {r0, r1}
- 412:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     ret->type = type;
- 1827              		.loc 1 412 0
- 1828 092e 7B6B     		ldr	r3, [r7, #52]
- 1829 0930 0B22     		movs	r2, #11
- 1830 0932 BA18     		adds	r2, r7, r2
- 1831 0934 2021     		movs	r1, #32
- 1832 0936 1278     		ldrb	r2, [r2]
- 1833 0938 5A54     		strb	r2, [r3, r1]
- 413:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	return ret->id;
- 1834              		.loc 1 413 0
- 1835 093a 7B6B     		ldr	r3, [r7, #52]
- 1836 093c 5B68     		ldr	r3, [r3, #4]
- 414:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** }
- 1837              		.loc 1 414 0
- 1838 093e 1800     		movs	r0, r3
- 1839 0940 BD46     		mov	sp, r7
- 1840 0942 0FB0     		add	sp, sp, #60
- 1841              		@ sp needed
- 1842 0944 90BD     		pop	{r4, r7, pc}
- 1843              	.L82:
- 1844 0946 C046     		.align	2
- 1845              	.L81:
- 1846 0948 C0560000 		.word	num_entities
- 1847 094c C0440000 		.word	entities
- 1848 0950 C8560000 		.word	id_counter.4357
- 1849              		.cfi_endproc
- 1850              	.LFE22:
- 1852              		.align	2
- 1853              		.global	blit_sprite
- 1854              		.code	16
- 1855              		.thumb_func
- 1857              	blit_sprite:
- 1858              	.LFB23:
+ 402:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** #define ENIMY_SPEED 8
+ 403:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
+ 404:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** #define TURN_POINTS 24
+ 405:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** #define Y_UPPER 54
+ 406:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** #define Y_LOWER 6
+ 407:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
+ 408:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** #define START_Y 120
+ 409:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** #define STEP_Y 16
+ 410:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
+ 411:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** #define LEFT (Vec2){-ENIMY_SPEED, 0}
+ 412:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** #define RIGHT (Vec2){ENIMY_SPEED, 0}
+ 413:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** #define DOWN (Vec2){0, -ENIMY_SPEED}
+ 414:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
  415:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
- 416:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
- 417:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** void blit_sprite(Sprite *sprite, int x, int y, int frame)
- 418:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {
- 1859              		.loc 1 418 0
- 1860              		.cfi_startproc
- 1861 0954 80B5     		push	{r7, lr}
- 1862              		.cfi_def_cfa_offset 8
- 1863              		.cfi_offset 7, -8
- 1864              		.cfi_offset 14, -4
- 1865 0956 88B0     		sub	sp, sp, #32
- 1866              		.cfi_def_cfa_offset 40
- 1867 0958 00AF     		add	r7, sp, #0
- 1868              		.cfi_def_cfa_register 7
- 1869 095a F860     		str	r0, [r7, #12]
- 1870 095c B960     		str	r1, [r7, #8]
- 1871 095e 7A60     		str	r2, [r7, #4]
- 1872 0960 3B60     		str	r3, [r7]
- 1873              	.LBB12:
- 419:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	for (int x_ = 0; x_ < sprite->w; x_++)
- 1874              		.loc 1 419 0
- 1875 0962 0023     		movs	r3, #0
- 1876 0964 FB61     		str	r3, [r7, #28]
- 1877 0966 2AE0     		b	.L84
- 1878              	.L88:
- 1879              	.LBB13:
- 420:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{
- 421:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		for (int y_ = 0; y_ < sprite->h; y_++)
- 1880              		.loc 1 421 0
- 1881 0968 0023     		movs	r3, #0
- 1882 096a BB61     		str	r3, [r7, #24]
- 1883 096c 1EE0     		b	.L85
- 1884              	.L87:
- 1885              	.LBB14:
- 422:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		{
- 423:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 			bool set = sprite->sprite[frame][x_][y_];
- 1886              		.loc 1 423 0
- 1887 096e 1723     		movs	r3, #23
- 1888 0970 FB18     		adds	r3, r7, r3
- 1889 0972 F968     		ldr	r1, [r7, #12]
- 1890 0974 3A68     		ldr	r2, [r7]
- 1891 0976 1001     		lsls	r0, r2, #4
- 1892 0978 FA69     		ldr	r2, [r7, #28]
- 1893 097a 8218     		adds	r2, r0, r2
- 1894 097c 1201     		lsls	r2, r2, #4
- 1895 097e 8918     		adds	r1, r1, r2
- 1896 0980 BA69     		ldr	r2, [r7, #24]
- 1897 0982 8A18     		adds	r2, r1, r2
- 1898 0984 1278     		ldrb	r2, [r2]
- 1899 0986 1A70     		strb	r2, [r3]
- 424:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 			if (set)
- 1900              		.loc 1 424 0
- 1901 0988 1723     		movs	r3, #23
- 1902 098a FB18     		adds	r3, r7, r3
- 1903 098c 1B78     		ldrb	r3, [r3]
- 1904 098e 002B     		cmp	r3, #0
- 1905 0990 09D0     		beq	.L86
- 425:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 				write_px(x + x_, y + y_, true);
- 1906              		.loc 1 425 0
- 1907 0992 BA68     		ldr	r2, [r7, #8]
- 1908 0994 FB69     		ldr	r3, [r7, #28]
- 1909 0996 D018     		adds	r0, r2, r3
- 1910 0998 7A68     		ldr	r2, [r7, #4]
- 1911 099a BB69     		ldr	r3, [r7, #24]
- 1912 099c D318     		adds	r3, r2, r3
- 1913 099e 0122     		movs	r2, #1
- 1914 09a0 1900     		movs	r1, r3
- 1915 09a2 FFF7FEFF 		bl	write_px
- 1916              	.L86:
- 1917              	.LBE14:
- 421:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		{
- 1918              		.loc 1 421 0 discriminator 2
- 1919 09a6 BB69     		ldr	r3, [r7, #24]
- 1920 09a8 0133     		adds	r3, r3, #1
- 1921 09aa BB61     		str	r3, [r7, #24]
- 1922              	.L85:
- 421:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		{
- 1923              		.loc 1 421 0 is_stmt 0 discriminator 1
- 1924 09ac FB68     		ldr	r3, [r7, #12]
- 1925 09ae 094A     		ldr	r2, .L89
- 1926 09b0 9A58     		ldr	r2, [r3, r2]
- 1927 09b2 BB69     		ldr	r3, [r7, #24]
- 1928 09b4 9A42     		cmp	r2, r3
- 1929 09b6 DADC     		bgt	.L87
- 1930              	.LBE13:
- 419:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{
- 1931              		.loc 1 419 0 is_stmt 1 discriminator 2
- 1932 09b8 FB69     		ldr	r3, [r7, #28]
- 1933 09ba 0133     		adds	r3, r3, #1
- 1934 09bc FB61     		str	r3, [r7, #28]
- 1935              	.L84:
- 419:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{
- 1936              		.loc 1 419 0 is_stmt 0 discriminator 1
- 1937 09be FA68     		ldr	r2, [r7, #12]
- 1938 09c0 8123     		movs	r3, #129
- 1939 09c2 DB00     		lsls	r3, r3, #3
- 1940 09c4 D258     		ldr	r2, [r2, r3]
- 1941 09c6 FB69     		ldr	r3, [r7, #28]
- 1942 09c8 9A42     		cmp	r2, r3
- 1943 09ca CDDC     		bgt	.L88
- 1944              	.LBE12:
- 426:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		}
- 427:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	}
- 428:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** }
- 1945              		.loc 1 428 0 is_stmt 1
- 1946 09cc C046     		nop
- 1947 09ce BD46     		mov	sp, r7
- 1948 09d0 08B0     		add	sp, sp, #32
- 1949              		@ sp needed
- 1950 09d2 80BD     		pop	{r7, pc}
- 1951              	.L90:
- 1952              		.align	2
- 1953              	.L89:
- 1954 09d4 04040000 		.word	1028
- 1955              		.cfi_endproc
- 1956              	.LFE23:
- 1958              		.align	2
- 1959              		.global	clear_sprite
- 1960              		.code	16
- 1961              		.thumb_func
- 1963              	clear_sprite:
- 1964              	.LFB24:
- 429:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
- 430:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** void clear_sprite(Sprite *sprite, int x, int y, int frame)
- 431:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {
- 1965              		.loc 1 431 0
- 1966              		.cfi_startproc
- 1967 09d8 80B5     		push	{r7, lr}
- 1968              		.cfi_def_cfa_offset 8
- 1969              		.cfi_offset 7, -8
- 1970              		.cfi_offset 14, -4
- 1971 09da 88B0     		sub	sp, sp, #32
- 1972              		.cfi_def_cfa_offset 40
- 1973 09dc 00AF     		add	r7, sp, #0
- 1974              		.cfi_def_cfa_register 7
- 1975 09de F860     		str	r0, [r7, #12]
- 1976 09e0 B960     		str	r1, [r7, #8]
- 1977 09e2 7A60     		str	r2, [r7, #4]
- 1978 09e4 3B60     		str	r3, [r7]
- 1979              	.LBB15:
- 432:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	for (int x_ = 0; x_ < sprite->w; x_++)
- 1980              		.loc 1 432 0
- 1981 09e6 0023     		movs	r3, #0
- 1982 09e8 FB61     		str	r3, [r7, #28]
- 1983 09ea 2AE0     		b	.L92
- 1984              	.L96:
- 1985              	.LBB16:
- 433:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{
- 434:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		for (int y_ = 0; y_ < sprite->h; y_++)
- 1986              		.loc 1 434 0
- 1987 09ec 0023     		movs	r3, #0
- 1988 09ee BB61     		str	r3, [r7, #24]
- 1989 09f0 1EE0     		b	.L93
- 1990              	.L95:
- 1991              	.LBB17:
- 435:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		{
- 436:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 			bool set = sprite->sprite[frame][x_][y_];
- 1992              		.loc 1 436 0
- 1993 09f2 1723     		movs	r3, #23
- 1994 09f4 FB18     		adds	r3, r7, r3
- 1995 09f6 F968     		ldr	r1, [r7, #12]
- 1996 09f8 3A68     		ldr	r2, [r7]
- 1997 09fa 1001     		lsls	r0, r2, #4
- 1998 09fc FA69     		ldr	r2, [r7, #28]
- 1999 09fe 8218     		adds	r2, r0, r2
- 2000 0a00 1201     		lsls	r2, r2, #4
- 2001 0a02 8918     		adds	r1, r1, r2
- 2002 0a04 BA69     		ldr	r2, [r7, #24]
- 2003 0a06 8A18     		adds	r2, r1, r2
- 2004 0a08 1278     		ldrb	r2, [r2]
- 2005 0a0a 1A70     		strb	r2, [r3]
- 437:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 			if (set)
- 2006              		.loc 1 437 0
- 2007 0a0c 1723     		movs	r3, #23
- 2008 0a0e FB18     		adds	r3, r7, r3
- 2009 0a10 1B78     		ldrb	r3, [r3]
- 2010 0a12 002B     		cmp	r3, #0
- 2011 0a14 09D0     		beq	.L94
- 438:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 				write_px(x + x_, y + y_, false);
- 2012              		.loc 1 438 0
- 2013 0a16 BA68     		ldr	r2, [r7, #8]
- 2014 0a18 FB69     		ldr	r3, [r7, #28]
- 2015 0a1a D018     		adds	r0, r2, r3
- 2016 0a1c 7A68     		ldr	r2, [r7, #4]
- 2017 0a1e BB69     		ldr	r3, [r7, #24]
- 2018 0a20 D318     		adds	r3, r2, r3
- 2019 0a22 0022     		movs	r2, #0
- 2020 0a24 1900     		movs	r1, r3
- 2021 0a26 FFF7FEFF 		bl	write_px
- 2022              	.L94:
- 2023              	.LBE17:
- 434:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		{
- 2024              		.loc 1 434 0 discriminator 2
- 2025 0a2a BB69     		ldr	r3, [r7, #24]
- 2026 0a2c 0133     		adds	r3, r3, #1
- 2027 0a2e BB61     		str	r3, [r7, #24]
- 2028              	.L93:
- 434:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		{
- 2029              		.loc 1 434 0 is_stmt 0 discriminator 1
- 2030 0a30 FB68     		ldr	r3, [r7, #12]
- 2031 0a32 094A     		ldr	r2, .L97
- 2032 0a34 9A58     		ldr	r2, [r3, r2]
- 2033 0a36 BB69     		ldr	r3, [r7, #24]
- 2034 0a38 9A42     		cmp	r2, r3
- 2035 0a3a DADC     		bgt	.L95
- 2036              	.LBE16:
- 432:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{
- 2037              		.loc 1 432 0 is_stmt 1 discriminator 2
- 2038 0a3c FB69     		ldr	r3, [r7, #28]
- 2039 0a3e 0133     		adds	r3, r3, #1
- 2040 0a40 FB61     		str	r3, [r7, #28]
- 2041              	.L92:
- 432:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{
- 2042              		.loc 1 432 0 is_stmt 0 discriminator 1
- 2043 0a42 FA68     		ldr	r2, [r7, #12]
- 2044 0a44 8123     		movs	r3, #129
- 2045 0a46 DB00     		lsls	r3, r3, #3
- 2046 0a48 D258     		ldr	r2, [r2, r3]
- 2047 0a4a FB69     		ldr	r3, [r7, #28]
- 2048 0a4c 9A42     		cmp	r2, r3
- 2049 0a4e CDDC     		bgt	.L96
- 2050              	.LBE15:
- 439:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		}
- 440:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	}
- 441:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** }
- 2051              		.loc 1 441 0 is_stmt 1
- 2052 0a50 C046     		nop
- 2053 0a52 BD46     		mov	sp, r7
- 2054 0a54 08B0     		add	sp, sp, #32
- 2055              		@ sp needed
- 2056 0a56 80BD     		pop	{r7, pc}
- 2057              	.L98:
- 2058              		.align	2
- 2059              	.L97:
- 2060 0a58 04040000 		.word	1028
- 2061              		.cfi_endproc
- 2062              	.LFE24:
- 2064              		.align	2
- 2065              		.global	make_sprite
- 2066              		.code	16
- 2067              		.thumb_func
- 2069              	make_sprite:
- 2070              	.LFB25:
+ 416:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** TurnPoint turnPoints[] = 
+ 417:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {
+ 418:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {(Vec2){Y_UPPER, START_Y}, RIGHT},
+ 419:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {(Vec2){Y_UPPER, START_Y}, DOWN},
+ 420:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {(Vec2){Y_UPPER, START_Y - STEP_Y}, LEFT},
+ 421:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {(Vec2){Y_LOWER, START_Y - STEP_Y}, DOWN},
+ 422:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
+ 423:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {(Vec2){Y_LOWER, START_Y - STEP_Y * 2}, RIGHT},
+ 424:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {(Vec2){Y_UPPER, START_Y - STEP_Y * 2}, DOWN},
+ 425:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {(Vec2){Y_UPPER, START_Y - STEP_Y * 3}, LEFT},
+ 426:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {(Vec2){Y_LOWER, START_Y - STEP_Y * 3}, DOWN},
+ 427:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
+ 428:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {(Vec2){Y_LOWER, START_Y - STEP_Y * 2}, RIGHT},
+ 429:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {(Vec2){Y_UPPER, START_Y - STEP_Y * 2}, DOWN},
+ 430:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {(Vec2){Y_UPPER, START_Y - STEP_Y * 3}, LEFT},
+ 431:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {(Vec2){Y_LOWER, START_Y - STEP_Y * 3}, DOWN},
+ 432:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
+ 433:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {(Vec2){Y_LOWER, START_Y - STEP_Y * 4}, RIGHT},
+ 434:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {(Vec2){Y_UPPER, START_Y - STEP_Y * 4}, DOWN},
+ 435:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {(Vec2){Y_UPPER, START_Y - STEP_Y * 5}, LEFT},
+ 436:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {(Vec2){Y_LOWER, START_Y - STEP_Y * 5}, DOWN},
+ 437:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
+ 438:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {(Vec2){Y_LOWER, START_Y - STEP_Y * 6}, RIGHT},
+ 439:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {(Vec2){Y_UPPER, START_Y - STEP_Y * 6}, DOWN},
+ 440:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {(Vec2){Y_UPPER, START_Y - STEP_Y * 7}, LEFT},
+ 441:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {(Vec2){Y_LOWER, START_Y - STEP_Y * 7}, DOWN},
  442:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
- 443:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** Sprite *make_sprite(char *sprite, int w, int h, int num_frames)
- 444:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {
- 2071              		.loc 1 444 0
- 2072              		.cfi_startproc
- 2073 0a5c 90B5     		push	{r4, r7, lr}
- 2074              		.cfi_def_cfa_offset 12
- 2075              		.cfi_offset 4, -12
- 2076              		.cfi_offset 7, -8
- 2077              		.cfi_offset 14, -4
- 2078 0a5e 89B0     		sub	sp, sp, #36
- 2079              		.cfi_def_cfa_offset 48
- 2080 0a60 00AF     		add	r7, sp, #0
- 2081              		.cfi_def_cfa_register 7
- 2082 0a62 F860     		str	r0, [r7, #12]
- 2083 0a64 B960     		str	r1, [r7, #8]
- 2084 0a66 7A60     		str	r2, [r7, #4]
- 2085 0a68 3B60     		str	r3, [r7]
- 445:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	Sprite *ret = &sprites[num_sprites++];
- 2086              		.loc 1 445 0
- 2087 0a6a 284B     		ldr	r3, .L107
- 2088 0a6c 1B68     		ldr	r3, [r3]
- 2089 0a6e 591C     		adds	r1, r3, #1
- 2090 0a70 264A     		ldr	r2, .L107
- 2091 0a72 1160     		str	r1, [r2]
- 2092 0a74 264A     		ldr	r2, .L107+4
- 2093 0a76 5A43     		muls	r2, r3
- 2094 0a78 264B     		ldr	r3, .L107+8
- 2095 0a7a D318     		adds	r3, r2, r3
- 2096 0a7c 3B61     		str	r3, [r7, #16]
- 446:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     ret->num_frames = num_frames;
- 2097              		.loc 1 446 0
- 2098 0a7e 3A69     		ldr	r2, [r7, #16]
- 2099 0a80 8023     		movs	r3, #128
- 2100 0a82 DB00     		lsls	r3, r3, #3
- 2101 0a84 3968     		ldr	r1, [r7]
- 2102 0a86 D150     		str	r1, [r2, r3]
- 447:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     ret->w = w;
- 2103              		.loc 1 447 0
- 2104 0a88 3A69     		ldr	r2, [r7, #16]
- 2105 0a8a 8123     		movs	r3, #129
- 2106 0a8c DB00     		lsls	r3, r3, #3
- 2107 0a8e B968     		ldr	r1, [r7, #8]
- 2108 0a90 D150     		str	r1, [r2, r3]
- 448:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     ret->h = h;
- 2109              		.loc 1 448 0
- 2110 0a92 3B69     		ldr	r3, [r7, #16]
- 2111 0a94 2049     		ldr	r1, .L107+12
- 2112 0a96 7A68     		ldr	r2, [r7, #4]
- 2113 0a98 5A50     		str	r2, [r3, r1]
- 2114              	.LBB18:
- 449:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	for (int frame = 0; frame < num_frames; frame++)
- 2115              		.loc 1 449 0
- 2116 0a9a 0023     		movs	r3, #0
- 2117 0a9c FB61     		str	r3, [r7, #28]
- 2118 0a9e 2CE0     		b	.L100
- 2119              	.L105:
- 2120              	.LBB19:
- 450:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     {
- 451:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****         for (int y = 0; y < h; y++)
- 2121              		.loc 1 451 0
- 2122 0aa0 0023     		movs	r3, #0
- 2123 0aa2 BB61     		str	r3, [r7, #24]
- 2124 0aa4 22E0     		b	.L101
- 2125              	.L104:
- 2126              	.LBB20:
- 452:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****         {
- 453:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****             for (int x = 0; x < w; x++)
- 2127              		.loc 1 453 0
- 2128 0aa6 0023     		movs	r3, #0
- 2129 0aa8 7B61     		str	r3, [r7, #20]
- 2130 0aaa 18E0     		b	.L102
- 2131              	.L103:
- 454:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****             {
- 455:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		
- 456:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 				ret->sprite[frame][x][h-y-1] = (*(sprite++)) == '#';
- 2132              		.loc 1 456 0 discriminator 3
- 2133 0aac 7A68     		ldr	r2, [r7, #4]
- 2134 0aae BB69     		ldr	r3, [r7, #24]
- 2135 0ab0 D31A     		subs	r3, r2, r3
- 2136 0ab2 5A1E     		subs	r2, r3, #1
- 2137 0ab4 FB68     		ldr	r3, [r7, #12]
- 2138 0ab6 591C     		adds	r1, r3, #1
- 2139 0ab8 F960     		str	r1, [r7, #12]
- 2140 0aba 1B78     		ldrb	r3, [r3]
- 2141 0abc 233B     		subs	r3, r3, #35
- 2142 0abe 5942     		rsbs	r1, r3, #0
- 2143 0ac0 4B41     		adcs	r3, r3, r1
- 2144 0ac2 DBB2     		uxtb	r3, r3
- 2145 0ac4 1C00     		movs	r4, r3
- 2146 0ac6 3969     		ldr	r1, [r7, #16]
- 2147 0ac8 FB69     		ldr	r3, [r7, #28]
- 2148 0aca 1801     		lsls	r0, r3, #4
- 2149 0acc 7B69     		ldr	r3, [r7, #20]
- 2150 0ace C318     		adds	r3, r0, r3
- 2151 0ad0 1B01     		lsls	r3, r3, #4
- 2152 0ad2 CB18     		adds	r3, r1, r3
- 2153 0ad4 211C     		adds	r1, r4, #0
- 2154 0ad6 9954     		strb	r1, [r3, r2]
- 453:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****             {
- 2155              		.loc 1 453 0 discriminator 3
- 2156 0ad8 7B69     		ldr	r3, [r7, #20]
- 2157 0ada 0133     		adds	r3, r3, #1
- 2158 0adc 7B61     		str	r3, [r7, #20]
- 2159              	.L102:
- 453:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****             {
- 2160              		.loc 1 453 0 is_stmt 0 discriminator 1
- 2161 0ade 7A69     		ldr	r2, [r7, #20]
- 2162 0ae0 BB68     		ldr	r3, [r7, #8]
- 2163 0ae2 9A42     		cmp	r2, r3
- 2164 0ae4 E2DB     		blt	.L103
- 2165              	.LBE20:
- 451:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****         {
- 2166              		.loc 1 451 0 is_stmt 1 discriminator 2
- 2167 0ae6 BB69     		ldr	r3, [r7, #24]
- 2168 0ae8 0133     		adds	r3, r3, #1
- 2169 0aea BB61     		str	r3, [r7, #24]
- 2170              	.L101:
- 451:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****         {
- 2171              		.loc 1 451 0 is_stmt 0 discriminator 1
- 2172 0aec BA69     		ldr	r2, [r7, #24]
- 2173 0aee 7B68     		ldr	r3, [r7, #4]
- 2174 0af0 9A42     		cmp	r2, r3
- 2175 0af2 D8DB     		blt	.L104
- 2176              	.LBE19:
- 449:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     {
- 2177              		.loc 1 449 0 is_stmt 1 discriminator 2
- 2178 0af4 FB69     		ldr	r3, [r7, #28]
- 2179 0af6 0133     		adds	r3, r3, #1
- 2180 0af8 FB61     		str	r3, [r7, #28]
- 2181              	.L100:
- 449:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     {
- 2182              		.loc 1 449 0 is_stmt 0 discriminator 1
- 2183 0afa FA69     		ldr	r2, [r7, #28]
- 2184 0afc 3B68     		ldr	r3, [r7]
- 2185 0afe 9A42     		cmp	r2, r3
- 2186 0b00 CEDB     		blt	.L105
- 2187              	.LBE18:
- 457:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 			}
- 458:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		}
- 459:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	}
- 460:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
- 461:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	return ret;
- 2188              		.loc 1 461 0 is_stmt 1
- 2189 0b02 3B69     		ldr	r3, [r7, #16]
- 462:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** }
- 2190              		.loc 1 462 0
- 2191 0b04 1800     		movs	r0, r3
- 2192 0b06 BD46     		mov	sp, r7
- 2193 0b08 09B0     		add	sp, sp, #36
- 2194              		@ sp needed
- 2195 0b0a 90BD     		pop	{r4, r7, pc}
- 2196              	.L108:
- 2197              		.align	2
- 2198              	.L107:
- 2199 0b0c C4560000 		.word	num_sprites
- 2200 0b10 0C040000 		.word	1036
- 2201 0b14 00040000 		.word	sprites
- 2202 0b18 04040000 		.word	1028
- 2203              		.cfi_endproc
- 2204              	.LFE25:
- 2206              		.align	2
- 2207              		.global	render
- 2208              		.code	16
- 2209              		.thumb_func
- 2211              	render:
- 2212              	.LFB26:
- 463:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
- 464:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** void render()
- 465:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {
- 2213              		.loc 1 465 0
- 2214              		.cfi_startproc
- 2215 0b1c B0B5     		push	{r4, r5, r7, lr}
- 2216              		.cfi_def_cfa_offset 16
- 2217              		.cfi_offset 4, -16
- 2218              		.cfi_offset 5, -12
- 2219              		.cfi_offset 7, -8
- 2220              		.cfi_offset 14, -4
- 2221 0b1e 82B0     		sub	sp, sp, #8
- 2222              		.cfi_def_cfa_offset 24
- 2223 0b20 00AF     		add	r7, sp, #0
- 2224              		.cfi_def_cfa_register 7
- 2225              	.LBB21:
- 466:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	for (int i = 0; i < num_entities; i++)
- 2226              		.loc 1 466 0
- 2227 0b22 0023     		movs	r3, #0
- 2228 0b24 7B60     		str	r3, [r7, #4]
- 2229 0b26 3DE0     		b	.L110
- 2230              	.L113:
- 467:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{
- 468:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		//if(force || entities[i].velocity.x != 0 || entities[i].velocity.y != 0)
- 469:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		blit_sprite(entities[i].sprite, 
- 2231              		.loc 1 469 0 discriminator 3
- 2232 0b28 4749     		ldr	r1, .L118
- 2233 0b2a 7A68     		ldr	r2, [r7, #4]
- 2234 0b2c 1300     		movs	r3, r2
- 2235 0b2e DB00     		lsls	r3, r3, #3
- 2236 0b30 9B18     		adds	r3, r3, r2
- 2237 0b32 9B00     		lsls	r3, r3, #2
- 2238 0b34 5C58     		ldr	r4, [r3, r1]
- 470:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****             entities[i].pos.x-entities[i].sprite->w/2,
- 2239              		.loc 1 470 0 discriminator 3
- 2240 0b36 4449     		ldr	r1, .L118
- 2241 0b38 7A68     		ldr	r2, [r7, #4]
- 2242 0b3a 1300     		movs	r3, r2
- 2243 0b3c DB00     		lsls	r3, r3, #3
- 2244 0b3e 9B18     		adds	r3, r3, r2
- 2245 0b40 9B00     		lsls	r3, r3, #2
- 2246 0b42 CB18     		adds	r3, r1, r3
- 2247 0b44 0833     		adds	r3, r3, #8
- 2248 0b46 1968     		ldr	r1, [r3]
- 2249 0b48 3F48     		ldr	r0, .L118
- 2250 0b4a 7A68     		ldr	r2, [r7, #4]
- 2251 0b4c 1300     		movs	r3, r2
- 2252 0b4e DB00     		lsls	r3, r3, #3
- 2253 0b50 9B18     		adds	r3, r3, r2
- 2254 0b52 9B00     		lsls	r3, r3, #2
- 2255 0b54 1A58     		ldr	r2, [r3, r0]
- 2256 0b56 8123     		movs	r3, #129
- 2257 0b58 DB00     		lsls	r3, r3, #3
- 2258 0b5a D358     		ldr	r3, [r2, r3]
- 2259 0b5c 002B     		cmp	r3, #0
- 2260 0b5e 00DA     		bge	.L111
- 2261 0b60 0133     		adds	r3, r3, #1
- 2262              	.L111:
- 2263 0b62 5B10     		asrs	r3, r3, #1
- 469:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****             entities[i].pos.x-entities[i].sprite->w/2,
- 2264              		.loc 1 469 0 discriminator 3
- 2265 0b64 CD1A     		subs	r5, r1, r3
- 471:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****             entities[i].pos.y-entities[i].sprite->h/2, 0);
- 2266              		.loc 1 471 0 discriminator 3
- 2267 0b66 3849     		ldr	r1, .L118
- 2268 0b68 7A68     		ldr	r2, [r7, #4]
- 2269 0b6a 1300     		movs	r3, r2
- 2270 0b6c DB00     		lsls	r3, r3, #3
- 2271 0b6e 9B18     		adds	r3, r3, r2
- 2272 0b70 9B00     		lsls	r3, r3, #2
- 2273 0b72 CB18     		adds	r3, r1, r3
- 2274 0b74 0C33     		adds	r3, r3, #12
- 2275 0b76 1968     		ldr	r1, [r3]
- 2276 0b78 3348     		ldr	r0, .L118
- 2277 0b7a 7A68     		ldr	r2, [r7, #4]
- 2278 0b7c 1300     		movs	r3, r2
- 2279 0b7e DB00     		lsls	r3, r3, #3
- 2280 0b80 9B18     		adds	r3, r3, r2
- 2281 0b82 9B00     		lsls	r3, r3, #2
- 2282 0b84 1B58     		ldr	r3, [r3, r0]
- 2283 0b86 314A     		ldr	r2, .L118+4
- 2284 0b88 9B58     		ldr	r3, [r3, r2]
- 2285 0b8a 002B     		cmp	r3, #0
- 2286 0b8c 00DA     		bge	.L112
- 2287 0b8e 0133     		adds	r3, r3, #1
- 2288              	.L112:
- 2289 0b90 5B10     		asrs	r3, r3, #1
- 469:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****             entities[i].pos.x-entities[i].sprite->w/2,
- 2290              		.loc 1 469 0 discriminator 3
- 2291 0b92 CA1A     		subs	r2, r1, r3
- 2292 0b94 0023     		movs	r3, #0
- 2293 0b96 2900     		movs	r1, r5
- 2294 0b98 2000     		movs	r0, r4
- 2295 0b9a FFF7FEFF 		bl	blit_sprite
- 466:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{
- 2296              		.loc 1 466 0 discriminator 3
- 2297 0b9e 7B68     		ldr	r3, [r7, #4]
- 2298 0ba0 0133     		adds	r3, r3, #1
- 2299 0ba2 7B60     		str	r3, [r7, #4]
- 2300              	.L110:
- 466:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{
- 2301              		.loc 1 466 0 is_stmt 0 discriminator 1
- 2302 0ba4 2A4B     		ldr	r3, .L118+8
- 2303 0ba6 1B68     		ldr	r3, [r3]
- 2304 0ba8 7A68     		ldr	r2, [r7, #4]
- 2305 0baa 9A42     		cmp	r2, r3
- 2306 0bac BCDB     		blt	.L113
- 2307              	.LBE21:
- 472:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	}
- 473:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	flush_screen();
- 2308              		.loc 1 473 0 is_stmt 1
- 2309 0bae FFF7FEFF 		bl	flush_screen
- 2310              	.LBB22:
- 474:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	for (int i = 0; i < num_entities; i++)
- 2311              		.loc 1 474 0
- 2312 0bb2 0023     		movs	r3, #0
- 2313 0bb4 3B60     		str	r3, [r7]
- 2314 0bb6 3DE0     		b	.L114
- 2315              	.L117:
- 475:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{
- 476:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		//if(force || entities[i].velocity.x != 0 || entities[i].velocity.y != 0)
- 477:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		clear_sprite(entities[i].sprite, 
- 2316              		.loc 1 477 0 discriminator 3
- 2317 0bb8 2349     		ldr	r1, .L118
- 2318 0bba 3A68     		ldr	r2, [r7]
- 2319 0bbc 1300     		movs	r3, r2
- 2320 0bbe DB00     		lsls	r3, r3, #3
- 2321 0bc0 9B18     		adds	r3, r3, r2
- 2322 0bc2 9B00     		lsls	r3, r3, #2
- 2323 0bc4 5C58     		ldr	r4, [r3, r1]
- 478:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****             entities[i].pos.x-entities[i].sprite->w/2, 
- 2324              		.loc 1 478 0 discriminator 3
- 2325 0bc6 2049     		ldr	r1, .L118
- 2326 0bc8 3A68     		ldr	r2, [r7]
- 2327 0bca 1300     		movs	r3, r2
- 2328 0bcc DB00     		lsls	r3, r3, #3
- 2329 0bce 9B18     		adds	r3, r3, r2
- 2330 0bd0 9B00     		lsls	r3, r3, #2
- 2331 0bd2 CB18     		adds	r3, r1, r3
- 2332 0bd4 0833     		adds	r3, r3, #8
- 2333 0bd6 1968     		ldr	r1, [r3]
- 2334 0bd8 1B48     		ldr	r0, .L118
- 2335 0bda 3A68     		ldr	r2, [r7]
- 2336 0bdc 1300     		movs	r3, r2
- 2337 0bde DB00     		lsls	r3, r3, #3
- 2338 0be0 9B18     		adds	r3, r3, r2
- 2339 0be2 9B00     		lsls	r3, r3, #2
- 2340 0be4 1A58     		ldr	r2, [r3, r0]
- 2341 0be6 8123     		movs	r3, #129
- 2342 0be8 DB00     		lsls	r3, r3, #3
- 2343 0bea D358     		ldr	r3, [r2, r3]
- 2344 0bec 002B     		cmp	r3, #0
- 2345 0bee 00DA     		bge	.L115
- 2346 0bf0 0133     		adds	r3, r3, #1
- 2347              	.L115:
- 2348 0bf2 5B10     		asrs	r3, r3, #1
- 477:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****             entities[i].pos.x-entities[i].sprite->w/2, 
- 2349              		.loc 1 477 0 discriminator 3
- 2350 0bf4 CD1A     		subs	r5, r1, r3
- 479:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****             entities[i].pos.y-entities[i].sprite->h/2, 0);
- 2351              		.loc 1 479 0 discriminator 3
- 2352 0bf6 1449     		ldr	r1, .L118
- 2353 0bf8 3A68     		ldr	r2, [r7]
- 2354 0bfa 1300     		movs	r3, r2
- 2355 0bfc DB00     		lsls	r3, r3, #3
- 2356 0bfe 9B18     		adds	r3, r3, r2
- 2357 0c00 9B00     		lsls	r3, r3, #2
- 2358 0c02 CB18     		adds	r3, r1, r3
- 2359 0c04 0C33     		adds	r3, r3, #12
- 2360 0c06 1968     		ldr	r1, [r3]
- 2361 0c08 0F48     		ldr	r0, .L118
- 2362 0c0a 3A68     		ldr	r2, [r7]
- 2363 0c0c 1300     		movs	r3, r2
- 2364 0c0e DB00     		lsls	r3, r3, #3
- 2365 0c10 9B18     		adds	r3, r3, r2
- 2366 0c12 9B00     		lsls	r3, r3, #2
- 2367 0c14 1B58     		ldr	r3, [r3, r0]
- 2368 0c16 0D4A     		ldr	r2, .L118+4
- 2369 0c18 9B58     		ldr	r3, [r3, r2]
- 2370 0c1a 002B     		cmp	r3, #0
- 2371 0c1c 00DA     		bge	.L116
- 2372 0c1e 0133     		adds	r3, r3, #1
- 2373              	.L116:
- 2374 0c20 5B10     		asrs	r3, r3, #1
- 477:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****             entities[i].pos.x-entities[i].sprite->w/2, 
- 2375              		.loc 1 477 0 discriminator 3
- 2376 0c22 CA1A     		subs	r2, r1, r3
- 2377 0c24 0023     		movs	r3, #0
- 2378 0c26 2900     		movs	r1, r5
- 2379 0c28 2000     		movs	r0, r4
- 2380 0c2a FFF7FEFF 		bl	clear_sprite
- 474:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{
- 2381              		.loc 1 474 0 discriminator 3
- 2382 0c2e 3B68     		ldr	r3, [r7]
- 2383 0c30 0133     		adds	r3, r3, #1
- 2384 0c32 3B60     		str	r3, [r7]
- 2385              	.L114:
- 474:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{
- 2386              		.loc 1 474 0 is_stmt 0 discriminator 1
- 2387 0c34 064B     		ldr	r3, .L118+8
- 2388 0c36 1B68     		ldr	r3, [r3]
- 2389 0c38 3A68     		ldr	r2, [r7]
- 2390 0c3a 9A42     		cmp	r2, r3
- 2391 0c3c BCDB     		blt	.L117
- 2392              	.LBE22:
- 480:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	}
- 481:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** }
- 2393              		.loc 1 481 0 is_stmt 1
- 2394 0c3e C046     		nop
- 2395 0c40 BD46     		mov	sp, r7
- 2396 0c42 02B0     		add	sp, sp, #8
- 2397              		@ sp needed
- 2398 0c44 B0BD     		pop	{r4, r5, r7, pc}
- 2399              	.L119:
- 2400 0c46 C046     		.align	2
- 2401              	.L118:
- 2402 0c48 C0440000 		.word	entities
- 2403 0c4c 04040000 		.word	1028
- 2404 0c50 C0560000 		.word	num_entities
- 2405              		.cfi_endproc
- 2406              	.LFE26:
- 2408              		.align	2
- 2409              		.global	entity_from_id
- 2410              		.code	16
- 2411              		.thumb_func
- 2413              	entity_from_id:
- 2414              	.LFB27:
- 482:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
- 483:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** //note will change between frames
- 484:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** Entity *entity_from_id(int id)
- 485:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {
- 2415              		.loc 1 485 0
- 2416              		.cfi_startproc
- 2417 0c54 80B5     		push	{r7, lr}
- 2418              		.cfi_def_cfa_offset 8
- 2419              		.cfi_offset 7, -8
- 2420              		.cfi_offset 14, -4
- 2421 0c56 84B0     		sub	sp, sp, #16
- 2422              		.cfi_def_cfa_offset 24
- 2423 0c58 00AF     		add	r7, sp, #0
- 2424              		.cfi_def_cfa_register 7
- 2425 0c5a 7860     		str	r0, [r7, #4]
- 2426              	.LBB23:
- 486:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	for (int i = 0; i < num_entities; i++)
- 2427              		.loc 1 486 0
- 2428 0c5c 0023     		movs	r3, #0
- 2429 0c5e FB60     		str	r3, [r7, #12]
- 2430 0c60 16E0     		b	.L121
- 2431              	.L124:
- 487:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{
- 488:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		if (entities[i].id == id)return &entities[i];
- 2432              		.loc 1 488 0
- 2433 0c62 1049     		ldr	r1, .L125
- 2434 0c64 FA68     		ldr	r2, [r7, #12]
- 2435 0c66 1300     		movs	r3, r2
- 2436 0c68 DB00     		lsls	r3, r3, #3
- 2437 0c6a 9B18     		adds	r3, r3, r2
- 2438 0c6c 9B00     		lsls	r3, r3, #2
- 2439 0c6e CB18     		adds	r3, r1, r3
- 2440 0c70 0433     		adds	r3, r3, #4
- 2441 0c72 1A68     		ldr	r2, [r3]
- 2442 0c74 7B68     		ldr	r3, [r7, #4]
- 2443 0c76 9A42     		cmp	r2, r3
- 2444 0c78 07D1     		bne	.L122
- 2445              		.loc 1 488 0 is_stmt 0 discriminator 1
- 2446 0c7a FA68     		ldr	r2, [r7, #12]
- 2447 0c7c 1300     		movs	r3, r2
- 2448 0c7e DB00     		lsls	r3, r3, #3
- 2449 0c80 9B18     		adds	r3, r3, r2
- 2450 0c82 9B00     		lsls	r3, r3, #2
- 2451 0c84 074A     		ldr	r2, .L125
- 2452 0c86 9B18     		adds	r3, r3, r2
- 2453 0c88 08E0     		b	.L123
- 2454              	.L122:
- 486:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	for (int i = 0; i < num_entities; i++)
- 2455              		.loc 1 486 0 is_stmt 1 discriminator 2
- 2456 0c8a FB68     		ldr	r3, [r7, #12]
- 2457 0c8c 0133     		adds	r3, r3, #1
- 2458 0c8e FB60     		str	r3, [r7, #12]
- 2459              	.L121:
- 486:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	for (int i = 0; i < num_entities; i++)
- 2460              		.loc 1 486 0 is_stmt 0 discriminator 1
- 2461 0c90 054B     		ldr	r3, .L125+4
- 2462 0c92 1B68     		ldr	r3, [r3]
- 2463 0c94 FA68     		ldr	r2, [r7, #12]
- 2464 0c96 9A42     		cmp	r2, r3
- 2465 0c98 E3DB     		blt	.L124
- 2466              	.LBE23:
- 489:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	}
- 490:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     return 0;
- 2467              		.loc 1 490 0 is_stmt 1
- 2468 0c9a 0023     		movs	r3, #0
- 2469              	.L123:
- 491:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** }
- 2470              		.loc 1 491 0
- 2471 0c9c 1800     		movs	r0, r3
- 2472 0c9e BD46     		mov	sp, r7
- 2473 0ca0 04B0     		add	sp, sp, #16
- 2474              		@ sp needed
- 2475 0ca2 80BD     		pop	{r7, pc}
- 2476              	.L126:
- 2477              		.align	2
- 2478              	.L125:
- 2479 0ca4 C0440000 		.word	entities
- 2480 0ca8 C0560000 		.word	num_entities
- 2481              		.cfi_endproc
- 2482              	.LFE27:
- 2484              		.align	2
- 2485              		.global	cleanup_entities
- 2486              		.code	16
- 2487              		.thumb_func
- 2489              	cleanup_entities:
- 2490              	.LFB28:
- 492:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
- 493:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** void cleanup_entities()
- 494:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {
- 2491              		.loc 1 494 0
- 2492              		.cfi_startproc
- 2493 0cac 90B5     		push	{r4, r7, lr}
- 2494              		.cfi_def_cfa_offset 12
- 2495              		.cfi_offset 4, -12
- 2496              		.cfi_offset 7, -8
- 2497              		.cfi_offset 14, -4
- 2498 0cae 83B0     		sub	sp, sp, #12
- 2499              		.cfi_def_cfa_offset 24
- 2500 0cb0 00AF     		add	r7, sp, #0
- 2501              		.cfi_def_cfa_register 7
- 2502              	.LBB24:
- 495:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	for (int i = 0; i < num_entities; i++)
- 2503              		.loc 1 495 0
- 2504 0cb2 0023     		movs	r3, #0
- 2505 0cb4 7B60     		str	r3, [r7, #4]
- 2506 0cb6 27E0     		b	.L128
- 2507              	.L130:
- 496:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{
- 497:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		if (entities[i].destroy) entities[i] = entities[--num_entities];
- 2508              		.loc 1 497 0
- 2509 0cb8 1849     		ldr	r1, .L131
- 2510 0cba 7A68     		ldr	r2, [r7, #4]
- 2511 0cbc 1300     		movs	r3, r2
- 2512 0cbe DB00     		lsls	r3, r3, #3
- 2513 0cc0 9B18     		adds	r3, r3, r2
- 2514 0cc2 9B00     		lsls	r3, r3, #2
- 2515 0cc4 CB18     		adds	r3, r1, r3
- 2516 0cc6 1833     		adds	r3, r3, #24
- 2517 0cc8 1B78     		ldrb	r3, [r3]
- 2518 0cca 002B     		cmp	r3, #0
- 2519 0ccc 19D0     		beq	.L129
- 2520              		.loc 1 497 0 is_stmt 0 discriminator 1
- 2521 0cce 144B     		ldr	r3, .L131+4
- 2522 0cd0 1B68     		ldr	r3, [r3]
- 2523 0cd2 5A1E     		subs	r2, r3, #1
- 2524 0cd4 124B     		ldr	r3, .L131+4
- 2525 0cd6 1A60     		str	r2, [r3]
- 2526 0cd8 114B     		ldr	r3, .L131+4
- 2527 0cda 1968     		ldr	r1, [r3]
- 2528 0cdc 0F4C     		ldr	r4, .L131
- 2529 0cde 7A68     		ldr	r2, [r7, #4]
- 2530 0ce0 1300     		movs	r3, r2
- 2531 0ce2 DB00     		lsls	r3, r3, #3
- 2532 0ce4 9B18     		adds	r3, r3, r2
- 2533 0ce6 9B00     		lsls	r3, r3, #2
- 2534 0ce8 0C48     		ldr	r0, .L131
- 2535 0cea 0A00     		movs	r2, r1
- 2536 0cec D200     		lsls	r2, r2, #3
- 2537 0cee 5218     		adds	r2, r2, r1
- 2538 0cf0 9200     		lsls	r2, r2, #2
- 2539 0cf2 E318     		adds	r3, r4, r3
- 2540 0cf4 8218     		adds	r2, r0, r2
- 2541 0cf6 13CA     		ldmia	r2!, {r0, r1, r4}
- 2542 0cf8 13C3     		stmia	r3!, {r0, r1, r4}
- 2543 0cfa 13CA     		ldmia	r2!, {r0, r1, r4}
- 2544 0cfc 13C3     		stmia	r3!, {r0, r1, r4}
- 2545 0cfe 13CA     		ldmia	r2!, {r0, r1, r4}
- 2546 0d00 13C3     		stmia	r3!, {r0, r1, r4}
- 2547              	.L129:
- 495:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	for (int i = 0; i < num_entities; i++)
- 2548              		.loc 1 495 0 is_stmt 1 discriminator 2
- 2549 0d02 7B68     		ldr	r3, [r7, #4]
- 2550 0d04 0133     		adds	r3, r3, #1
- 2551 0d06 7B60     		str	r3, [r7, #4]
- 2552              	.L128:
- 495:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	for (int i = 0; i < num_entities; i++)
- 2553              		.loc 1 495 0 is_stmt 0 discriminator 1
- 2554 0d08 054B     		ldr	r3, .L131+4
- 2555 0d0a 1B68     		ldr	r3, [r3]
- 2556 0d0c 7A68     		ldr	r2, [r7, #4]
- 2557 0d0e 9A42     		cmp	r2, r3
- 2558 0d10 D2DB     		blt	.L130
- 2559              	.LBE24:
- 498:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	}
- 499:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** }
- 2560              		.loc 1 499 0 is_stmt 1
- 2561 0d12 C046     		nop
- 2562 0d14 BD46     		mov	sp, r7
- 2563 0d16 03B0     		add	sp, sp, #12
- 2564              		@ sp needed
- 2565 0d18 90BD     		pop	{r4, r7, pc}
- 2566              	.L132:
- 2567 0d1a C046     		.align	2
- 2568              	.L131:
- 2569 0d1c C0440000 		.word	entities
- 2570 0d20 C0560000 		.word	num_entities
- 2571              		.cfi_endproc
- 2572              	.LFE28:
- 2574              		.section	.rodata
- 2575              		.align	2
- 2576              	.LC0:
- 2577 0000 31       		.byte	49
- 2578 0001 32       		.byte	50
- 2579 0002 33       		.byte	51
- 2580 0003 41       		.byte	65
- 2581 0004 34       		.byte	52
- 2582 0005 35       		.byte	53
- 2583 0006 36       		.byte	54
- 2584 0007 42       		.byte	66
- 2585 0008 37       		.byte	55
- 2586 0009 38       		.byte	56
- 2587 000a 39       		.byte	57
- 2588 000b 43       		.byte	67
- 2589 000c 2A       		.byte	42
- 2590 000d 30       		.byte	48
- 2591 000e 23       		.byte	35
- 2592 000f 44       		.byte	68
- 2593              		.text
- 2594              		.align	2
- 2595              		.global	keyb
- 2596              		.code	16
- 2597              		.thumb_func
- 2599              	keyb:
- 2600              	.LFB29:
- 500:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
- 501:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
- 502:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
- 503:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** char keyb()
- 504:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {
- 2601              		.loc 1 504 0
- 2602              		.cfi_startproc
- 2603 0d24 80B5     		push	{r7, lr}
- 2604              		.cfi_def_cfa_offset 8
- 2605              		.cfi_offset 7, -8
- 2606              		.cfi_offset 14, -4
- 2607 0d26 88B0     		sub	sp, sp, #32
- 2608              		.cfi_def_cfa_offset 40
- 2609 0d28 00AF     		add	r7, sp, #0
- 2610              		.cfi_def_cfa_register 7
- 505:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	GPIO_REG *d = (GPIO_REG *)0x40020C00;
- 2611              		.loc 1 505 0
- 2612 0d2a 214B     		ldr	r3, .L141
- 2613 0d2c 7B61     		str	r3, [r7, #20]
- 506:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	GPIO_REG *e = (GPIO_REG *)0x40021000;
- 2614              		.loc 1 506 0
- 2615 0d2e 214B     		ldr	r3, .L141+4
- 2616 0d30 3B61     		str	r3, [r7, #16]
- 507:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	
- 508:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	char res[4][4]=
- 2617              		.loc 1 508 0
- 2618 0d32 3A00     		movs	r2, r7
- 2619 0d34 204B     		ldr	r3, .L141+8
- 2620 0d36 1000     		movs	r0, r2
- 2621 0d38 1900     		movs	r1, r3
- 2622 0d3a 1023     		movs	r3, #16
- 2623 0d3c 1A00     		movs	r2, r3
- 2624 0d3e FFF7FEFF 		bl	memcpy
- 2625              	.LBB25:
- 509:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{{'1','2','3','A'},
- 510:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{'4','5','6','B'},
- 511:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{'7','8','9','C'},
- 512:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{'*','0','#','D'},};
- 513:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	for(int i = 0; i<4;i++)
- 2626              		.loc 1 513 0
- 2627 0d42 0023     		movs	r3, #0
- 2628 0d44 FB61     		str	r3, [r7, #28]
- 2629 0d46 2AE0     		b	.L134
- 2630              	.L139:
- 514:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{
- 515:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		d->ODR = 0x1000<<i | d->ODR&0xff;
- 2631              		.loc 1 515 0
- 2632 0d48 8023     		movs	r3, #128
- 2633 0d4a 5A01     		lsls	r2, r3, #5
- 2634 0d4c FB69     		ldr	r3, [r7, #28]
- 2635 0d4e 9A40     		lsls	r2, r2, r3
- 2636 0d50 1300     		movs	r3, r2
- 2637 0d52 1900     		movs	r1, r3
- 2638 0d54 7B69     		ldr	r3, [r7, #20]
- 2639 0d56 5B69     		ldr	r3, [r3, #20]
- 2640 0d58 FF22     		movs	r2, #255
- 2641 0d5a 1340     		ands	r3, r2
- 2642 0d5c 0A00     		movs	r2, r1
- 2643 0d5e 1A43     		orrs	r2, r3
- 2644 0d60 7B69     		ldr	r3, [r7, #20]
- 2645 0d62 5A61     		str	r2, [r3, #20]
- 2646              	.LBB26:
- 516:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		for(int j = 0; j<4;j++)
- 2647              		.loc 1 516 0
- 2648 0d64 0023     		movs	r3, #0
- 2649 0d66 BB61     		str	r3, [r7, #24]
- 2650 0d68 13E0     		b	.L135
- 2651              	.L138:
- 517:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		{
- 518:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 			if(d->IDR & 0x100<<j)
- 2652              		.loc 1 518 0
- 2653 0d6a 7B69     		ldr	r3, [r7, #20]
- 2654 0d6c 1B69     		ldr	r3, [r3, #16]
- 2655 0d6e 8022     		movs	r2, #128
- 2656 0d70 5100     		lsls	r1, r2, #1
- 2657 0d72 BA69     		ldr	r2, [r7, #24]
- 2658 0d74 9140     		lsls	r1, r1, r2
- 2659 0d76 0A00     		movs	r2, r1
- 2660 0d78 1340     		ands	r3, r2
- 2661 0d7a 07D0     		beq	.L136
- 519:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 			{
- 520:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 				return res[i][j];
- 2662              		.loc 1 520 0
- 2663 0d7c 3A00     		movs	r2, r7
- 2664 0d7e FB69     		ldr	r3, [r7, #28]
- 2665 0d80 9B00     		lsls	r3, r3, #2
- 2666 0d82 D218     		adds	r2, r2, r3
- 2667 0d84 BB69     		ldr	r3, [r7, #24]
- 2668 0d86 D318     		adds	r3, r2, r3
- 2669 0d88 1B78     		ldrb	r3, [r3]
- 2670 0d8a 0CE0     		b	.L140
- 2671              	.L136:
- 516:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		{
- 2672              		.loc 1 516 0 discriminator 2
- 2673 0d8c BB69     		ldr	r3, [r7, #24]
- 2674 0d8e 0133     		adds	r3, r3, #1
- 2675 0d90 BB61     		str	r3, [r7, #24]
- 2676              	.L135:
- 516:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		{
- 2677              		.loc 1 516 0 is_stmt 0 discriminator 1
- 2678 0d92 BB69     		ldr	r3, [r7, #24]
- 2679 0d94 032B     		cmp	r3, #3
- 2680 0d96 E8DD     		ble	.L138
- 2681              	.LBE26:
- 513:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{
- 2682              		.loc 1 513 0 is_stmt 1 discriminator 2
- 2683 0d98 FB69     		ldr	r3, [r7, #28]
- 2684 0d9a 0133     		adds	r3, r3, #1
- 2685 0d9c FB61     		str	r3, [r7, #28]
- 2686              	.L134:
- 513:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{
- 2687              		.loc 1 513 0 is_stmt 0 discriminator 1
- 2688 0d9e FB69     		ldr	r3, [r7, #28]
- 2689 0da0 032B     		cmp	r3, #3
- 2690 0da2 D1DD     		ble	.L139
- 2691              	.LBE25:
- 521:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 			}
- 522:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		}
- 523:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	}
- 524:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	return 0;
- 2692              		.loc 1 524 0 is_stmt 1
- 2693 0da4 0023     		movs	r3, #0
- 2694              	.L140:
- 525:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** }
- 2695              		.loc 1 525 0 discriminator 1
- 2696 0da6 1800     		movs	r0, r3
- 2697 0da8 BD46     		mov	sp, r7
- 2698 0daa 08B0     		add	sp, sp, #32
- 2699              		@ sp needed
- 2700 0dac 80BD     		pop	{r7, pc}
- 2701              	.L142:
- 2702 0dae C046     		.align	2
- 2703              	.L141:
- 2704 0db0 000C0240 		.word	1073875968
- 2705 0db4 00100240 		.word	1073876992
- 2706 0db8 00000000 		.word	.LC0
- 2707              		.cfi_endproc
- 2708              	.LFE29:
- 2710              		.align	2
- 2711              		.global	get_bounds
- 2712              		.code	16
- 2713              		.thumb_func
- 2715              	get_bounds:
- 2716              	.LFB30:
- 526:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
- 527:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** void get_bounds(Entity *entity, int *x_min, int *x_max, int *y_min, int *y_max)
- 528:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {
- 2717              		.loc 1 528 0
- 2718              		.cfi_startproc
- 2719 0dbc 80B5     		push	{r7, lr}
- 2720              		.cfi_def_cfa_offset 8
- 2721              		.cfi_offset 7, -8
- 2722              		.cfi_offset 14, -4
- 2723 0dbe 84B0     		sub	sp, sp, #16
- 2724              		.cfi_def_cfa_offset 24
- 2725 0dc0 00AF     		add	r7, sp, #0
- 2726              		.cfi_def_cfa_register 7
- 2727 0dc2 F860     		str	r0, [r7, #12]
- 2728 0dc4 B960     		str	r1, [r7, #8]
- 2729 0dc6 7A60     		str	r2, [r7, #4]
- 2730 0dc8 3B60     		str	r3, [r7]
- 529:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     *x_max = entity->pos.x + entities->sprite->w/2;
- 2731              		.loc 1 529 0
- 2732 0dca FB68     		ldr	r3, [r7, #12]
- 2733 0dcc 9A68     		ldr	r2, [r3, #8]
- 2734 0dce 1C4B     		ldr	r3, .L148
- 2735 0dd0 1968     		ldr	r1, [r3]
- 2736 0dd2 8123     		movs	r3, #129
- 2737 0dd4 DB00     		lsls	r3, r3, #3
- 2738 0dd6 CB58     		ldr	r3, [r1, r3]
- 2739 0dd8 002B     		cmp	r3, #0
- 2740 0dda 00DA     		bge	.L144
- 2741 0ddc 0133     		adds	r3, r3, #1
- 2742              	.L144:
- 2743 0dde 5B10     		asrs	r3, r3, #1
- 2744 0de0 D218     		adds	r2, r2, r3
- 2745 0de2 7B68     		ldr	r3, [r7, #4]
- 2746 0de4 1A60     		str	r2, [r3]
- 530:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     *x_min = entity->pos.x - entities->sprite->w/2;
- 2747              		.loc 1 530 0
- 2748 0de6 FB68     		ldr	r3, [r7, #12]
- 2749 0de8 9A68     		ldr	r2, [r3, #8]
- 2750 0dea 154B     		ldr	r3, .L148
- 2751 0dec 1968     		ldr	r1, [r3]
- 2752 0dee 8123     		movs	r3, #129
- 2753 0df0 DB00     		lsls	r3, r3, #3
- 2754 0df2 CB58     		ldr	r3, [r1, r3]
- 2755 0df4 002B     		cmp	r3, #0
- 2756 0df6 00DA     		bge	.L145
- 2757 0df8 0133     		adds	r3, r3, #1
- 2758              	.L145:
- 2759 0dfa 5B10     		asrs	r3, r3, #1
- 2760 0dfc D21A     		subs	r2, r2, r3
- 2761 0dfe BB68     		ldr	r3, [r7, #8]
- 2762 0e00 1A60     		str	r2, [r3]
- 531:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
- 532:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     *y_max = entity->pos.y + entities->sprite->h/2;
- 2763              		.loc 1 532 0
- 2764 0e02 FB68     		ldr	r3, [r7, #12]
- 2765 0e04 DA68     		ldr	r2, [r3, #12]
- 2766 0e06 0E4B     		ldr	r3, .L148
- 2767 0e08 1B68     		ldr	r3, [r3]
- 2768 0e0a 0E49     		ldr	r1, .L148+4
- 2769 0e0c 5B58     		ldr	r3, [r3, r1]
- 2770 0e0e 002B     		cmp	r3, #0
- 2771 0e10 00DA     		bge	.L146
- 2772 0e12 0133     		adds	r3, r3, #1
- 2773              	.L146:
- 2774 0e14 5B10     		asrs	r3, r3, #1
- 2775 0e16 D218     		adds	r2, r2, r3
- 2776 0e18 BB69     		ldr	r3, [r7, #24]
- 2777 0e1a 1A60     		str	r2, [r3]
- 533:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     *y_min = entity->pos.y - entities->sprite->h/2; 
- 2778              		.loc 1 533 0
- 2779 0e1c FB68     		ldr	r3, [r7, #12]
- 2780 0e1e DA68     		ldr	r2, [r3, #12]
- 2781 0e20 074B     		ldr	r3, .L148
- 2782 0e22 1B68     		ldr	r3, [r3]
- 2783 0e24 0749     		ldr	r1, .L148+4
- 2784 0e26 5B58     		ldr	r3, [r3, r1]
- 2785 0e28 002B     		cmp	r3, #0
- 2786 0e2a 00DA     		bge	.L147
- 2787 0e2c 0133     		adds	r3, r3, #1
- 2788              	.L147:
- 2789 0e2e 5B10     		asrs	r3, r3, #1
- 2790 0e30 D21A     		subs	r2, r2, r3
- 2791 0e32 3B68     		ldr	r3, [r7]
- 2792 0e34 1A60     		str	r2, [r3]
- 534:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** }
- 2793              		.loc 1 534 0
- 2794 0e36 C046     		nop
- 2795 0e38 BD46     		mov	sp, r7
- 2796 0e3a 04B0     		add	sp, sp, #16
- 2797              		@ sp needed
- 2798 0e3c 80BD     		pop	{r7, pc}
- 2799              	.L149:
- 2800 0e3e C046     		.align	2
- 2801              	.L148:
- 2802 0e40 C0440000 		.word	entities
- 2803 0e44 04040000 		.word	1028
- 2804              		.cfi_endproc
- 2805              	.LFE30:
- 2807              		.align	2
- 2808              		.global	wall_collision
- 2809              		.code	16
- 2810              		.thumb_func
- 2812              	wall_collision:
- 2813              	.LFB31:
- 535:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
- 536:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** bool wall_collision(Entity *entity)
+ 443:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {(Vec2){Y_LOWER, START_Y - STEP_Y * 8}, RIGHT},
+ 444:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {(Vec2){Y_UPPER, START_Y - STEP_Y * 8}, DOWN},
+ 445:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {(Vec2){Y_UPPER, START_Y - STEP_Y * 9}, LEFT},
+ 446:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {(Vec2){Y_LOWER, START_Y - STEP_Y * 9}, DOWN},
+ 447:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** };
+ 448:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
+ 449:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** static Sprite sprites[16];
+ 450:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** static Entity entities[128];
+ 451:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** static int num_entities=0;
+ 452:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** static num_sprites = 0;
+ 453:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
+ 454:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** int make_entity(Sprite *sprite, EntityType type, Vec2 pos, Vec2 velocity)
+ 455:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {
+ 1850              		.loc 1 455 0
+ 1851              		.cfi_startproc
+ 1852 08ac 90B5     		push	{r4, r7, lr}
+ 1853              		.cfi_def_cfa_offset 12
+ 1854              		.cfi_offset 4, -12
+ 1855              		.cfi_offset 7, -8
+ 1856              		.cfi_offset 14, -4
+ 1857 08ae 8FB0     		sub	sp, sp, #60
+ 1858              		.cfi_def_cfa_offset 72
+ 1859 08b0 00AF     		add	r7, sp, #0
+ 1860              		.cfi_def_cfa_register 7
+ 1861 08b2 F860     		str	r0, [r7, #12]
+ 1862 08b4 0800     		movs	r0, r1
+ 1863 08b6 3900     		movs	r1, r7
+ 1864 08b8 0A60     		str	r2, [r1]
+ 1865 08ba 4B60     		str	r3, [r1, #4]
+ 1866 08bc 0B23     		movs	r3, #11
+ 1867 08be FB18     		adds	r3, r7, r3
+ 1868 08c0 021C     		adds	r2, r0, #0
+ 1869 08c2 1A70     		strb	r2, [r3]
+ 456:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	static id_counter = 0;
+ 457:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	Entity *ret = &entities[num_entities++];
+ 1870              		.loc 1 457 0
+ 1871 08c4 204B     		ldr	r3, .L81
+ 1872 08c6 1A68     		ldr	r2, [r3]
+ 1873 08c8 511C     		adds	r1, r2, #1
+ 1874 08ca 1F4B     		ldr	r3, .L81
+ 1875 08cc 1960     		str	r1, [r3]
+ 1876 08ce 1300     		movs	r3, r2
+ 1877 08d0 DB00     		lsls	r3, r3, #3
+ 1878 08d2 9B18     		adds	r3, r3, r2
+ 1879 08d4 9B00     		lsls	r3, r3, #2
+ 1880 08d6 1D4A     		ldr	r2, .L81+4
+ 1881 08d8 9B18     		adds	r3, r3, r2
+ 1882 08da 7B63     		str	r3, [r7, #52]
+ 458:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	Entity zeroed = {};
+ 1883              		.loc 1 458 0
+ 1884 08dc 1023     		movs	r3, #16
+ 1885 08de FB18     		adds	r3, r7, r3
+ 1886 08e0 1800     		movs	r0, r3
+ 1887 08e2 2423     		movs	r3, #36
+ 1888 08e4 1A00     		movs	r2, r3
+ 1889 08e6 0021     		movs	r1, #0
+ 1890 08e8 FFF7FEFF 		bl	memset
+ 459:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     *ret = zeroed;
+ 1891              		.loc 1 459 0
+ 1892 08ec 7B6B     		ldr	r3, [r7, #52]
+ 1893 08ee 1022     		movs	r2, #16
+ 1894 08f0 BA18     		adds	r2, r7, r2
+ 1895 08f2 13CA     		ldmia	r2!, {r0, r1, r4}
+ 1896 08f4 13C3     		stmia	r3!, {r0, r1, r4}
+ 1897 08f6 13CA     		ldmia	r2!, {r0, r1, r4}
+ 1898 08f8 13C3     		stmia	r3!, {r0, r1, r4}
+ 1899 08fa 13CA     		ldmia	r2!, {r0, r1, r4}
+ 1900 08fc 13C3     		stmia	r3!, {r0, r1, r4}
+ 460:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	ret->sprite = sprite;
+ 1901              		.loc 1 460 0
+ 1902 08fe 7B6B     		ldr	r3, [r7, #52]
+ 1903 0900 FA68     		ldr	r2, [r7, #12]
+ 1904 0902 1A60     		str	r2, [r3]
+ 461:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	ret->id = id_counter++;
+ 1905              		.loc 1 461 0
+ 1906 0904 124B     		ldr	r3, .L81+8
+ 1907 0906 1A68     		ldr	r2, [r3]
+ 1908 0908 511C     		adds	r1, r2, #1
+ 1909 090a 114B     		ldr	r3, .L81+8
+ 1910 090c 1960     		str	r1, [r3]
+ 1911 090e 7B6B     		ldr	r3, [r7, #52]
+ 1912 0910 5A60     		str	r2, [r3, #4]
+ 462:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     ret->pos = pos;
+ 1913              		.loc 1 462 0
+ 1914 0912 7B6B     		ldr	r3, [r7, #52]
+ 1915 0914 3A00     		movs	r2, r7
+ 1916 0916 0833     		adds	r3, r3, #8
+ 1917 0918 03CA     		ldmia	r2!, {r0, r1}
+ 1918 091a 03C3     		stmia	r3!, {r0, r1}
+ 463:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     ret->velocity = velocity;
+ 1919              		.loc 1 463 0
+ 1920 091c 7B6B     		ldr	r3, [r7, #52]
+ 1921 091e 4022     		movs	r2, #64
+ 1922 0920 0821     		movs	r1, #8
+ 1923 0922 8C46     		mov	ip, r1
+ 1924 0924 BC44     		add	ip, ip, r7
+ 1925 0926 6244     		add	r2, r2, ip
+ 1926 0928 1033     		adds	r3, r3, #16
+ 1927 092a 03CA     		ldmia	r2!, {r0, r1}
+ 1928 092c 03C3     		stmia	r3!, {r0, r1}
+ 464:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     ret->type = type;
+ 1929              		.loc 1 464 0
+ 1930 092e 7B6B     		ldr	r3, [r7, #52]
+ 1931 0930 0B22     		movs	r2, #11
+ 1932 0932 BA18     		adds	r2, r7, r2
+ 1933 0934 2021     		movs	r1, #32
+ 1934 0936 1278     		ldrb	r2, [r2]
+ 1935 0938 5A54     		strb	r2, [r3, r1]
+ 465:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	return ret->id;
+ 1936              		.loc 1 465 0
+ 1937 093a 7B6B     		ldr	r3, [r7, #52]
+ 1938 093c 5B68     		ldr	r3, [r3, #4]
+ 466:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** }
+ 1939              		.loc 1 466 0
+ 1940 093e 1800     		movs	r0, r3
+ 1941 0940 BD46     		mov	sp, r7
+ 1942 0942 0FB0     		add	sp, sp, #60
+ 1943              		@ sp needed
+ 1944 0944 90BD     		pop	{r4, r7, pc}
+ 1945              	.L82:
+ 1946 0946 C046     		.align	2
+ 1947              	.L81:
+ 1948 0948 C0560000 		.word	num_entities
+ 1949 094c C0440000 		.word	entities
+ 1950 0950 C8560000 		.word	id_counter.4410
+ 1951              		.cfi_endproc
+ 1952              	.LFE22:
+ 1954              		.align	2
+ 1955              		.global	blit_sprite
+ 1956              		.code	16
+ 1957              		.thumb_func
+ 1959              	blit_sprite:
+ 1960              	.LFB23:
+ 467:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
+ 468:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
+ 469:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** void blit_sprite(Sprite *sprite, int x, int y, int frame)
+ 470:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {
+ 1961              		.loc 1 470 0
+ 1962              		.cfi_startproc
+ 1963 0954 80B5     		push	{r7, lr}
+ 1964              		.cfi_def_cfa_offset 8
+ 1965              		.cfi_offset 7, -8
+ 1966              		.cfi_offset 14, -4
+ 1967 0956 88B0     		sub	sp, sp, #32
+ 1968              		.cfi_def_cfa_offset 40
+ 1969 0958 00AF     		add	r7, sp, #0
+ 1970              		.cfi_def_cfa_register 7
+ 1971 095a F860     		str	r0, [r7, #12]
+ 1972 095c B960     		str	r1, [r7, #8]
+ 1973 095e 7A60     		str	r2, [r7, #4]
+ 1974 0960 3B60     		str	r3, [r7]
+ 1975              	.LBB12:
+ 471:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	for (int x_ = 0; x_ < sprite->w; x_++)
+ 1976              		.loc 1 471 0
+ 1977 0962 0023     		movs	r3, #0
+ 1978 0964 FB61     		str	r3, [r7, #28]
+ 1979 0966 2AE0     		b	.L84
+ 1980              	.L88:
+ 1981              	.LBB13:
+ 472:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{
+ 473:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		for (int y_ = 0; y_ < sprite->h; y_++)
+ 1982              		.loc 1 473 0
+ 1983 0968 0023     		movs	r3, #0
+ 1984 096a BB61     		str	r3, [r7, #24]
+ 1985 096c 1EE0     		b	.L85
+ 1986              	.L87:
+ 1987              	.LBB14:
+ 474:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		{
+ 475:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 			bool set = sprite->sprite[frame][x_][y_];
+ 1988              		.loc 1 475 0
+ 1989 096e 1723     		movs	r3, #23
+ 1990 0970 FB18     		adds	r3, r7, r3
+ 1991 0972 F968     		ldr	r1, [r7, #12]
+ 1992 0974 3A68     		ldr	r2, [r7]
+ 1993 0976 1001     		lsls	r0, r2, #4
+ 1994 0978 FA69     		ldr	r2, [r7, #28]
+ 1995 097a 8218     		adds	r2, r0, r2
+ 1996 097c 1201     		lsls	r2, r2, #4
+ 1997 097e 8918     		adds	r1, r1, r2
+ 1998 0980 BA69     		ldr	r2, [r7, #24]
+ 1999 0982 8A18     		adds	r2, r1, r2
+ 2000 0984 1278     		ldrb	r2, [r2]
+ 2001 0986 1A70     		strb	r2, [r3]
+ 476:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 			if (set)
+ 2002              		.loc 1 476 0
+ 2003 0988 1723     		movs	r3, #23
+ 2004 098a FB18     		adds	r3, r7, r3
+ 2005 098c 1B78     		ldrb	r3, [r3]
+ 2006 098e 002B     		cmp	r3, #0
+ 2007 0990 09D0     		beq	.L86
+ 477:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 				write_px(x + x_, y + y_, true);
+ 2008              		.loc 1 477 0
+ 2009 0992 BA68     		ldr	r2, [r7, #8]
+ 2010 0994 FB69     		ldr	r3, [r7, #28]
+ 2011 0996 D018     		adds	r0, r2, r3
+ 2012 0998 7A68     		ldr	r2, [r7, #4]
+ 2013 099a BB69     		ldr	r3, [r7, #24]
+ 2014 099c D318     		adds	r3, r2, r3
+ 2015 099e 0122     		movs	r2, #1
+ 2016 09a0 1900     		movs	r1, r3
+ 2017 09a2 FFF7FEFF 		bl	write_px
+ 2018              	.L86:
+ 2019              	.LBE14:
+ 473:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		{
+ 2020              		.loc 1 473 0 discriminator 2
+ 2021 09a6 BB69     		ldr	r3, [r7, #24]
+ 2022 09a8 0133     		adds	r3, r3, #1
+ 2023 09aa BB61     		str	r3, [r7, #24]
+ 2024              	.L85:
+ 473:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		{
+ 2025              		.loc 1 473 0 is_stmt 0 discriminator 1
+ 2026 09ac FB68     		ldr	r3, [r7, #12]
+ 2027 09ae 094A     		ldr	r2, .L89
+ 2028 09b0 9A58     		ldr	r2, [r3, r2]
+ 2029 09b2 BB69     		ldr	r3, [r7, #24]
+ 2030 09b4 9A42     		cmp	r2, r3
+ 2031 09b6 DADC     		bgt	.L87
+ 2032              	.LBE13:
+ 471:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{
+ 2033              		.loc 1 471 0 is_stmt 1 discriminator 2
+ 2034 09b8 FB69     		ldr	r3, [r7, #28]
+ 2035 09ba 0133     		adds	r3, r3, #1
+ 2036 09bc FB61     		str	r3, [r7, #28]
+ 2037              	.L84:
+ 471:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{
+ 2038              		.loc 1 471 0 is_stmt 0 discriminator 1
+ 2039 09be FA68     		ldr	r2, [r7, #12]
+ 2040 09c0 8123     		movs	r3, #129
+ 2041 09c2 DB00     		lsls	r3, r3, #3
+ 2042 09c4 D258     		ldr	r2, [r2, r3]
+ 2043 09c6 FB69     		ldr	r3, [r7, #28]
+ 2044 09c8 9A42     		cmp	r2, r3
+ 2045 09ca CDDC     		bgt	.L88
+ 2046              	.LBE12:
+ 478:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		}
+ 479:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	}
+ 480:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** }
+ 2047              		.loc 1 480 0 is_stmt 1
+ 2048 09cc C046     		nop
+ 2049 09ce BD46     		mov	sp, r7
+ 2050 09d0 08B0     		add	sp, sp, #32
+ 2051              		@ sp needed
+ 2052 09d2 80BD     		pop	{r7, pc}
+ 2053              	.L90:
+ 2054              		.align	2
+ 2055              	.L89:
+ 2056 09d4 04040000 		.word	1028
+ 2057              		.cfi_endproc
+ 2058              	.LFE23:
+ 2060              		.align	2
+ 2061              		.global	clear_sprite
+ 2062              		.code	16
+ 2063              		.thumb_func
+ 2065              	clear_sprite:
+ 2066              	.LFB24:
+ 481:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
+ 482:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** void clear_sprite(Sprite *sprite, int x, int y, int frame)
+ 483:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {
+ 2067              		.loc 1 483 0
+ 2068              		.cfi_startproc
+ 2069 09d8 80B5     		push	{r7, lr}
+ 2070              		.cfi_def_cfa_offset 8
+ 2071              		.cfi_offset 7, -8
+ 2072              		.cfi_offset 14, -4
+ 2073 09da 88B0     		sub	sp, sp, #32
+ 2074              		.cfi_def_cfa_offset 40
+ 2075 09dc 00AF     		add	r7, sp, #0
+ 2076              		.cfi_def_cfa_register 7
+ 2077 09de F860     		str	r0, [r7, #12]
+ 2078 09e0 B960     		str	r1, [r7, #8]
+ 2079 09e2 7A60     		str	r2, [r7, #4]
+ 2080 09e4 3B60     		str	r3, [r7]
+ 2081              	.LBB15:
+ 484:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	for (int x_ = 0; x_ < sprite->w; x_++)
+ 2082              		.loc 1 484 0
+ 2083 09e6 0023     		movs	r3, #0
+ 2084 09e8 FB61     		str	r3, [r7, #28]
+ 2085 09ea 2AE0     		b	.L92
+ 2086              	.L96:
+ 2087              	.LBB16:
+ 485:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{
+ 486:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		for (int y_ = 0; y_ < sprite->h; y_++)
+ 2088              		.loc 1 486 0
+ 2089 09ec 0023     		movs	r3, #0
+ 2090 09ee BB61     		str	r3, [r7, #24]
+ 2091 09f0 1EE0     		b	.L93
+ 2092              	.L95:
+ 2093              	.LBB17:
+ 487:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		{
+ 488:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 			bool set = sprite->sprite[frame][x_][y_];
+ 2094              		.loc 1 488 0
+ 2095 09f2 1723     		movs	r3, #23
+ 2096 09f4 FB18     		adds	r3, r7, r3
+ 2097 09f6 F968     		ldr	r1, [r7, #12]
+ 2098 09f8 3A68     		ldr	r2, [r7]
+ 2099 09fa 1001     		lsls	r0, r2, #4
+ 2100 09fc FA69     		ldr	r2, [r7, #28]
+ 2101 09fe 8218     		adds	r2, r0, r2
+ 2102 0a00 1201     		lsls	r2, r2, #4
+ 2103 0a02 8918     		adds	r1, r1, r2
+ 2104 0a04 BA69     		ldr	r2, [r7, #24]
+ 2105 0a06 8A18     		adds	r2, r1, r2
+ 2106 0a08 1278     		ldrb	r2, [r2]
+ 2107 0a0a 1A70     		strb	r2, [r3]
+ 489:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 			if (set)
+ 2108              		.loc 1 489 0
+ 2109 0a0c 1723     		movs	r3, #23
+ 2110 0a0e FB18     		adds	r3, r7, r3
+ 2111 0a10 1B78     		ldrb	r3, [r3]
+ 2112 0a12 002B     		cmp	r3, #0
+ 2113 0a14 09D0     		beq	.L94
+ 490:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 				write_px(x + x_, y + y_, false);
+ 2114              		.loc 1 490 0
+ 2115 0a16 BA68     		ldr	r2, [r7, #8]
+ 2116 0a18 FB69     		ldr	r3, [r7, #28]
+ 2117 0a1a D018     		adds	r0, r2, r3
+ 2118 0a1c 7A68     		ldr	r2, [r7, #4]
+ 2119 0a1e BB69     		ldr	r3, [r7, #24]
+ 2120 0a20 D318     		adds	r3, r2, r3
+ 2121 0a22 0022     		movs	r2, #0
+ 2122 0a24 1900     		movs	r1, r3
+ 2123 0a26 FFF7FEFF 		bl	write_px
+ 2124              	.L94:
+ 2125              	.LBE17:
+ 486:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		{
+ 2126              		.loc 1 486 0 discriminator 2
+ 2127 0a2a BB69     		ldr	r3, [r7, #24]
+ 2128 0a2c 0133     		adds	r3, r3, #1
+ 2129 0a2e BB61     		str	r3, [r7, #24]
+ 2130              	.L93:
+ 486:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		{
+ 2131              		.loc 1 486 0 is_stmt 0 discriminator 1
+ 2132 0a30 FB68     		ldr	r3, [r7, #12]
+ 2133 0a32 094A     		ldr	r2, .L97
+ 2134 0a34 9A58     		ldr	r2, [r3, r2]
+ 2135 0a36 BB69     		ldr	r3, [r7, #24]
+ 2136 0a38 9A42     		cmp	r2, r3
+ 2137 0a3a DADC     		bgt	.L95
+ 2138              	.LBE16:
+ 484:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{
+ 2139              		.loc 1 484 0 is_stmt 1 discriminator 2
+ 2140 0a3c FB69     		ldr	r3, [r7, #28]
+ 2141 0a3e 0133     		adds	r3, r3, #1
+ 2142 0a40 FB61     		str	r3, [r7, #28]
+ 2143              	.L92:
+ 484:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{
+ 2144              		.loc 1 484 0 is_stmt 0 discriminator 1
+ 2145 0a42 FA68     		ldr	r2, [r7, #12]
+ 2146 0a44 8123     		movs	r3, #129
+ 2147 0a46 DB00     		lsls	r3, r3, #3
+ 2148 0a48 D258     		ldr	r2, [r2, r3]
+ 2149 0a4a FB69     		ldr	r3, [r7, #28]
+ 2150 0a4c 9A42     		cmp	r2, r3
+ 2151 0a4e CDDC     		bgt	.L96
+ 2152              	.LBE15:
+ 491:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		}
+ 492:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	}
+ 493:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** }
+ 2153              		.loc 1 493 0 is_stmt 1
+ 2154 0a50 C046     		nop
+ 2155 0a52 BD46     		mov	sp, r7
+ 2156 0a54 08B0     		add	sp, sp, #32
+ 2157              		@ sp needed
+ 2158 0a56 80BD     		pop	{r7, pc}
+ 2159              	.L98:
+ 2160              		.align	2
+ 2161              	.L97:
+ 2162 0a58 04040000 		.word	1028
+ 2163              		.cfi_endproc
+ 2164              	.LFE24:
+ 2166              		.align	2
+ 2167              		.global	make_sprite
+ 2168              		.code	16
+ 2169              		.thumb_func
+ 2171              	make_sprite:
+ 2172              	.LFB25:
+ 494:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
+ 495:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** Sprite *make_sprite(char *sprite, int w, int h, int num_frames)
+ 496:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {
+ 2173              		.loc 1 496 0
+ 2174              		.cfi_startproc
+ 2175 0a5c 90B5     		push	{r4, r7, lr}
+ 2176              		.cfi_def_cfa_offset 12
+ 2177              		.cfi_offset 4, -12
+ 2178              		.cfi_offset 7, -8
+ 2179              		.cfi_offset 14, -4
+ 2180 0a5e 89B0     		sub	sp, sp, #36
+ 2181              		.cfi_def_cfa_offset 48
+ 2182 0a60 00AF     		add	r7, sp, #0
+ 2183              		.cfi_def_cfa_register 7
+ 2184 0a62 F860     		str	r0, [r7, #12]
+ 2185 0a64 B960     		str	r1, [r7, #8]
+ 2186 0a66 7A60     		str	r2, [r7, #4]
+ 2187 0a68 3B60     		str	r3, [r7]
+ 497:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	Sprite *ret = &sprites[num_sprites++];
+ 2188              		.loc 1 497 0
+ 2189 0a6a 284B     		ldr	r3, .L107
+ 2190 0a6c 1B68     		ldr	r3, [r3]
+ 2191 0a6e 591C     		adds	r1, r3, #1
+ 2192 0a70 264A     		ldr	r2, .L107
+ 2193 0a72 1160     		str	r1, [r2]
+ 2194 0a74 264A     		ldr	r2, .L107+4
+ 2195 0a76 5A43     		muls	r2, r3
+ 2196 0a78 264B     		ldr	r3, .L107+8
+ 2197 0a7a D318     		adds	r3, r2, r3
+ 2198 0a7c 3B61     		str	r3, [r7, #16]
+ 498:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     ret->num_frames = num_frames;
+ 2199              		.loc 1 498 0
+ 2200 0a7e 3A69     		ldr	r2, [r7, #16]
+ 2201 0a80 8023     		movs	r3, #128
+ 2202 0a82 DB00     		lsls	r3, r3, #3
+ 2203 0a84 3968     		ldr	r1, [r7]
+ 2204 0a86 D150     		str	r1, [r2, r3]
+ 499:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     ret->w = w;
+ 2205              		.loc 1 499 0
+ 2206 0a88 3A69     		ldr	r2, [r7, #16]
+ 2207 0a8a 8123     		movs	r3, #129
+ 2208 0a8c DB00     		lsls	r3, r3, #3
+ 2209 0a8e B968     		ldr	r1, [r7, #8]
+ 2210 0a90 D150     		str	r1, [r2, r3]
+ 500:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     ret->h = h;
+ 2211              		.loc 1 500 0
+ 2212 0a92 3B69     		ldr	r3, [r7, #16]
+ 2213 0a94 2049     		ldr	r1, .L107+12
+ 2214 0a96 7A68     		ldr	r2, [r7, #4]
+ 2215 0a98 5A50     		str	r2, [r3, r1]
+ 2216              	.LBB18:
+ 501:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	for (int frame = 0; frame < num_frames; frame++)
+ 2217              		.loc 1 501 0
+ 2218 0a9a 0023     		movs	r3, #0
+ 2219 0a9c FB61     		str	r3, [r7, #28]
+ 2220 0a9e 2CE0     		b	.L100
+ 2221              	.L105:
+ 2222              	.LBB19:
+ 502:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     {
+ 503:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****         for (int y = 0; y < h; y++)
+ 2223              		.loc 1 503 0
+ 2224 0aa0 0023     		movs	r3, #0
+ 2225 0aa2 BB61     		str	r3, [r7, #24]
+ 2226 0aa4 22E0     		b	.L101
+ 2227              	.L104:
+ 2228              	.LBB20:
+ 504:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****         {
+ 505:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****             for (int x = 0; x < w; x++)
+ 2229              		.loc 1 505 0
+ 2230 0aa6 0023     		movs	r3, #0
+ 2231 0aa8 7B61     		str	r3, [r7, #20]
+ 2232 0aaa 18E0     		b	.L102
+ 2233              	.L103:
+ 506:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****             {
+ 507:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		
+ 508:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 				ret->sprite[frame][x][h-y-1] = (*(sprite++)) == '#';
+ 2234              		.loc 1 508 0 discriminator 3
+ 2235 0aac 7A68     		ldr	r2, [r7, #4]
+ 2236 0aae BB69     		ldr	r3, [r7, #24]
+ 2237 0ab0 D31A     		subs	r3, r2, r3
+ 2238 0ab2 5A1E     		subs	r2, r3, #1
+ 2239 0ab4 FB68     		ldr	r3, [r7, #12]
+ 2240 0ab6 591C     		adds	r1, r3, #1
+ 2241 0ab8 F960     		str	r1, [r7, #12]
+ 2242 0aba 1B78     		ldrb	r3, [r3]
+ 2243 0abc 233B     		subs	r3, r3, #35
+ 2244 0abe 5942     		rsbs	r1, r3, #0
+ 2245 0ac0 4B41     		adcs	r3, r3, r1
+ 2246 0ac2 DBB2     		uxtb	r3, r3
+ 2247 0ac4 1C00     		movs	r4, r3
+ 2248 0ac6 3969     		ldr	r1, [r7, #16]
+ 2249 0ac8 FB69     		ldr	r3, [r7, #28]
+ 2250 0aca 1801     		lsls	r0, r3, #4
+ 2251 0acc 7B69     		ldr	r3, [r7, #20]
+ 2252 0ace C318     		adds	r3, r0, r3
+ 2253 0ad0 1B01     		lsls	r3, r3, #4
+ 2254 0ad2 CB18     		adds	r3, r1, r3
+ 2255 0ad4 211C     		adds	r1, r4, #0
+ 2256 0ad6 9954     		strb	r1, [r3, r2]
+ 505:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****             {
+ 2257              		.loc 1 505 0 discriminator 3
+ 2258 0ad8 7B69     		ldr	r3, [r7, #20]
+ 2259 0ada 0133     		adds	r3, r3, #1
+ 2260 0adc 7B61     		str	r3, [r7, #20]
+ 2261              	.L102:
+ 505:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****             {
+ 2262              		.loc 1 505 0 is_stmt 0 discriminator 1
+ 2263 0ade 7A69     		ldr	r2, [r7, #20]
+ 2264 0ae0 BB68     		ldr	r3, [r7, #8]
+ 2265 0ae2 9A42     		cmp	r2, r3
+ 2266 0ae4 E2DB     		blt	.L103
+ 2267              	.LBE20:
+ 503:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****         {
+ 2268              		.loc 1 503 0 is_stmt 1 discriminator 2
+ 2269 0ae6 BB69     		ldr	r3, [r7, #24]
+ 2270 0ae8 0133     		adds	r3, r3, #1
+ 2271 0aea BB61     		str	r3, [r7, #24]
+ 2272              	.L101:
+ 503:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****         {
+ 2273              		.loc 1 503 0 is_stmt 0 discriminator 1
+ 2274 0aec BA69     		ldr	r2, [r7, #24]
+ 2275 0aee 7B68     		ldr	r3, [r7, #4]
+ 2276 0af0 9A42     		cmp	r2, r3
+ 2277 0af2 D8DB     		blt	.L104
+ 2278              	.LBE19:
+ 501:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     {
+ 2279              		.loc 1 501 0 is_stmt 1 discriminator 2
+ 2280 0af4 FB69     		ldr	r3, [r7, #28]
+ 2281 0af6 0133     		adds	r3, r3, #1
+ 2282 0af8 FB61     		str	r3, [r7, #28]
+ 2283              	.L100:
+ 501:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     {
+ 2284              		.loc 1 501 0 is_stmt 0 discriminator 1
+ 2285 0afa FA69     		ldr	r2, [r7, #28]
+ 2286 0afc 3B68     		ldr	r3, [r7]
+ 2287 0afe 9A42     		cmp	r2, r3
+ 2288 0b00 CEDB     		blt	.L105
+ 2289              	.LBE18:
+ 509:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 			}
+ 510:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		}
+ 511:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	}
+ 512:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
+ 513:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	return ret;
+ 2290              		.loc 1 513 0 is_stmt 1
+ 2291 0b02 3B69     		ldr	r3, [r7, #16]
+ 514:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** }
+ 2292              		.loc 1 514 0
+ 2293 0b04 1800     		movs	r0, r3
+ 2294 0b06 BD46     		mov	sp, r7
+ 2295 0b08 09B0     		add	sp, sp, #36
+ 2296              		@ sp needed
+ 2297 0b0a 90BD     		pop	{r4, r7, pc}
+ 2298              	.L108:
+ 2299              		.align	2
+ 2300              	.L107:
+ 2301 0b0c C4560000 		.word	num_sprites
+ 2302 0b10 0C040000 		.word	1036
+ 2303 0b14 00040000 		.word	sprites
+ 2304 0b18 04040000 		.word	1028
+ 2305              		.cfi_endproc
+ 2306              	.LFE25:
+ 2308              		.align	2
+ 2309              		.global	render
+ 2310              		.code	16
+ 2311              		.thumb_func
+ 2313              	render:
+ 2314              	.LFB26:
+ 515:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
+ 516:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** void render()
+ 517:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {
+ 2315              		.loc 1 517 0
+ 2316              		.cfi_startproc
+ 2317 0b1c B0B5     		push	{r4, r5, r7, lr}
+ 2318              		.cfi_def_cfa_offset 16
+ 2319              		.cfi_offset 4, -16
+ 2320              		.cfi_offset 5, -12
+ 2321              		.cfi_offset 7, -8
+ 2322              		.cfi_offset 14, -4
+ 2323 0b1e 82B0     		sub	sp, sp, #8
+ 2324              		.cfi_def_cfa_offset 24
+ 2325 0b20 00AF     		add	r7, sp, #0
+ 2326              		.cfi_def_cfa_register 7
+ 2327              	.LBB21:
+ 518:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	for (int i = 0; i < num_entities; i++)
+ 2328              		.loc 1 518 0
+ 2329 0b22 0023     		movs	r3, #0
+ 2330 0b24 7B60     		str	r3, [r7, #4]
+ 2331 0b26 3DE0     		b	.L110
+ 2332              	.L113:
+ 519:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{
+ 520:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		//if(force || entities[i].velocity.x != 0 || entities[i].velocity.y != 0)
+ 521:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		blit_sprite(entities[i].sprite, 
+ 2333              		.loc 1 521 0 discriminator 3
+ 2334 0b28 4749     		ldr	r1, .L118
+ 2335 0b2a 7A68     		ldr	r2, [r7, #4]
+ 2336 0b2c 1300     		movs	r3, r2
+ 2337 0b2e DB00     		lsls	r3, r3, #3
+ 2338 0b30 9B18     		adds	r3, r3, r2
+ 2339 0b32 9B00     		lsls	r3, r3, #2
+ 2340 0b34 5C58     		ldr	r4, [r3, r1]
+ 522:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****             entities[i].pos.x-entities[i].sprite->w/2,
+ 2341              		.loc 1 522 0 discriminator 3
+ 2342 0b36 4449     		ldr	r1, .L118
+ 2343 0b38 7A68     		ldr	r2, [r7, #4]
+ 2344 0b3a 1300     		movs	r3, r2
+ 2345 0b3c DB00     		lsls	r3, r3, #3
+ 2346 0b3e 9B18     		adds	r3, r3, r2
+ 2347 0b40 9B00     		lsls	r3, r3, #2
+ 2348 0b42 CB18     		adds	r3, r1, r3
+ 2349 0b44 0833     		adds	r3, r3, #8
+ 2350 0b46 1968     		ldr	r1, [r3]
+ 2351 0b48 3F48     		ldr	r0, .L118
+ 2352 0b4a 7A68     		ldr	r2, [r7, #4]
+ 2353 0b4c 1300     		movs	r3, r2
+ 2354 0b4e DB00     		lsls	r3, r3, #3
+ 2355 0b50 9B18     		adds	r3, r3, r2
+ 2356 0b52 9B00     		lsls	r3, r3, #2
+ 2357 0b54 1A58     		ldr	r2, [r3, r0]
+ 2358 0b56 8123     		movs	r3, #129
+ 2359 0b58 DB00     		lsls	r3, r3, #3
+ 2360 0b5a D358     		ldr	r3, [r2, r3]
+ 2361 0b5c 002B     		cmp	r3, #0
+ 2362 0b5e 00DA     		bge	.L111
+ 2363 0b60 0133     		adds	r3, r3, #1
+ 2364              	.L111:
+ 2365 0b62 5B10     		asrs	r3, r3, #1
+ 521:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****             entities[i].pos.x-entities[i].sprite->w/2,
+ 2366              		.loc 1 521 0 discriminator 3
+ 2367 0b64 CD1A     		subs	r5, r1, r3
+ 523:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****             entities[i].pos.y-entities[i].sprite->h/2, 0);
+ 2368              		.loc 1 523 0 discriminator 3
+ 2369 0b66 3849     		ldr	r1, .L118
+ 2370 0b68 7A68     		ldr	r2, [r7, #4]
+ 2371 0b6a 1300     		movs	r3, r2
+ 2372 0b6c DB00     		lsls	r3, r3, #3
+ 2373 0b6e 9B18     		adds	r3, r3, r2
+ 2374 0b70 9B00     		lsls	r3, r3, #2
+ 2375 0b72 CB18     		adds	r3, r1, r3
+ 2376 0b74 0C33     		adds	r3, r3, #12
+ 2377 0b76 1968     		ldr	r1, [r3]
+ 2378 0b78 3348     		ldr	r0, .L118
+ 2379 0b7a 7A68     		ldr	r2, [r7, #4]
+ 2380 0b7c 1300     		movs	r3, r2
+ 2381 0b7e DB00     		lsls	r3, r3, #3
+ 2382 0b80 9B18     		adds	r3, r3, r2
+ 2383 0b82 9B00     		lsls	r3, r3, #2
+ 2384 0b84 1B58     		ldr	r3, [r3, r0]
+ 2385 0b86 314A     		ldr	r2, .L118+4
+ 2386 0b88 9B58     		ldr	r3, [r3, r2]
+ 2387 0b8a 002B     		cmp	r3, #0
+ 2388 0b8c 00DA     		bge	.L112
+ 2389 0b8e 0133     		adds	r3, r3, #1
+ 2390              	.L112:
+ 2391 0b90 5B10     		asrs	r3, r3, #1
+ 521:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****             entities[i].pos.x-entities[i].sprite->w/2,
+ 2392              		.loc 1 521 0 discriminator 3
+ 2393 0b92 CA1A     		subs	r2, r1, r3
+ 2394 0b94 0023     		movs	r3, #0
+ 2395 0b96 2900     		movs	r1, r5
+ 2396 0b98 2000     		movs	r0, r4
+ 2397 0b9a FFF7FEFF 		bl	blit_sprite
+ 518:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{
+ 2398              		.loc 1 518 0 discriminator 3
+ 2399 0b9e 7B68     		ldr	r3, [r7, #4]
+ 2400 0ba0 0133     		adds	r3, r3, #1
+ 2401 0ba2 7B60     		str	r3, [r7, #4]
+ 2402              	.L110:
+ 518:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{
+ 2403              		.loc 1 518 0 is_stmt 0 discriminator 1
+ 2404 0ba4 2A4B     		ldr	r3, .L118+8
+ 2405 0ba6 1B68     		ldr	r3, [r3]
+ 2406 0ba8 7A68     		ldr	r2, [r7, #4]
+ 2407 0baa 9A42     		cmp	r2, r3
+ 2408 0bac BCDB     		blt	.L113
+ 2409              	.LBE21:
+ 524:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	}
+ 525:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	flush_screen();
+ 2410              		.loc 1 525 0 is_stmt 1
+ 2411 0bae FFF7FEFF 		bl	flush_screen
+ 2412              	.LBB22:
+ 526:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	for (int i = 0; i < num_entities; i++)
+ 2413              		.loc 1 526 0
+ 2414 0bb2 0023     		movs	r3, #0
+ 2415 0bb4 3B60     		str	r3, [r7]
+ 2416 0bb6 3DE0     		b	.L114
+ 2417              	.L117:
+ 527:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{
+ 528:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		//if(force || entities[i].velocity.x != 0 || entities[i].velocity.y != 0)
+ 529:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		clear_sprite(entities[i].sprite, 
+ 2418              		.loc 1 529 0 discriminator 3
+ 2419 0bb8 2349     		ldr	r1, .L118
+ 2420 0bba 3A68     		ldr	r2, [r7]
+ 2421 0bbc 1300     		movs	r3, r2
+ 2422 0bbe DB00     		lsls	r3, r3, #3
+ 2423 0bc0 9B18     		adds	r3, r3, r2
+ 2424 0bc2 9B00     		lsls	r3, r3, #2
+ 2425 0bc4 5C58     		ldr	r4, [r3, r1]
+ 530:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****             entities[i].pos.x-entities[i].sprite->w/2, 
+ 2426              		.loc 1 530 0 discriminator 3
+ 2427 0bc6 2049     		ldr	r1, .L118
+ 2428 0bc8 3A68     		ldr	r2, [r7]
+ 2429 0bca 1300     		movs	r3, r2
+ 2430 0bcc DB00     		lsls	r3, r3, #3
+ 2431 0bce 9B18     		adds	r3, r3, r2
+ 2432 0bd0 9B00     		lsls	r3, r3, #2
+ 2433 0bd2 CB18     		adds	r3, r1, r3
+ 2434 0bd4 0833     		adds	r3, r3, #8
+ 2435 0bd6 1968     		ldr	r1, [r3]
+ 2436 0bd8 1B48     		ldr	r0, .L118
+ 2437 0bda 3A68     		ldr	r2, [r7]
+ 2438 0bdc 1300     		movs	r3, r2
+ 2439 0bde DB00     		lsls	r3, r3, #3
+ 2440 0be0 9B18     		adds	r3, r3, r2
+ 2441 0be2 9B00     		lsls	r3, r3, #2
+ 2442 0be4 1A58     		ldr	r2, [r3, r0]
+ 2443 0be6 8123     		movs	r3, #129
+ 2444 0be8 DB00     		lsls	r3, r3, #3
+ 2445 0bea D358     		ldr	r3, [r2, r3]
+ 2446 0bec 002B     		cmp	r3, #0
+ 2447 0bee 00DA     		bge	.L115
+ 2448 0bf0 0133     		adds	r3, r3, #1
+ 2449              	.L115:
+ 2450 0bf2 5B10     		asrs	r3, r3, #1
+ 529:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****             entities[i].pos.x-entities[i].sprite->w/2, 
+ 2451              		.loc 1 529 0 discriminator 3
+ 2452 0bf4 CD1A     		subs	r5, r1, r3
+ 531:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****             entities[i].pos.y-entities[i].sprite->h/2, 0);
+ 2453              		.loc 1 531 0 discriminator 3
+ 2454 0bf6 1449     		ldr	r1, .L118
+ 2455 0bf8 3A68     		ldr	r2, [r7]
+ 2456 0bfa 1300     		movs	r3, r2
+ 2457 0bfc DB00     		lsls	r3, r3, #3
+ 2458 0bfe 9B18     		adds	r3, r3, r2
+ 2459 0c00 9B00     		lsls	r3, r3, #2
+ 2460 0c02 CB18     		adds	r3, r1, r3
+ 2461 0c04 0C33     		adds	r3, r3, #12
+ 2462 0c06 1968     		ldr	r1, [r3]
+ 2463 0c08 0F48     		ldr	r0, .L118
+ 2464 0c0a 3A68     		ldr	r2, [r7]
+ 2465 0c0c 1300     		movs	r3, r2
+ 2466 0c0e DB00     		lsls	r3, r3, #3
+ 2467 0c10 9B18     		adds	r3, r3, r2
+ 2468 0c12 9B00     		lsls	r3, r3, #2
+ 2469 0c14 1B58     		ldr	r3, [r3, r0]
+ 2470 0c16 0D4A     		ldr	r2, .L118+4
+ 2471 0c18 9B58     		ldr	r3, [r3, r2]
+ 2472 0c1a 002B     		cmp	r3, #0
+ 2473 0c1c 00DA     		bge	.L116
+ 2474 0c1e 0133     		adds	r3, r3, #1
+ 2475              	.L116:
+ 2476 0c20 5B10     		asrs	r3, r3, #1
+ 529:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****             entities[i].pos.x-entities[i].sprite->w/2, 
+ 2477              		.loc 1 529 0 discriminator 3
+ 2478 0c22 CA1A     		subs	r2, r1, r3
+ 2479 0c24 0023     		movs	r3, #0
+ 2480 0c26 2900     		movs	r1, r5
+ 2481 0c28 2000     		movs	r0, r4
+ 2482 0c2a FFF7FEFF 		bl	clear_sprite
+ 526:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{
+ 2483              		.loc 1 526 0 discriminator 3
+ 2484 0c2e 3B68     		ldr	r3, [r7]
+ 2485 0c30 0133     		adds	r3, r3, #1
+ 2486 0c32 3B60     		str	r3, [r7]
+ 2487              	.L114:
+ 526:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{
+ 2488              		.loc 1 526 0 is_stmt 0 discriminator 1
+ 2489 0c34 064B     		ldr	r3, .L118+8
+ 2490 0c36 1B68     		ldr	r3, [r3]
+ 2491 0c38 3A68     		ldr	r2, [r7]
+ 2492 0c3a 9A42     		cmp	r2, r3
+ 2493 0c3c BCDB     		blt	.L117
+ 2494              	.LBE22:
+ 532:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	}
+ 533:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** }
+ 2495              		.loc 1 533 0 is_stmt 1
+ 2496 0c3e C046     		nop
+ 2497 0c40 BD46     		mov	sp, r7
+ 2498 0c42 02B0     		add	sp, sp, #8
+ 2499              		@ sp needed
+ 2500 0c44 B0BD     		pop	{r4, r5, r7, pc}
+ 2501              	.L119:
+ 2502 0c46 C046     		.align	2
+ 2503              	.L118:
+ 2504 0c48 C0440000 		.word	entities
+ 2505 0c4c 04040000 		.word	1028
+ 2506 0c50 C0560000 		.word	num_entities
+ 2507              		.cfi_endproc
+ 2508              	.LFE26:
+ 2510              		.align	2
+ 2511              		.global	entity_from_id
+ 2512              		.code	16
+ 2513              		.thumb_func
+ 2515              	entity_from_id:
+ 2516              	.LFB27:
+ 534:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
+ 535:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** //note will change between frames
+ 536:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** Entity *entity_from_id(int id)
  537:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {
- 2814              		.loc 1 537 0
- 2815              		.cfi_startproc
- 2816 0e48 90B5     		push	{r4, r7, lr}
- 2817              		.cfi_def_cfa_offset 12
- 2818              		.cfi_offset 4, -12
- 2819              		.cfi_offset 7, -8
- 2820              		.cfi_offset 14, -4
- 2821 0e4a 89B0     		sub	sp, sp, #36
- 2822              		.cfi_def_cfa_offset 48
- 2823 0e4c 02AF     		add	r7, sp, #8
- 2824              		.cfi_def_cfa 7, 40
- 2825 0e4e 7860     		str	r0, [r7, #4]
- 538:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     int x_min,x_max,y_min,y_max;
- 539:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     get_bounds(entity,&x_min,&x_max,&y_min,&y_max);
- 2826              		.loc 1 539 0
- 2827 0e50 0C23     		movs	r3, #12
- 2828 0e52 FC18     		adds	r4, r7, r3
- 2829 0e54 1023     		movs	r3, #16
- 2830 0e56 FA18     		adds	r2, r7, r3
- 2831 0e58 1423     		movs	r3, #20
- 2832 0e5a F918     		adds	r1, r7, r3
- 2833 0e5c 7868     		ldr	r0, [r7, #4]
- 2834 0e5e 0823     		movs	r3, #8
- 2835 0e60 FB18     		adds	r3, r7, r3
- 2836 0e62 0093     		str	r3, [sp]
- 2837 0e64 2300     		movs	r3, r4
- 2838 0e66 FFF7FEFF 		bl	get_bounds
- 540:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     
- 541:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     if(x_max >= 64  || 
- 2839              		.loc 1 541 0
- 2840 0e6a 3B69     		ldr	r3, [r7, #16]
- 2841 0e6c 3F2B     		cmp	r3, #63
- 2842 0e6e 08DC     		bgt	.L151
- 542:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****        x_min < 0    ||
- 2843              		.loc 1 542 0 discriminator 1
- 2844 0e70 7B69     		ldr	r3, [r7, #20]
- 541:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****        x_min < 0    ||
- 2845              		.loc 1 541 0 discriminator 1
- 2846 0e72 002B     		cmp	r3, #0
- 2847 0e74 05DB     		blt	.L151
- 543:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****        y_max >= 128 || 
- 2848              		.loc 1 543 0
- 2849 0e76 BB68     		ldr	r3, [r7, #8]
- 542:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****        x_min < 0    ||
- 2850              		.loc 1 542 0
- 2851 0e78 7F2B     		cmp	r3, #127
- 2852 0e7a 02DC     		bgt	.L151
- 544:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****        y_min < 0) return true;
- 2853              		.loc 1 544 0
- 2854 0e7c FB68     		ldr	r3, [r7, #12]
- 543:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****        y_max >= 128 || 
- 2855              		.loc 1 543 0
- 2856 0e7e 002B     		cmp	r3, #0
- 2857 0e80 01DA     		bge	.L152
- 2858              	.L151:
- 2859              		.loc 1 544 0
- 2860 0e82 0123     		movs	r3, #1
- 2861 0e84 00E0     		b	.L154
- 2862              	.L152:
- 545:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     
- 546:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     return false;
- 2863              		.loc 1 546 0
- 2864 0e86 0023     		movs	r3, #0
- 2865              	.L154:
- 547:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** }
- 2866              		.loc 1 547 0 discriminator 1
- 2867 0e88 1800     		movs	r0, r3
- 2868 0e8a BD46     		mov	sp, r7
- 2869 0e8c 07B0     		add	sp, sp, #28
- 2870              		@ sp needed
- 2871 0e8e 90BD     		pop	{r4, r7, pc}
- 2872              		.cfi_endproc
- 2873              	.LFE31:
- 2875              		.align	2
- 2876              		.global	update_entity_pos
- 2877              		.code	16
- 2878              		.thumb_func
- 2880              	update_entity_pos:
- 2881              	.LFB32:
- 548:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
- 549:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** void update_entity_pos(Entity *entity)
- 550:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {
- 2882              		.loc 1 550 0
- 2883              		.cfi_startproc
- 2884 0e90 80B5     		push	{r7, lr}
- 2885              		.cfi_def_cfa_offset 8
- 2886              		.cfi_offset 7, -8
- 2887              		.cfi_offset 14, -4
- 2888 0e92 82B0     		sub	sp, sp, #8
- 2889              		.cfi_def_cfa_offset 16
- 2890 0e94 00AF     		add	r7, sp, #0
- 2891              		.cfi_def_cfa_register 7
- 2892 0e96 7860     		str	r0, [r7, #4]
- 551:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	entity->pos.x += entity->velocity.x;
- 2893              		.loc 1 551 0
- 2894 0e98 7B68     		ldr	r3, [r7, #4]
- 2895 0e9a 9A68     		ldr	r2, [r3, #8]
- 2896 0e9c 7B68     		ldr	r3, [r7, #4]
- 2897 0e9e 1B69     		ldr	r3, [r3, #16]
- 2898 0ea0 D218     		adds	r2, r2, r3
- 2899 0ea2 7B68     		ldr	r3, [r7, #4]
- 2900 0ea4 9A60     		str	r2, [r3, #8]
- 552:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	entity->pos.y += entity->velocity.y;
- 2901              		.loc 1 552 0
- 2902 0ea6 7B68     		ldr	r3, [r7, #4]
- 2903 0ea8 DA68     		ldr	r2, [r3, #12]
- 2904 0eaa 7B68     		ldr	r3, [r7, #4]
- 2905 0eac 5B69     		ldr	r3, [r3, #20]
- 2906 0eae D218     		adds	r2, r2, r3
- 2907 0eb0 7B68     		ldr	r3, [r7, #4]
- 2908 0eb2 DA60     		str	r2, [r3, #12]
- 553:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** }
- 2909              		.loc 1 553 0
- 2910 0eb4 C046     		nop
- 2911 0eb6 BD46     		mov	sp, r7
- 2912 0eb8 02B0     		add	sp, sp, #8
- 2913              		@ sp needed
- 2914 0eba 80BD     		pop	{r7, pc}
- 2915              		.cfi_endproc
- 2916              	.LFE32:
- 2918              		.align	2
- 2919              		.global	mirror_update_entity_pos
- 2920              		.code	16
- 2921              		.thumb_func
- 2923              	mirror_update_entity_pos:
- 2924              	.LFB33:
+ 2517              		.loc 1 537 0
+ 2518              		.cfi_startproc
+ 2519 0c54 80B5     		push	{r7, lr}
+ 2520              		.cfi_def_cfa_offset 8
+ 2521              		.cfi_offset 7, -8
+ 2522              		.cfi_offset 14, -4
+ 2523 0c56 84B0     		sub	sp, sp, #16
+ 2524              		.cfi_def_cfa_offset 24
+ 2525 0c58 00AF     		add	r7, sp, #0
+ 2526              		.cfi_def_cfa_register 7
+ 2527 0c5a 7860     		str	r0, [r7, #4]
+ 2528              	.LBB23:
+ 538:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	for (int i = 0; i < num_entities; i++)
+ 2529              		.loc 1 538 0
+ 2530 0c5c 0023     		movs	r3, #0
+ 2531 0c5e FB60     		str	r3, [r7, #12]
+ 2532 0c60 16E0     		b	.L121
+ 2533              	.L124:
+ 539:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{
+ 540:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		if (entities[i].id == id)return &entities[i];
+ 2534              		.loc 1 540 0
+ 2535 0c62 1049     		ldr	r1, .L125
+ 2536 0c64 FA68     		ldr	r2, [r7, #12]
+ 2537 0c66 1300     		movs	r3, r2
+ 2538 0c68 DB00     		lsls	r3, r3, #3
+ 2539 0c6a 9B18     		adds	r3, r3, r2
+ 2540 0c6c 9B00     		lsls	r3, r3, #2
+ 2541 0c6e CB18     		adds	r3, r1, r3
+ 2542 0c70 0433     		adds	r3, r3, #4
+ 2543 0c72 1A68     		ldr	r2, [r3]
+ 2544 0c74 7B68     		ldr	r3, [r7, #4]
+ 2545 0c76 9A42     		cmp	r2, r3
+ 2546 0c78 07D1     		bne	.L122
+ 2547              		.loc 1 540 0 is_stmt 0 discriminator 1
+ 2548 0c7a FA68     		ldr	r2, [r7, #12]
+ 2549 0c7c 1300     		movs	r3, r2
+ 2550 0c7e DB00     		lsls	r3, r3, #3
+ 2551 0c80 9B18     		adds	r3, r3, r2
+ 2552 0c82 9B00     		lsls	r3, r3, #2
+ 2553 0c84 074A     		ldr	r2, .L125
+ 2554 0c86 9B18     		adds	r3, r3, r2
+ 2555 0c88 08E0     		b	.L123
+ 2556              	.L122:
+ 538:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	for (int i = 0; i < num_entities; i++)
+ 2557              		.loc 1 538 0 is_stmt 1 discriminator 2
+ 2558 0c8a FB68     		ldr	r3, [r7, #12]
+ 2559 0c8c 0133     		adds	r3, r3, #1
+ 2560 0c8e FB60     		str	r3, [r7, #12]
+ 2561              	.L121:
+ 538:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	for (int i = 0; i < num_entities; i++)
+ 2562              		.loc 1 538 0 is_stmt 0 discriminator 1
+ 2563 0c90 054B     		ldr	r3, .L125+4
+ 2564 0c92 1B68     		ldr	r3, [r3]
+ 2565 0c94 FA68     		ldr	r2, [r7, #12]
+ 2566 0c96 9A42     		cmp	r2, r3
+ 2567 0c98 E3DB     		blt	.L124
+ 2568              	.LBE23:
+ 541:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	}
+ 542:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     return 0;
+ 2569              		.loc 1 542 0 is_stmt 1
+ 2570 0c9a 0023     		movs	r3, #0
+ 2571              	.L123:
+ 543:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** }
+ 2572              		.loc 1 543 0
+ 2573 0c9c 1800     		movs	r0, r3
+ 2574 0c9e BD46     		mov	sp, r7
+ 2575 0ca0 04B0     		add	sp, sp, #16
+ 2576              		@ sp needed
+ 2577 0ca2 80BD     		pop	{r7, pc}
+ 2578              	.L126:
+ 2579              		.align	2
+ 2580              	.L125:
+ 2581 0ca4 C0440000 		.word	entities
+ 2582 0ca8 C0560000 		.word	num_entities
+ 2583              		.cfi_endproc
+ 2584              	.LFE27:
+ 2586              		.align	2
+ 2587              		.global	cleanup_entities
+ 2588              		.code	16
+ 2589              		.thumb_func
+ 2591              	cleanup_entities:
+ 2592              	.LFB28:
+ 544:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
+ 545:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** void cleanup_entities()
+ 546:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {
+ 2593              		.loc 1 546 0
+ 2594              		.cfi_startproc
+ 2595 0cac 90B5     		push	{r4, r7, lr}
+ 2596              		.cfi_def_cfa_offset 12
+ 2597              		.cfi_offset 4, -12
+ 2598              		.cfi_offset 7, -8
+ 2599              		.cfi_offset 14, -4
+ 2600 0cae 83B0     		sub	sp, sp, #12
+ 2601              		.cfi_def_cfa_offset 24
+ 2602 0cb0 00AF     		add	r7, sp, #0
+ 2603              		.cfi_def_cfa_register 7
+ 2604              	.LBB24:
+ 547:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	for (int i = 0; i < num_entities; i++)
+ 2605              		.loc 1 547 0
+ 2606 0cb2 0023     		movs	r3, #0
+ 2607 0cb4 7B60     		str	r3, [r7, #4]
+ 2608 0cb6 27E0     		b	.L128
+ 2609              	.L130:
+ 548:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{
+ 549:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		if (entities[i].destroy) entities[i] = entities[--num_entities];
+ 2610              		.loc 1 549 0
+ 2611 0cb8 1849     		ldr	r1, .L131
+ 2612 0cba 7A68     		ldr	r2, [r7, #4]
+ 2613 0cbc 1300     		movs	r3, r2
+ 2614 0cbe DB00     		lsls	r3, r3, #3
+ 2615 0cc0 9B18     		adds	r3, r3, r2
+ 2616 0cc2 9B00     		lsls	r3, r3, #2
+ 2617 0cc4 CB18     		adds	r3, r1, r3
+ 2618 0cc6 1833     		adds	r3, r3, #24
+ 2619 0cc8 1B78     		ldrb	r3, [r3]
+ 2620 0cca 002B     		cmp	r3, #0
+ 2621 0ccc 19D0     		beq	.L129
+ 2622              		.loc 1 549 0 is_stmt 0 discriminator 1
+ 2623 0cce 144B     		ldr	r3, .L131+4
+ 2624 0cd0 1B68     		ldr	r3, [r3]
+ 2625 0cd2 5A1E     		subs	r2, r3, #1
+ 2626 0cd4 124B     		ldr	r3, .L131+4
+ 2627 0cd6 1A60     		str	r2, [r3]
+ 2628 0cd8 114B     		ldr	r3, .L131+4
+ 2629 0cda 1968     		ldr	r1, [r3]
+ 2630 0cdc 0F4C     		ldr	r4, .L131
+ 2631 0cde 7A68     		ldr	r2, [r7, #4]
+ 2632 0ce0 1300     		movs	r3, r2
+ 2633 0ce2 DB00     		lsls	r3, r3, #3
+ 2634 0ce4 9B18     		adds	r3, r3, r2
+ 2635 0ce6 9B00     		lsls	r3, r3, #2
+ 2636 0ce8 0C48     		ldr	r0, .L131
+ 2637 0cea 0A00     		movs	r2, r1
+ 2638 0cec D200     		lsls	r2, r2, #3
+ 2639 0cee 5218     		adds	r2, r2, r1
+ 2640 0cf0 9200     		lsls	r2, r2, #2
+ 2641 0cf2 E318     		adds	r3, r4, r3
+ 2642 0cf4 8218     		adds	r2, r0, r2
+ 2643 0cf6 13CA     		ldmia	r2!, {r0, r1, r4}
+ 2644 0cf8 13C3     		stmia	r3!, {r0, r1, r4}
+ 2645 0cfa 13CA     		ldmia	r2!, {r0, r1, r4}
+ 2646 0cfc 13C3     		stmia	r3!, {r0, r1, r4}
+ 2647 0cfe 13CA     		ldmia	r2!, {r0, r1, r4}
+ 2648 0d00 13C3     		stmia	r3!, {r0, r1, r4}
+ 2649              	.L129:
+ 547:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	for (int i = 0; i < num_entities; i++)
+ 2650              		.loc 1 547 0 is_stmt 1 discriminator 2
+ 2651 0d02 7B68     		ldr	r3, [r7, #4]
+ 2652 0d04 0133     		adds	r3, r3, #1
+ 2653 0d06 7B60     		str	r3, [r7, #4]
+ 2654              	.L128:
+ 547:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	for (int i = 0; i < num_entities; i++)
+ 2655              		.loc 1 547 0 is_stmt 0 discriminator 1
+ 2656 0d08 054B     		ldr	r3, .L131+4
+ 2657 0d0a 1B68     		ldr	r3, [r3]
+ 2658 0d0c 7A68     		ldr	r2, [r7, #4]
+ 2659 0d0e 9A42     		cmp	r2, r3
+ 2660 0d10 D2DB     		blt	.L130
+ 2661              	.LBE24:
+ 550:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	}
+ 551:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** }
+ 2662              		.loc 1 551 0 is_stmt 1
+ 2663 0d12 C046     		nop
+ 2664 0d14 BD46     		mov	sp, r7
+ 2665 0d16 03B0     		add	sp, sp, #12
+ 2666              		@ sp needed
+ 2667 0d18 90BD     		pop	{r4, r7, pc}
+ 2668              	.L132:
+ 2669 0d1a C046     		.align	2
+ 2670              	.L131:
+ 2671 0d1c C0440000 		.word	entities
+ 2672 0d20 C0560000 		.word	num_entities
+ 2673              		.cfi_endproc
+ 2674              	.LFE28:
+ 2676              		.section	.rodata
+ 2677              		.align	2
+ 2678              	.LC0:
+ 2679 0000 31       		.byte	49
+ 2680 0001 32       		.byte	50
+ 2681 0002 33       		.byte	51
+ 2682 0003 41       		.byte	65
+ 2683 0004 34       		.byte	52
+ 2684 0005 35       		.byte	53
+ 2685 0006 36       		.byte	54
+ 2686 0007 42       		.byte	66
+ 2687 0008 37       		.byte	55
+ 2688 0009 38       		.byte	56
+ 2689 000a 39       		.byte	57
+ 2690 000b 43       		.byte	67
+ 2691 000c 2A       		.byte	42
+ 2692 000d 30       		.byte	48
+ 2693 000e 23       		.byte	35
+ 2694 000f 44       		.byte	68
+ 2695              		.text
+ 2696              		.align	2
+ 2697              		.global	keyb
+ 2698              		.code	16
+ 2699              		.thumb_func
+ 2701              	keyb:
+ 2702              	.LFB29:
+ 552:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
+ 553:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
  554:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
- 555:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** void mirror_update_entity_pos(Entity *entity)
+ 555:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** char keyb()
  556:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {
- 2925              		.loc 1 556 0
- 2926              		.cfi_startproc
- 2927 0ebc 80B5     		push	{r7, lr}
- 2928              		.cfi_def_cfa_offset 8
- 2929              		.cfi_offset 7, -8
- 2930              		.cfi_offset 14, -4
- 2931 0ebe 82B0     		sub	sp, sp, #8
- 2932              		.cfi_def_cfa_offset 16
- 2933 0ec0 00AF     		add	r7, sp, #0
- 2934              		.cfi_def_cfa_register 7
- 2935 0ec2 7860     		str	r0, [r7, #4]
- 557:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	entity->pos.x -= entity->velocity.x;
- 2936              		.loc 1 557 0
- 2937 0ec4 7B68     		ldr	r3, [r7, #4]
- 2938 0ec6 9A68     		ldr	r2, [r3, #8]
- 2939 0ec8 7B68     		ldr	r3, [r7, #4]
- 2940 0eca 1B69     		ldr	r3, [r3, #16]
- 2941 0ecc D21A     		subs	r2, r2, r3
- 2942 0ece 7B68     		ldr	r3, [r7, #4]
- 2943 0ed0 9A60     		str	r2, [r3, #8]
- 558:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	entity->pos.y -= entity->velocity.y;
- 2944              		.loc 1 558 0
- 2945 0ed2 7B68     		ldr	r3, [r7, #4]
- 2946 0ed4 DA68     		ldr	r2, [r3, #12]
- 2947 0ed6 7B68     		ldr	r3, [r7, #4]
- 2948 0ed8 5B69     		ldr	r3, [r3, #20]
- 2949 0eda D21A     		subs	r2, r2, r3
- 2950 0edc 7B68     		ldr	r3, [r7, #4]
- 2951 0ede DA60     		str	r2, [r3, #12]
- 559:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** }
- 2952              		.loc 1 559 0
- 2953 0ee0 C046     		nop
- 2954 0ee2 BD46     		mov	sp, r7
- 2955 0ee4 02B0     		add	sp, sp, #8
- 2956              		@ sp needed
- 2957 0ee6 80BD     		pop	{r7, pc}
- 2958              		.cfi_endproc
- 2959              	.LFE33:
- 2961              		.align	2
- 2962              		.global	step_physics
- 2963              		.code	16
- 2964              		.thumb_func
- 2966              	step_physics:
- 2967              	.LFB34:
- 560:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
- 561:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** void step_physics(bool force)
- 562:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {
- 2968              		.loc 1 562 0
- 2969              		.cfi_startproc
- 2970 0ee8 80B5     		push	{r7, lr}
- 2971              		.cfi_def_cfa_offset 8
- 2972              		.cfi_offset 7, -8
- 2973              		.cfi_offset 14, -4
- 2974 0eea 84B0     		sub	sp, sp, #16
- 2975              		.cfi_def_cfa_offset 24
- 2976 0eec 00AF     		add	r7, sp, #0
- 2977              		.cfi_def_cfa_register 7
- 2978 0eee 0200     		movs	r2, r0
- 2979 0ef0 FB1D     		adds	r3, r7, #7
- 2980 0ef2 1A70     		strb	r2, [r3]
- 2981              	.LBB27:
- 563:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	for (int i = 0; i < num_entities; i++)
- 2982              		.loc 1 563 0
- 2983 0ef4 0023     		movs	r3, #0
- 2984 0ef6 FB60     		str	r3, [r7, #12]
- 2985 0ef8 3DE0     		b	.L158
- 2986              	.L162:
- 564:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{
- 565:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		if(force || !wall_collision(&entities[i]))
- 2987              		.loc 1 565 0
- 2988 0efa FB1D     		adds	r3, r7, #7
- 2989 0efc 1B78     		ldrb	r3, [r3]
- 2990 0efe 002B     		cmp	r3, #0
- 2991 0f00 0BD1     		bne	.L159
- 2992              		.loc 1 565 0 is_stmt 0 discriminator 1
- 2993 0f02 FA68     		ldr	r2, [r7, #12]
- 2994 0f04 1300     		movs	r3, r2
- 2995 0f06 DB00     		lsls	r3, r3, #3
- 2996 0f08 9B18     		adds	r3, r3, r2
- 2997 0f0a 9B00     		lsls	r3, r3, #2
- 2998 0f0c 1E4A     		ldr	r2, .L163
- 2999 0f0e 9B18     		adds	r3, r3, r2
- 3000 0f10 1800     		movs	r0, r3
- 3001 0f12 FFF7FEFF 		bl	wall_collision
- 3002 0f16 031E     		subs	r3, r0, #0
- 3003 0f18 0AD1     		bne	.L160
- 3004              	.L159:
- 566:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		{
- 567:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 			update_entity_pos(&entities[i]);
- 3005              		.loc 1 567 0 is_stmt 1
- 3006 0f1a FA68     		ldr	r2, [r7, #12]
- 3007 0f1c 1300     		movs	r3, r2
- 3008 0f1e DB00     		lsls	r3, r3, #3
- 3009 0f20 9B18     		adds	r3, r3, r2
- 3010 0f22 9B00     		lsls	r3, r3, #2
- 3011 0f24 184A     		ldr	r2, .L163
- 3012 0f26 9B18     		adds	r3, r3, r2
- 3013 0f28 1800     		movs	r0, r3
- 3014 0f2a FFF7FEFF 		bl	update_entity_pos
- 3015 0f2e 1FE0     		b	.L161
- 3016              	.L160:
- 568:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 			//entities[i].pos.x += entities[i].velocity.x;
- 569:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 			//entities[i].pos.y += entities[i].velocity.y;
- 570:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		} 
- 571:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		else //is currently stuck on wall
- 572:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		{			
- 573:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 			update_entity_pos(&entities[i]);
- 3017              		.loc 1 573 0
- 3018 0f30 FA68     		ldr	r2, [r7, #12]
- 3019 0f32 1300     		movs	r3, r2
- 3020 0f34 DB00     		lsls	r3, r3, #3
- 3021 0f36 9B18     		adds	r3, r3, r2
- 3022 0f38 9B00     		lsls	r3, r3, #2
- 3023 0f3a 134A     		ldr	r2, .L163
- 3024 0f3c 9B18     		adds	r3, r3, r2
- 3025 0f3e 1800     		movs	r0, r3
- 3026 0f40 FFF7FEFF 		bl	update_entity_pos
- 574:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 			if(wall_collision(&entities[i]))
- 3027              		.loc 1 574 0
- 3028 0f44 FA68     		ldr	r2, [r7, #12]
- 3029 0f46 1300     		movs	r3, r2
- 3030 0f48 DB00     		lsls	r3, r3, #3
- 3031 0f4a 9B18     		adds	r3, r3, r2
- 3032 0f4c 9B00     		lsls	r3, r3, #2
- 3033 0f4e 0E4A     		ldr	r2, .L163
- 3034 0f50 9B18     		adds	r3, r3, r2
- 3035 0f52 1800     		movs	r0, r3
- 3036 0f54 FFF7FEFF 		bl	wall_collision
- 3037 0f58 031E     		subs	r3, r0, #0
- 3038 0f5a 09D0     		beq	.L161
- 575:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 				mirror_update_entity_pos(&entities[i]); //move back
- 3039              		.loc 1 575 0
- 3040 0f5c FA68     		ldr	r2, [r7, #12]
- 3041 0f5e 1300     		movs	r3, r2
- 3042 0f60 DB00     		lsls	r3, r3, #3
- 3043 0f62 9B18     		adds	r3, r3, r2
- 3044 0f64 9B00     		lsls	r3, r3, #2
- 3045 0f66 084A     		ldr	r2, .L163
- 3046 0f68 9B18     		adds	r3, r3, r2
- 3047 0f6a 1800     		movs	r0, r3
- 3048 0f6c FFF7FEFF 		bl	mirror_update_entity_pos
- 3049              	.L161:
- 563:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{
- 3050              		.loc 1 563 0 discriminator 2
- 3051 0f70 FB68     		ldr	r3, [r7, #12]
- 3052 0f72 0133     		adds	r3, r3, #1
- 3053 0f74 FB60     		str	r3, [r7, #12]
- 3054              	.L158:
- 563:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{
- 3055              		.loc 1 563 0 is_stmt 0 discriminator 1
- 3056 0f76 054B     		ldr	r3, .L163+4
- 3057 0f78 1B68     		ldr	r3, [r3]
- 3058 0f7a FA68     		ldr	r2, [r7, #12]
- 3059 0f7c 9A42     		cmp	r2, r3
- 3060 0f7e BCDB     		blt	.L162
- 3061              	.LBE27:
- 576:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		}
- 577:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	}
- 578:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** }
- 3062              		.loc 1 578 0 is_stmt 1
- 3063 0f80 C046     		nop
- 3064 0f82 BD46     		mov	sp, r7
- 3065 0f84 04B0     		add	sp, sp, #16
- 3066              		@ sp needed
- 3067 0f86 80BD     		pop	{r7, pc}
- 3068              	.L164:
- 3069              		.align	2
- 3070              	.L163:
- 3071 0f88 C0440000 		.word	entities
- 3072 0f8c C0560000 		.word	num_entities
- 3073              		.cfi_endproc
- 3074              	.LFE34:
- 3076              		.align	2
- 3077              		.global	entity_collision
- 3078              		.code	16
- 3079              		.thumb_func
- 3081              	entity_collision:
- 3082              	.LFB35:
- 579:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
- 580:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** bool entity_collision(Entity *a, Entity *b)
- 581:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {
- 3083              		.loc 1 581 0
- 3084              		.cfi_startproc
- 3085 0f90 90B5     		push	{r4, r7, lr}
- 3086              		.cfi_def_cfa_offset 12
- 3087              		.cfi_offset 4, -12
- 3088              		.cfi_offset 7, -8
- 3089              		.cfi_offset 14, -4
- 3090 0f92 8DB0     		sub	sp, sp, #52
- 3091              		.cfi_def_cfa_offset 64
- 3092 0f94 02AF     		add	r7, sp, #8
- 3093              		.cfi_def_cfa 7, 56
- 3094 0f96 7860     		str	r0, [r7, #4]
- 3095 0f98 3960     		str	r1, [r7]
- 582:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     int ax_min,ax_max,ay_min,ay_max;
- 583:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     get_bounds(a,&ax_min,&ax_max,&ay_min,&ay_max);
- 3096              		.loc 1 583 0
- 3097 0f9a 1C23     		movs	r3, #28
- 3098 0f9c FC18     		adds	r4, r7, r3
- 3099 0f9e 2023     		movs	r3, #32
- 3100 0fa0 FA18     		adds	r2, r7, r3
- 3101 0fa2 2423     		movs	r3, #36
- 3102 0fa4 F918     		adds	r1, r7, r3
- 3103 0fa6 7868     		ldr	r0, [r7, #4]
- 3104 0fa8 1823     		movs	r3, #24
- 3105 0faa FB18     		adds	r3, r7, r3
- 3106 0fac 0093     		str	r3, [sp]
- 3107 0fae 2300     		movs	r3, r4
- 3108 0fb0 FFF7FEFF 		bl	get_bounds
- 584:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     
- 585:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     int bx_min,bx_max,by_min,by_max;
- 586:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     get_bounds(b,&bx_min,&bx_max,&by_min,&by_max);
- 3109              		.loc 1 586 0
- 3110 0fb4 0C23     		movs	r3, #12
- 3111 0fb6 FC18     		adds	r4, r7, r3
- 3112 0fb8 1023     		movs	r3, #16
- 3113 0fba FA18     		adds	r2, r7, r3
- 3114 0fbc 1423     		movs	r3, #20
- 3115 0fbe F918     		adds	r1, r7, r3
- 3116 0fc0 3868     		ldr	r0, [r7]
- 3117 0fc2 0823     		movs	r3, #8
- 3118 0fc4 FB18     		adds	r3, r7, r3
- 3119 0fc6 0093     		str	r3, [sp]
- 3120 0fc8 2300     		movs	r3, r4
- 3121 0fca FFF7FEFF 		bl	get_bounds
- 587:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****    
- 588:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	if((ax_min <= bx_min && ax_max >= bx_min)||
- 3122              		.loc 1 588 0
- 3123 0fce 7A6A     		ldr	r2, [r7, #36]
- 3124 0fd0 7B69     		ldr	r3, [r7, #20]
- 3125 0fd2 9A42     		cmp	r2, r3
- 3126 0fd4 03DC     		bgt	.L166
- 3127              		.loc 1 588 0 is_stmt 0 discriminator 1
- 3128 0fd6 3A6A     		ldr	r2, [r7, #32]
- 3129 0fd8 7B69     		ldr	r3, [r7, #20]
- 3130 0fda 9A42     		cmp	r2, r3
- 3131 0fdc 07DA     		bge	.L167
- 3132              	.L166:
- 589:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****         (bx_min <= ax_min && bx_max >= ax_min))
- 3133              		.loc 1 589 0 is_stmt 1 discriminator 3
- 3134 0fde 7A69     		ldr	r2, [r7, #20]
- 3135 0fe0 7B6A     		ldr	r3, [r7, #36]
- 588:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****         (bx_min <= ax_min && bx_max >= ax_min))
- 3136              		.loc 1 588 0 discriminator 3
- 3137 0fe2 9A42     		cmp	r2, r3
- 3138 0fe4 15DC     		bgt	.L168
- 3139              		.loc 1 589 0
- 3140 0fe6 3A69     		ldr	r2, [r7, #16]
- 3141 0fe8 7B6A     		ldr	r3, [r7, #36]
- 3142 0fea 9A42     		cmp	r2, r3
- 3143 0fec 11DB     		blt	.L168
- 3144              	.L167:
- 590:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     {
- 591:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****         if((ay_min <= by_min && ay_max >= by_min)||
- 3145              		.loc 1 591 0
- 3146 0fee FA69     		ldr	r2, [r7, #28]
- 3147 0ff0 FB68     		ldr	r3, [r7, #12]
- 3148 0ff2 9A42     		cmp	r2, r3
- 3149 0ff4 03DC     		bgt	.L169
- 3150              		.loc 1 591 0 is_stmt 0 discriminator 1
- 3151 0ff6 BA69     		ldr	r2, [r7, #24]
- 3152 0ff8 FB68     		ldr	r3, [r7, #12]
- 3153 0ffa 9A42     		cmp	r2, r3
- 3154 0ffc 07DA     		bge	.L170
- 3155              	.L169:
- 592:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****            (by_min <= ay_min && by_max >= ay_min))
- 3156              		.loc 1 592 0 is_stmt 1 discriminator 3
- 3157 0ffe FA68     		ldr	r2, [r7, #12]
- 3158 1000 FB69     		ldr	r3, [r7, #28]
- 591:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****            (by_min <= ay_min && by_max >= ay_min))
- 3159              		.loc 1 591 0 discriminator 3
- 3160 1002 9A42     		cmp	r2, r3
- 3161 1004 05DC     		bgt	.L168
- 3162              		.loc 1 592 0
- 3163 1006 BA68     		ldr	r2, [r7, #8]
- 3164 1008 FB69     		ldr	r3, [r7, #28]
- 3165 100a 9A42     		cmp	r2, r3
- 3166 100c 01DB     		blt	.L168
- 3167              	.L170:
- 593:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****         {
- 594:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****             return true;
- 3168              		.loc 1 594 0
- 3169 100e 0123     		movs	r3, #1
- 3170 1010 00E0     		b	.L172
- 3171              	.L168:
- 595:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****         }
- 596:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     }
- 597:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     return false;
- 3172              		.loc 1 597 0
- 3173 1012 0023     		movs	r3, #0
- 3174              	.L172:
- 598:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** }
- 3175              		.loc 1 598 0 discriminator 1
- 3176 1014 1800     		movs	r0, r3
- 3177 1016 BD46     		mov	sp, r7
- 3178 1018 0BB0     		add	sp, sp, #44
- 3179              		@ sp needed
- 3180 101a 90BD     		pop	{r4, r7, pc}
- 3181              		.cfi_endproc
- 3182              	.LFE35:
- 3184              		.global	ship_defn
- 3185              		.section	.rodata
- 3186              		.align	2
- 3187              	.LC63:
- 3188 0010 20202020 		.ascii	"      #           ###          ###      ###########"
- 3188      20202320 
- 3188      20202020 
- 3188      20202020 
- 3188      20202323 
- 3189 0043 20232323 		.ascii	" ##################################################"
- 3189      23232323 
- 3189      23232323 
- 3189      23232323 
- 3189      23232323 
- 3190 0076 232300   		.ascii	"##\000"
- 3191              		.data
- 3192 0019 000000   		.align	2
- 3195              	ship_defn:
- 3196 001c 10000000 		.word	.LC63
- 3197              		.global	bullet_defn
- 3198              		.section	.rodata
- 3199 0079 000000   		.align	2
- 3200              	.LC64:
- 3201 007c 20202320 		.ascii	"  #   ### ##### ###   #  \000"
- 3201      20202323 
- 3201      23202323 
- 3201      23232320 
- 3201      23232320 
- 3202              		.data
- 3203              		.align	2
- 3206              	bullet_defn:
- 3207 0020 7C000000 		.word	.LC64
- 3208              		.global	enemy_defn
- 3209              		.section	.rodata
- 3210 0096 0000     		.align	2
- 3211              	.LC65:
- 3212 0098 20202320 		.ascii	"  #     #     #   #     #######    # ### #   ## ###"
- 3212      20202020 
- 3212      23202020 
- 3212      20202320 
- 3212      20202320 
- 3213 00cb 20232320 		.ascii	" ## ############ ####### ## #     # #   #   #      "
- 3213      23232323 
- 3213      23232323 
- 3213      23232323 
- 3213      20232323 
- 3214 00fe 20232023 		.ascii	" # #    \000"
- 3214      20202020 
- 3214      00
- 3215              		.data
- 3216              		.align	2
- 3219              	enemy_defn:
- 3220 0024 98000000 		.word	.LC65
- 3221              		.global	laser_defn
- 3222              		.section	.rodata
- 3223 0107 00       		.align	2
- 3224              	.LC66:
- 3225 0108 23232323 		.ascii	"###########\000"
- 3225      23232323 
- 3225      23232300 
- 3226              		.data
- 3227              		.align	2
- 3230              	laser_defn:
- 3231 0028 08010000 		.word	.LC66
- 3232              		.section	.rodata
- 3233              		.align	2
- 3234              	.LC1:
- 3235 0114 1F000000 		.word	31
- 3236 0118 04000000 		.word	4
- 3237              		.align	2
- 3238              	.LC2:
- 3239 011c 1F000000 		.word	31
- 3240 0120 64000000 		.word	100
- 3241              		.text
- 3242              		.align	2
- 3243              		.global	main
- 3244              		.code	16
- 3245              		.thumb_func
- 3247              	main:
- 3248              	.LFB36:
- 599:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
- 600:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** char *ship_defn=
- 601:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** "      #      "
- 602:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** "     ###     "
- 603:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** "     ###     "
- 604:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** " ########### "
- 605:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** "#############"
- 606:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** "#############"
- 607:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** "#############"
- 608:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** "#############";
- 609:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****         
- 610:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** char *bullet_defn =
- 611:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** "  #  "
- 612:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** " ### "
- 613:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** "#####"
- 614:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** " ### "
- 615:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** "  #  ";
- 616:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** char *enemy_defn = 
- 617:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** "  #     #  "
- 618:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** "   #   #   "
- 619:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** "  #######  "
- 620:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** "  # ### #  "
- 621:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** " ## ### ## "
- 622:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** "###########"
- 623:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** "# ####### #"
- 624:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** "# #     # #"
- 625:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** "   #   #   "
- 626:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** "    # #    ";
- 627:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
- 628:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
- 629:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** char *laser_defn = "###########";
- 630:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
- 631:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** int main()
- 632:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {
- 3249              		.loc 1 632 0
- 3250              		.cfi_startproc
- 3251 101c B0B5     		push	{r4, r5, r7, lr}
- 3252              		.cfi_def_cfa_offset 16
- 3253              		.cfi_offset 4, -16
- 3254              		.cfi_offset 5, -12
- 3255              		.cfi_offset 7, -8
- 3256              		.cfi_offset 14, -4
- 3257 101e 96B0     		sub	sp, sp, #88
- 3258              		.cfi_def_cfa_offset 104
- 3259 1020 02AF     		add	r7, sp, #8
- 3260              		.cfi_def_cfa 7, 96
- 633:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     { //init app
- 634:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****         e->MODER = 0x55555555; //set write entire e
- 3261              		.loc 1 634 0
- 3262 1022 974B     		ldr	r3, .L186
- 3263 1024 1B68     		ldr	r3, [r3]
- 3264 1026 974A     		ldr	r2, .L186+4
- 3265 1028 1A60     		str	r2, [r3]
- 635:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		d->MODER = 0x55005555;
- 3266              		.loc 1 635 0
- 3267 102a 974B     		ldr	r3, .L186+8
- 3268 102c 1B68     		ldr	r3, [r3]
- 3269 102e 974A     		ldr	r2, .L186+12
- 3270 1030 1A60     		str	r2, [r3]
- 636:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		d->OTYPER = 0x0000;     //set push-pull 
- 3271              		.loc 1 636 0
- 3272 1032 954B     		ldr	r3, .L186+8
- 3273 1034 1B68     		ldr	r3, [r3]
- 3274 1036 0022     		movs	r2, #0
- 3275 1038 5A60     		str	r2, [r3, #4]
- 637:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		d->PUPDR  = 0xAA000000; //set pull-down
- 3276              		.loc 1 637 0
- 3277 103a 934B     		ldr	r3, .L186+8
- 3278 103c 1B68     		ldr	r3, [r3]
- 3279 103e AA22     		movs	r2, #170
- 3280 1040 1206     		lsls	r2, r2, #24
- 3281 1042 DA60     		str	r2, [r3, #12]
- 638:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     }
- 639:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     graphics_initialize();
- 3282              		.loc 1 639 0
- 3283 1044 FFF7FEFF 		bl	graphics_initialize
- 640:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	set_all(0xff);
- 3284              		.loc 1 640 0
- 3285 1048 FF20     		movs	r0, #255
- 3286 104a FFF7FEFF 		bl	set_all
- 641:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     
- 642:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
- 643:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	Sprite *ship_sprite = make_sprite(ship_defn,13,8,1);
- 3287              		.loc 1 643 0
- 3288 104e 904B     		ldr	r3, .L186+16
- 3289 1050 1868     		ldr	r0, [r3]
- 3290 1052 0123     		movs	r3, #1
- 3291 1054 0822     		movs	r2, #8
- 3292 1056 0D21     		movs	r1, #13
- 3293 1058 FFF7FEFF 		bl	make_sprite
- 3294 105c 0300     		movs	r3, r0
- 3295 105e 7B64     		str	r3, [r7, #68]
- 644:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	Sprite *bullet_sprite = make_sprite(bullet_defn,5,5,1);
- 3296              		.loc 1 644 0
- 3297 1060 8C4B     		ldr	r3, .L186+20
- 3298 1062 1868     		ldr	r0, [r3]
- 3299 1064 0123     		movs	r3, #1
- 3300 1066 0522     		movs	r2, #5
- 3301 1068 0521     		movs	r1, #5
- 3302 106a FFF7FEFF 		bl	make_sprite
- 3303 106e 0300     		movs	r3, r0
- 3304 1070 3B64     		str	r3, [r7, #64]
- 645:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     Sprite *laser_sprite = make_sprite(laser_defn,1,8,1);
- 3305              		.loc 1 645 0
- 3306 1072 894B     		ldr	r3, .L186+24
- 3307 1074 1868     		ldr	r0, [r3]
- 3308 1076 0123     		movs	r3, #1
- 3309 1078 0822     		movs	r2, #8
- 3310 107a 0121     		movs	r1, #1
- 3311 107c FFF7FEFF 		bl	make_sprite
- 3312 1080 0300     		movs	r3, r0
- 3313 1082 FB63     		str	r3, [r7, #60]
- 646:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     Sprite *enemy_sprite = make_sprite(enemy_defn,11,10,1);
- 3314              		.loc 1 646 0
- 3315 1084 854B     		ldr	r3, .L186+28
- 3316 1086 1868     		ldr	r0, [r3]
- 3317 1088 0123     		movs	r3, #1
- 3318 108a 0A22     		movs	r2, #10
- 3319 108c 0B21     		movs	r1, #11
- 3320 108e FFF7FEFF 		bl	make_sprite
- 3321 1092 0300     		movs	r3, r0
- 3322 1094 BB63     		str	r3, [r7, #56]
- 647:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
- 648:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	int *player_id = make_entity(ship_sprite, entity_type_player,(Vec2){31,4},(Vec2){0,0});
- 3323              		.loc 1 648 0
- 3324 1096 3B00     		movs	r3, r7
- 3325 1098 814A     		ldr	r2, .L186+32
- 3326 109a 03CA     		ldmia	r2!, {r0, r1}
- 3327 109c 03C3     		stmia	r3!, {r0, r1}
- 3328 109e 0823     		movs	r3, #8
- 3329 10a0 FB18     		adds	r3, r7, r3
- 3330 10a2 0022     		movs	r2, #0
- 3331 10a4 1A60     		str	r2, [r3]
- 3332 10a6 0823     		movs	r3, #8
- 3333 10a8 FB18     		adds	r3, r7, r3
- 3334 10aa 0022     		movs	r2, #0
- 3335 10ac 5A60     		str	r2, [r3, #4]
- 3336 10ae 3B00     		movs	r3, r7
- 3337 10b0 786C     		ldr	r0, [r7, #68]
- 3338 10b2 0822     		movs	r2, #8
- 3339 10b4 B918     		adds	r1, r7, r2
- 3340 10b6 6A46     		mov	r2, sp
- 3341 10b8 30C9     		ldmia	r1!, {r4, r5}
- 3342 10ba 30C2     		stmia	r2!, {r4, r5}
- 3343 10bc 1A68     		ldr	r2, [r3]
- 3344 10be 5B68     		ldr	r3, [r3, #4]
- 3345 10c0 0021     		movs	r1, #0
- 3346 10c2 FFF7FEFF 		bl	make_entity
- 3347 10c6 0300     		movs	r3, r0
- 3348 10c8 7B63     		str	r3, [r7, #52]
- 649:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     make_entity(enemy_sprite,entity_type_enemy,(Vec2){31,100},(Vec2){0,0});
- 3349              		.loc 1 649 0
- 3350 10ca 1023     		movs	r3, #16
- 3351 10cc FB18     		adds	r3, r7, r3
- 3352 10ce 754A     		ldr	r2, .L186+36
- 3353 10d0 03CA     		ldmia	r2!, {r0, r1}
- 3354 10d2 03C3     		stmia	r3!, {r0, r1}
- 3355 10d4 1823     		movs	r3, #24
- 3356 10d6 FB18     		adds	r3, r7, r3
- 3357 10d8 0022     		movs	r2, #0
- 3358 10da 1A60     		str	r2, [r3]
- 3359 10dc 1823     		movs	r3, #24
- 3360 10de FB18     		adds	r3, r7, r3
- 3361 10e0 0022     		movs	r2, #0
- 3362 10e2 5A60     		str	r2, [r3, #4]
- 3363 10e4 1023     		movs	r3, #16
- 3364 10e6 FB18     		adds	r3, r7, r3
- 3365 10e8 B86B     		ldr	r0, [r7, #56]
- 3366 10ea 1822     		movs	r2, #24
- 3367 10ec B918     		adds	r1, r7, r2
- 3368 10ee 6A46     		mov	r2, sp
- 3369 10f0 30C9     		ldmia	r1!, {r4, r5}
- 3370 10f2 30C2     		stmia	r2!, {r4, r5}
- 3371 10f4 1A68     		ldr	r2, [r3]
- 3372 10f6 5B68     		ldr	r3, [r3, #4]
- 3373 10f8 0221     		movs	r1, #2
- 3374 10fa FFF7FEFF 		bl	make_entity
- 650:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	set_all(0);
- 3375              		.loc 1 650 0
- 3376 10fe 0020     		movs	r0, #0
- 3377 1100 FFF7FEFF 		bl	set_all
- 651:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
- 652:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     int speed = 2;
- 3378              		.loc 1 652 0
- 3379 1104 0223     		movs	r3, #2
- 3380 1106 3B63     		str	r3, [r7, #48]
- 3381              	.L185:
- 3382              	.LBB28:
- 653:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     for(;;)
- 654:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     {
- 655:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****         char c = keyb();
- 3383              		.loc 1 655 0
- 3384 1108 2F23     		movs	r3, #47
- 3385 110a FC18     		adds	r4, r7, r3
- 3386 110c FFF7FEFF 		bl	keyb
- 3387 1110 0300     		movs	r3, r0
- 3388 1112 2370     		strb	r3, [r4]
- 656:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		Entity *player = entity_from_id(player_id);
- 3389              		.loc 1 656 0
- 3390 1114 7B6B     		ldr	r3, [r7, #52]
- 3391 1116 1800     		movs	r0, r3
- 3392 1118 FFF7FEFF 		bl	entity_from_id
- 3393 111c 0300     		movs	r3, r0
- 3394 111e BB62     		str	r3, [r7, #40]
- 657:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****         if(c == '6') player->velocity.x = 2;
- 3395              		.loc 1 657 0
- 3396 1120 2F23     		movs	r3, #47
- 3397 1122 FB18     		adds	r3, r7, r3
- 3398 1124 1B78     		ldrb	r3, [r3]
- 3399 1126 362B     		cmp	r3, #54
- 3400 1128 03D1     		bne	.L174
- 3401              		.loc 1 657 0 is_stmt 0 discriminator 1
- 3402 112a BB6A     		ldr	r3, [r7, #40]
- 3403 112c 0222     		movs	r2, #2
- 3404 112e 1A61     		str	r2, [r3, #16]
- 3405 1130 0CE0     		b	.L175
- 3406              	.L174:
- 658:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****         else if(c == '4') player->velocity.x = -2;
- 3407              		.loc 1 658 0 is_stmt 1
- 3408 1132 2F23     		movs	r3, #47
- 3409 1134 FB18     		adds	r3, r7, r3
- 3410 1136 1B78     		ldrb	r3, [r3]
- 3411 1138 342B     		cmp	r3, #52
- 3412 113a 04D1     		bne	.L176
- 3413              		.loc 1 658 0 is_stmt 0 discriminator 1
- 3414 113c BB6A     		ldr	r3, [r7, #40]
- 3415 113e 0222     		movs	r2, #2
- 3416 1140 5242     		rsbs	r2, r2, #0
- 3417 1142 1A61     		str	r2, [r3, #16]
- 3418 1144 02E0     		b	.L175
- 3419              	.L176:
- 659:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****         else player->velocity.x = 0;
- 3420              		.loc 1 659 0 is_stmt 1
- 3421 1146 BB6A     		ldr	r3, [r7, #40]
- 3422 1148 0022     		movs	r2, #0
- 3423 114a 1A61     		str	r2, [r3, #16]
- 3424              	.L175:
- 660:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		if (c == '2') 
- 3425              		.loc 1 660 0
- 3426 114c 2F23     		movs	r3, #47
- 3427 114e FB18     		adds	r3, r7, r3
- 3428 1150 1B78     		ldrb	r3, [r3]
- 3429 1152 322B     		cmp	r3, #50
- 3430 1154 13D1     		bne	.L177
- 661:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****         {
- 662:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****             make_entity(laser_sprite, entity_type_bullet, player->pos, (Vec2) { 0, 10});
- 3431              		.loc 1 662 0
- 3432 1156 2023     		movs	r3, #32
- 3433 1158 FB18     		adds	r3, r7, r3
- 3434 115a 0022     		movs	r2, #0
- 3435 115c 1A60     		str	r2, [r3]
- 3436 115e 2023     		movs	r3, #32
- 3437 1160 FB18     		adds	r3, r7, r3
- 3438 1162 0A22     		movs	r2, #10
- 3439 1164 5A60     		str	r2, [r3, #4]
- 3440 1166 BB6A     		ldr	r3, [r7, #40]
- 3441 1168 F86B     		ldr	r0, [r7, #60]
- 3442 116a 2022     		movs	r2, #32
- 3443 116c B918     		adds	r1, r7, r2
- 3444 116e 6A46     		mov	r2, sp
- 3445 1170 30C9     		ldmia	r1!, {r4, r5}
- 3446 1172 30C2     		stmia	r2!, {r4, r5}
- 3447 1174 9A68     		ldr	r2, [r3, #8]
- 3448 1176 DB68     		ldr	r3, [r3, #12]
- 3449 1178 0121     		movs	r1, #1
- 3450 117a FFF7FEFF 		bl	make_entity
- 3451              	.L177:
- 663:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****         }
- 664:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		
- 665:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		step_physics(false);
- 3452              		.loc 1 665 0
- 3453 117e 0020     		movs	r0, #0
- 3454 1180 FFF7FEFF 		bl	step_physics
- 3455              	.LBB29:
- 666:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****         for(int i = 0;i<num_entities;i++)
- 3456              		.loc 1 666 0
- 3457 1184 0023     		movs	r3, #0
- 3458 1186 FB64     		str	r3, [r7, #76]
- 3459 1188 6FE0     		b	.L178
- 3460              	.L184:
- 667:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****         {
- 668:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****             if(wall_collision(&entities[i]))
- 3461              		.loc 1 668 0
- 3462 118a FA6C     		ldr	r2, [r7, #76]
- 3463 118c 1300     		movs	r3, r2
- 3464 118e DB00     		lsls	r3, r3, #3
- 3465 1190 9B18     		adds	r3, r3, r2
- 3466 1192 9B00     		lsls	r3, r3, #2
- 3467 1194 444A     		ldr	r2, .L186+40
- 3468 1196 9B18     		adds	r3, r3, r2
- 3469 1198 1800     		movs	r0, r3
- 3470 119a FFF7FEFF 		bl	wall_collision
- 3471 119e 031E     		subs	r3, r0, #0
- 3472 11a0 15D0     		beq	.L179
- 669:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****             {
- 670:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 				if (entities[i].type == entity_type_bullet)entities[i].destroy = true;
- 3473              		.loc 1 670 0
- 3474 11a2 4149     		ldr	r1, .L186+40
- 3475 11a4 FA6C     		ldr	r2, [r7, #76]
- 3476 11a6 2020     		movs	r0, #32
- 3477 11a8 1300     		movs	r3, r2
- 3478 11aa DB00     		lsls	r3, r3, #3
- 3479 11ac 9B18     		adds	r3, r3, r2
- 3480 11ae 9B00     		lsls	r3, r3, #2
- 3481 11b0 CB18     		adds	r3, r1, r3
- 3482 11b2 1B18     		adds	r3, r3, r0
- 3483 11b4 1B78     		ldrb	r3, [r3]
- 3484 11b6 012B     		cmp	r3, #1
- 3485 11b8 09D1     		bne	.L179
- 3486              		.loc 1 670 0 is_stmt 0 discriminator 1
- 3487 11ba 3B49     		ldr	r1, .L186+40
- 3488 11bc FA6C     		ldr	r2, [r7, #76]
- 3489 11be 1300     		movs	r3, r2
- 3490 11c0 DB00     		lsls	r3, r3, #3
- 3491 11c2 9B18     		adds	r3, r3, r2
- 3492 11c4 9B00     		lsls	r3, r3, #2
- 3493 11c6 CB18     		adds	r3, r1, r3
- 3494 11c8 1833     		adds	r3, r3, #24
- 3495 11ca 0122     		movs	r2, #1
- 3496 11cc 1A70     		strb	r2, [r3]
- 3497              	.L179:
- 671:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****             }
- 672:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****             if (entities[i].type == entity_type_bullet)
- 3498              		.loc 1 672 0 is_stmt 1
- 3499 11ce 3649     		ldr	r1, .L186+40
- 3500 11d0 FA6C     		ldr	r2, [r7, #76]
- 3501 11d2 2020     		movs	r0, #32
- 3502 11d4 1300     		movs	r3, r2
- 3503 11d6 DB00     		lsls	r3, r3, #3
- 3504 11d8 9B18     		adds	r3, r3, r2
- 3505 11da 9B00     		lsls	r3, r3, #2
- 3506 11dc CB18     		adds	r3, r1, r3
- 3507 11de 1B18     		adds	r3, r3, r0
- 3508 11e0 1B78     		ldrb	r3, [r3]
- 3509 11e2 012B     		cmp	r3, #1
- 3510 11e4 3ED1     		bne	.L180
- 3511              	.LBB30:
- 673:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****             {
- 674:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****                 for(int j = 0;j<num_entities;j++)
- 3512              		.loc 1 674 0
- 3513 11e6 0023     		movs	r3, #0
- 3514 11e8 BB64     		str	r3, [r7, #72]
- 3515 11ea 36E0     		b	.L181
- 3516              	.L183:
- 675:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****                 {
- 676:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****                     if(entities[j].type == entity_type_enemy)
- 3517              		.loc 1 676 0
- 3518 11ec 2E49     		ldr	r1, .L186+40
- 3519 11ee BA6C     		ldr	r2, [r7, #72]
- 3520 11f0 2020     		movs	r0, #32
- 3521 11f2 1300     		movs	r3, r2
- 3522 11f4 DB00     		lsls	r3, r3, #3
- 3523 11f6 9B18     		adds	r3, r3, r2
- 3524 11f8 9B00     		lsls	r3, r3, #2
- 3525 11fa CB18     		adds	r3, r1, r3
- 3526 11fc 1B18     		adds	r3, r3, r0
- 3527 11fe 1B78     		ldrb	r3, [r3]
- 3528 1200 022B     		cmp	r3, #2
- 3529 1202 27D1     		bne	.L182
- 677:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****                     {
- 678:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****                         if(entity_collision(&entities[i],&entities[j]))
- 3530              		.loc 1 678 0
- 3531 1204 FA6C     		ldr	r2, [r7, #76]
- 3532 1206 1300     		movs	r3, r2
- 3533 1208 DB00     		lsls	r3, r3, #3
- 3534 120a 9B18     		adds	r3, r3, r2
- 3535 120c 9B00     		lsls	r3, r3, #2
- 3536 120e 264A     		ldr	r2, .L186+40
- 3537 1210 9818     		adds	r0, r3, r2
- 3538 1212 BA6C     		ldr	r2, [r7, #72]
- 3539 1214 1300     		movs	r3, r2
- 3540 1216 DB00     		lsls	r3, r3, #3
- 3541 1218 9B18     		adds	r3, r3, r2
- 3542 121a 9B00     		lsls	r3, r3, #2
- 3543 121c 224A     		ldr	r2, .L186+40
- 3544 121e 9B18     		adds	r3, r3, r2
- 3545 1220 1900     		movs	r1, r3
- 3546 1222 FFF7FEFF 		bl	entity_collision
- 3547 1226 031E     		subs	r3, r0, #0
- 3548 1228 14D0     		beq	.L182
- 679:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****                         {
- 680:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****                             entities[j].destroy = true;
- 3549              		.loc 1 680 0
- 3550 122a 1F49     		ldr	r1, .L186+40
- 3551 122c BA6C     		ldr	r2, [r7, #72]
- 3552 122e 1300     		movs	r3, r2
- 3553 1230 DB00     		lsls	r3, r3, #3
- 3554 1232 9B18     		adds	r3, r3, r2
- 3555 1234 9B00     		lsls	r3, r3, #2
- 3556 1236 CB18     		adds	r3, r1, r3
- 3557 1238 1833     		adds	r3, r3, #24
- 3558 123a 0122     		movs	r2, #1
- 3559 123c 1A70     		strb	r2, [r3]
- 681:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****                             entities[i].destroy = true;
- 3560              		.loc 1 681 0
- 3561 123e 1A49     		ldr	r1, .L186+40
- 3562 1240 FA6C     		ldr	r2, [r7, #76]
- 3563 1242 1300     		movs	r3, r2
- 3564 1244 DB00     		lsls	r3, r3, #3
- 3565 1246 9B18     		adds	r3, r3, r2
- 3566 1248 9B00     		lsls	r3, r3, #2
- 3567 124a CB18     		adds	r3, r1, r3
- 3568 124c 1833     		adds	r3, r3, #24
- 3569 124e 0122     		movs	r2, #1
- 3570 1250 1A70     		strb	r2, [r3]
- 682:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****                             break;
- 3571              		.loc 1 682 0
- 3572 1252 07E0     		b	.L180
- 3573              	.L182:
- 674:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****                 {
- 3574              		.loc 1 674 0 discriminator 2
- 3575 1254 BB6C     		ldr	r3, [r7, #72]
- 3576 1256 0133     		adds	r3, r3, #1
- 3577 1258 BB64     		str	r3, [r7, #72]
- 3578              	.L181:
- 674:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****                 {
- 3579              		.loc 1 674 0 is_stmt 0 discriminator 1
- 3580 125a 144B     		ldr	r3, .L186+44
- 3581 125c 1B68     		ldr	r3, [r3]
- 3582 125e BA6C     		ldr	r2, [r7, #72]
- 3583 1260 9A42     		cmp	r2, r3
- 3584 1262 C3DB     		blt	.L183
- 3585              	.L180:
- 3586              	.LBE30:
- 666:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****         {
- 3587              		.loc 1 666 0 is_stmt 1 discriminator 2
- 3588 1264 FB6C     		ldr	r3, [r7, #76]
- 3589 1266 0133     		adds	r3, r3, #1
- 3590 1268 FB64     		str	r3, [r7, #76]
- 3591              	.L178:
- 666:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****         {
- 3592              		.loc 1 666 0 is_stmt 0 discriminator 1
- 3593 126a 104B     		ldr	r3, .L186+44
- 3594 126c 1B68     		ldr	r3, [r3]
- 3595 126e FA6C     		ldr	r2, [r7, #76]
- 3596 1270 9A42     		cmp	r2, r3
- 3597 1272 8ADB     		blt	.L184
- 3598              	.LBE29:
- 683:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****                         }
- 684:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****                     }
- 685:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****                 }
- 686:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****             }
- 687:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
- 688:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****         }
- 689:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		render();
- 3599              		.loc 1 689 0 is_stmt 1
- 3600 1274 FFF7FEFF 		bl	render
- 690:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		cleanup_entities();
- 3601              		.loc 1 690 0
- 3602 1278 FFF7FEFF 		bl	cleanup_entities
- 3603              	.LBE28:
- 691:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     }
- 3604              		.loc 1 691 0
- 3605 127c 44E7     		b	.L185
- 3606              	.L187:
- 3607 127e C046     		.align	2
- 3608              	.L186:
- 3609 1280 00000000 		.word	e
- 3610 1284 55555555 		.word	1431655765
- 3611 1288 00000000 		.word	d
- 3612 128c 55550055 		.word	1426085205
- 3613 1290 00000000 		.word	ship_defn
- 3614 1294 00000000 		.word	bullet_defn
- 3615 1298 00000000 		.word	laser_defn
- 3616 129c 00000000 		.word	enemy_defn
- 3617 12a0 14010000 		.word	.LC1
- 3618 12a4 1C010000 		.word	.LC2
- 3619 12a8 C0440000 		.word	entities
- 3620 12ac C0560000 		.word	num_entities
- 3621              		.cfi_endproc
- 3622              	.LFE36:
- 3624              		.bss
- 3625              		.align	2
- 3626              	id_counter.4357:
- 3627 56c8 00000000 		.space	4
- 3628              		.text
- 3629              	.Letext0:
+ 2703              		.loc 1 556 0
+ 2704              		.cfi_startproc
+ 2705 0d24 80B5     		push	{r7, lr}
+ 2706              		.cfi_def_cfa_offset 8
+ 2707              		.cfi_offset 7, -8
+ 2708              		.cfi_offset 14, -4
+ 2709 0d26 88B0     		sub	sp, sp, #32
+ 2710              		.cfi_def_cfa_offset 40
+ 2711 0d28 00AF     		add	r7, sp, #0
+ 2712              		.cfi_def_cfa_register 7
+ 557:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	GPIO_REG *d = (GPIO_REG *)0x40020C00;
+ 2713              		.loc 1 557 0
+ 2714 0d2a 214B     		ldr	r3, .L141
+ 2715 0d2c 7B61     		str	r3, [r7, #20]
+ 558:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	GPIO_REG *e = (GPIO_REG *)0x40021000;
+ 2716              		.loc 1 558 0
+ 2717 0d2e 214B     		ldr	r3, .L141+4
+ 2718 0d30 3B61     		str	r3, [r7, #16]
+ 559:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	
+ 560:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	char res[4][4]=
+ 2719              		.loc 1 560 0
+ 2720 0d32 3A00     		movs	r2, r7
+ 2721 0d34 204B     		ldr	r3, .L141+8
+ 2722 0d36 1000     		movs	r0, r2
+ 2723 0d38 1900     		movs	r1, r3
+ 2724 0d3a 1023     		movs	r3, #16
+ 2725 0d3c 1A00     		movs	r2, r3
+ 2726 0d3e FFF7FEFF 		bl	memcpy
+ 2727              	.LBB25:
+ 561:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{{'1','2','3','A'},
+ 562:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{'4','5','6','B'},
+ 563:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{'7','8','9','C'},
+ 564:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{'*','0','#','D'},};
+ 565:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	for(int i = 0; i<4;i++)
+ 2728              		.loc 1 565 0
+ 2729 0d42 0023     		movs	r3, #0
+ 2730 0d44 FB61     		str	r3, [r7, #28]
+ 2731 0d46 2AE0     		b	.L134
+ 2732              	.L139:
+ 566:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{
+ 567:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		d->ODR = 0x1000<<i | d->ODR&0xff;
+ 2733              		.loc 1 567 0
+ 2734 0d48 8023     		movs	r3, #128
+ 2735 0d4a 5A01     		lsls	r2, r3, #5
+ 2736 0d4c FB69     		ldr	r3, [r7, #28]
+ 2737 0d4e 9A40     		lsls	r2, r2, r3
+ 2738 0d50 1300     		movs	r3, r2
+ 2739 0d52 1900     		movs	r1, r3
+ 2740 0d54 7B69     		ldr	r3, [r7, #20]
+ 2741 0d56 5B69     		ldr	r3, [r3, #20]
+ 2742 0d58 FF22     		movs	r2, #255
+ 2743 0d5a 1340     		ands	r3, r2
+ 2744 0d5c 0A00     		movs	r2, r1
+ 2745 0d5e 1A43     		orrs	r2, r3
+ 2746 0d60 7B69     		ldr	r3, [r7, #20]
+ 2747 0d62 5A61     		str	r2, [r3, #20]
+ 2748              	.LBB26:
+ 568:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		for(int j = 0; j<4;j++)
+ 2749              		.loc 1 568 0
+ 2750 0d64 0023     		movs	r3, #0
+ 2751 0d66 BB61     		str	r3, [r7, #24]
+ 2752 0d68 13E0     		b	.L135
+ 2753              	.L138:
+ 569:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		{
+ 570:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 			if(d->IDR & 0x100<<j)
+ 2754              		.loc 1 570 0
+ 2755 0d6a 7B69     		ldr	r3, [r7, #20]
+ 2756 0d6c 1B69     		ldr	r3, [r3, #16]
+ 2757 0d6e 8022     		movs	r2, #128
+ 2758 0d70 5100     		lsls	r1, r2, #1
+ 2759 0d72 BA69     		ldr	r2, [r7, #24]
+ 2760 0d74 9140     		lsls	r1, r1, r2
+ 2761 0d76 0A00     		movs	r2, r1
+ 2762 0d78 1340     		ands	r3, r2
+ 2763 0d7a 07D0     		beq	.L136
+ 571:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 			{
+ 572:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 				return res[i][j];
+ 2764              		.loc 1 572 0
+ 2765 0d7c 3A00     		movs	r2, r7
+ 2766 0d7e FB69     		ldr	r3, [r7, #28]
+ 2767 0d80 9B00     		lsls	r3, r3, #2
+ 2768 0d82 D218     		adds	r2, r2, r3
+ 2769 0d84 BB69     		ldr	r3, [r7, #24]
+ 2770 0d86 D318     		adds	r3, r2, r3
+ 2771 0d88 1B78     		ldrb	r3, [r3]
+ 2772 0d8a 0CE0     		b	.L140
+ 2773              	.L136:
+ 568:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		{
+ 2774              		.loc 1 568 0 discriminator 2
+ 2775 0d8c BB69     		ldr	r3, [r7, #24]
+ 2776 0d8e 0133     		adds	r3, r3, #1
+ 2777 0d90 BB61     		str	r3, [r7, #24]
+ 2778              	.L135:
+ 568:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		{
+ 2779              		.loc 1 568 0 is_stmt 0 discriminator 1
+ 2780 0d92 BB69     		ldr	r3, [r7, #24]
+ 2781 0d94 032B     		cmp	r3, #3
+ 2782 0d96 E8DD     		ble	.L138
+ 2783              	.LBE26:
+ 565:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{
+ 2784              		.loc 1 565 0 is_stmt 1 discriminator 2
+ 2785 0d98 FB69     		ldr	r3, [r7, #28]
+ 2786 0d9a 0133     		adds	r3, r3, #1
+ 2787 0d9c FB61     		str	r3, [r7, #28]
+ 2788              	.L134:
+ 565:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{
+ 2789              		.loc 1 565 0 is_stmt 0 discriminator 1
+ 2790 0d9e FB69     		ldr	r3, [r7, #28]
+ 2791 0da0 032B     		cmp	r3, #3
+ 2792 0da2 D1DD     		ble	.L139
+ 2793              	.LBE25:
+ 573:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 			}
+ 574:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		}
+ 575:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	}
+ 576:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	return 0;
+ 2794              		.loc 1 576 0 is_stmt 1
+ 2795 0da4 0023     		movs	r3, #0
+ 2796              	.L140:
+ 577:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** }
+ 2797              		.loc 1 577 0 discriminator 1
+ 2798 0da6 1800     		movs	r0, r3
+ 2799 0da8 BD46     		mov	sp, r7
+ 2800 0daa 08B0     		add	sp, sp, #32
+ 2801              		@ sp needed
+ 2802 0dac 80BD     		pop	{r7, pc}
+ 2803              	.L142:
+ 2804 0dae C046     		.align	2
+ 2805              	.L141:
+ 2806 0db0 000C0240 		.word	1073875968
+ 2807 0db4 00100240 		.word	1073876992
+ 2808 0db8 00000000 		.word	.LC0
+ 2809              		.cfi_endproc
+ 2810              	.LFE29:
+ 2812              		.align	2
+ 2813              		.global	get_bounds
+ 2814              		.code	16
+ 2815              		.thumb_func
+ 2817              	get_bounds:
+ 2818              	.LFB30:
+ 578:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
+ 579:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** void get_bounds(Entity *entity, int *x_min, int *x_max, int *y_min, int *y_max)
+ 580:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {
+ 2819              		.loc 1 580 0
+ 2820              		.cfi_startproc
+ 2821 0dbc 80B5     		push	{r7, lr}
+ 2822              		.cfi_def_cfa_offset 8
+ 2823              		.cfi_offset 7, -8
+ 2824              		.cfi_offset 14, -4
+ 2825 0dbe 84B0     		sub	sp, sp, #16
+ 2826              		.cfi_def_cfa_offset 24
+ 2827 0dc0 00AF     		add	r7, sp, #0
+ 2828              		.cfi_def_cfa_register 7
+ 2829 0dc2 F860     		str	r0, [r7, #12]
+ 2830 0dc4 B960     		str	r1, [r7, #8]
+ 2831 0dc6 7A60     		str	r2, [r7, #4]
+ 2832 0dc8 3B60     		str	r3, [r7]
+ 581:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     *x_max = entity->pos.x + entities->sprite->w/2;
+ 2833              		.loc 1 581 0
+ 2834 0dca FB68     		ldr	r3, [r7, #12]
+ 2835 0dcc 9A68     		ldr	r2, [r3, #8]
+ 2836 0dce 1C4B     		ldr	r3, .L148
+ 2837 0dd0 1968     		ldr	r1, [r3]
+ 2838 0dd2 8123     		movs	r3, #129
+ 2839 0dd4 DB00     		lsls	r3, r3, #3
+ 2840 0dd6 CB58     		ldr	r3, [r1, r3]
+ 2841 0dd8 002B     		cmp	r3, #0
+ 2842 0dda 00DA     		bge	.L144
+ 2843 0ddc 0133     		adds	r3, r3, #1
+ 2844              	.L144:
+ 2845 0dde 5B10     		asrs	r3, r3, #1
+ 2846 0de0 D218     		adds	r2, r2, r3
+ 2847 0de2 7B68     		ldr	r3, [r7, #4]
+ 2848 0de4 1A60     		str	r2, [r3]
+ 582:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     *x_min = entity->pos.x - entities->sprite->w/2;
+ 2849              		.loc 1 582 0
+ 2850 0de6 FB68     		ldr	r3, [r7, #12]
+ 2851 0de8 9A68     		ldr	r2, [r3, #8]
+ 2852 0dea 154B     		ldr	r3, .L148
+ 2853 0dec 1968     		ldr	r1, [r3]
+ 2854 0dee 8123     		movs	r3, #129
+ 2855 0df0 DB00     		lsls	r3, r3, #3
+ 2856 0df2 CB58     		ldr	r3, [r1, r3]
+ 2857 0df4 002B     		cmp	r3, #0
+ 2858 0df6 00DA     		bge	.L145
+ 2859 0df8 0133     		adds	r3, r3, #1
+ 2860              	.L145:
+ 2861 0dfa 5B10     		asrs	r3, r3, #1
+ 2862 0dfc D21A     		subs	r2, r2, r3
+ 2863 0dfe BB68     		ldr	r3, [r7, #8]
+ 2864 0e00 1A60     		str	r2, [r3]
+ 583:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
+ 584:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     *y_max = entity->pos.y + entities->sprite->h/2;
+ 2865              		.loc 1 584 0
+ 2866 0e02 FB68     		ldr	r3, [r7, #12]
+ 2867 0e04 DA68     		ldr	r2, [r3, #12]
+ 2868 0e06 0E4B     		ldr	r3, .L148
+ 2869 0e08 1B68     		ldr	r3, [r3]
+ 2870 0e0a 0E49     		ldr	r1, .L148+4
+ 2871 0e0c 5B58     		ldr	r3, [r3, r1]
+ 2872 0e0e 002B     		cmp	r3, #0
+ 2873 0e10 00DA     		bge	.L146
+ 2874 0e12 0133     		adds	r3, r3, #1
+ 2875              	.L146:
+ 2876 0e14 5B10     		asrs	r3, r3, #1
+ 2877 0e16 D218     		adds	r2, r2, r3
+ 2878 0e18 BB69     		ldr	r3, [r7, #24]
+ 2879 0e1a 1A60     		str	r2, [r3]
+ 585:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     *y_min = entity->pos.y - entities->sprite->h/2; 
+ 2880              		.loc 1 585 0
+ 2881 0e1c FB68     		ldr	r3, [r7, #12]
+ 2882 0e1e DA68     		ldr	r2, [r3, #12]
+ 2883 0e20 074B     		ldr	r3, .L148
+ 2884 0e22 1B68     		ldr	r3, [r3]
+ 2885 0e24 0749     		ldr	r1, .L148+4
+ 2886 0e26 5B58     		ldr	r3, [r3, r1]
+ 2887 0e28 002B     		cmp	r3, #0
+ 2888 0e2a 00DA     		bge	.L147
+ 2889 0e2c 0133     		adds	r3, r3, #1
+ 2890              	.L147:
+ 2891 0e2e 5B10     		asrs	r3, r3, #1
+ 2892 0e30 D21A     		subs	r2, r2, r3
+ 2893 0e32 3B68     		ldr	r3, [r7]
+ 2894 0e34 1A60     		str	r2, [r3]
+ 586:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** }
+ 2895              		.loc 1 586 0
+ 2896 0e36 C046     		nop
+ 2897 0e38 BD46     		mov	sp, r7
+ 2898 0e3a 04B0     		add	sp, sp, #16
+ 2899              		@ sp needed
+ 2900 0e3c 80BD     		pop	{r7, pc}
+ 2901              	.L149:
+ 2902 0e3e C046     		.align	2
+ 2903              	.L148:
+ 2904 0e40 C0440000 		.word	entities
+ 2905 0e44 04040000 		.word	1028
+ 2906              		.cfi_endproc
+ 2907              	.LFE30:
+ 2909              		.align	2
+ 2910              		.global	wall_collision
+ 2911              		.code	16
+ 2912              		.thumb_func
+ 2914              	wall_collision:
+ 2915              	.LFB31:
+ 587:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
+ 588:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** bool wall_collision(Entity *entity)
+ 589:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {
+ 2916              		.loc 1 589 0
+ 2917              		.cfi_startproc
+ 2918 0e48 90B5     		push	{r4, r7, lr}
+ 2919              		.cfi_def_cfa_offset 12
+ 2920              		.cfi_offset 4, -12
+ 2921              		.cfi_offset 7, -8
+ 2922              		.cfi_offset 14, -4
+ 2923 0e4a 89B0     		sub	sp, sp, #36
+ 2924              		.cfi_def_cfa_offset 48
+ 2925 0e4c 02AF     		add	r7, sp, #8
+ 2926              		.cfi_def_cfa 7, 40
+ 2927 0e4e 7860     		str	r0, [r7, #4]
+ 590:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     int x_min,x_max,y_min,y_max;
+ 591:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     get_bounds(entity,&x_min,&x_max,&y_min,&y_max);
+ 2928              		.loc 1 591 0
+ 2929 0e50 0C23     		movs	r3, #12
+ 2930 0e52 FC18     		adds	r4, r7, r3
+ 2931 0e54 1023     		movs	r3, #16
+ 2932 0e56 FA18     		adds	r2, r7, r3
+ 2933 0e58 1423     		movs	r3, #20
+ 2934 0e5a F918     		adds	r1, r7, r3
+ 2935 0e5c 7868     		ldr	r0, [r7, #4]
+ 2936 0e5e 0823     		movs	r3, #8
+ 2937 0e60 FB18     		adds	r3, r7, r3
+ 2938 0e62 0093     		str	r3, [sp]
+ 2939 0e64 2300     		movs	r3, r4
+ 2940 0e66 FFF7FEFF 		bl	get_bounds
+ 592:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     
+ 593:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     if(x_max >= 64  || 
+ 2941              		.loc 1 593 0
+ 2942 0e6a 3B69     		ldr	r3, [r7, #16]
+ 2943 0e6c 3F2B     		cmp	r3, #63
+ 2944 0e6e 08DC     		bgt	.L151
+ 594:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****        x_min < 0    ||
+ 2945              		.loc 1 594 0 discriminator 1
+ 2946 0e70 7B69     		ldr	r3, [r7, #20]
+ 593:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****        x_min < 0    ||
+ 2947              		.loc 1 593 0 discriminator 1
+ 2948 0e72 002B     		cmp	r3, #0
+ 2949 0e74 05DB     		blt	.L151
+ 595:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****        y_max >= 128 || 
+ 2950              		.loc 1 595 0
+ 2951 0e76 BB68     		ldr	r3, [r7, #8]
+ 594:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****        x_min < 0    ||
+ 2952              		.loc 1 594 0
+ 2953 0e78 7F2B     		cmp	r3, #127
+ 2954 0e7a 02DC     		bgt	.L151
+ 596:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****        y_min < 0) return true;
+ 2955              		.loc 1 596 0
+ 2956 0e7c FB68     		ldr	r3, [r7, #12]
+ 595:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****        y_max >= 128 || 
+ 2957              		.loc 1 595 0
+ 2958 0e7e 002B     		cmp	r3, #0
+ 2959 0e80 01DA     		bge	.L152
+ 2960              	.L151:
+ 2961              		.loc 1 596 0
+ 2962 0e82 0123     		movs	r3, #1
+ 2963 0e84 00E0     		b	.L154
+ 2964              	.L152:
+ 597:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     
+ 598:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     return false;
+ 2965              		.loc 1 598 0
+ 2966 0e86 0023     		movs	r3, #0
+ 2967              	.L154:
+ 599:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** }
+ 2968              		.loc 1 599 0 discriminator 1
+ 2969 0e88 1800     		movs	r0, r3
+ 2970 0e8a BD46     		mov	sp, r7
+ 2971 0e8c 07B0     		add	sp, sp, #28
+ 2972              		@ sp needed
+ 2973 0e8e 90BD     		pop	{r4, r7, pc}
+ 2974              		.cfi_endproc
+ 2975              	.LFE31:
+ 2977              		.align	2
+ 2978              		.global	update_entity_pos
+ 2979              		.code	16
+ 2980              		.thumb_func
+ 2982              	update_entity_pos:
+ 2983              	.LFB32:
+ 600:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
+ 601:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** void update_entity_pos(Entity *entity)
+ 602:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {
+ 2984              		.loc 1 602 0
+ 2985              		.cfi_startproc
+ 2986 0e90 80B5     		push	{r7, lr}
+ 2987              		.cfi_def_cfa_offset 8
+ 2988              		.cfi_offset 7, -8
+ 2989              		.cfi_offset 14, -4
+ 2990 0e92 82B0     		sub	sp, sp, #8
+ 2991              		.cfi_def_cfa_offset 16
+ 2992 0e94 00AF     		add	r7, sp, #0
+ 2993              		.cfi_def_cfa_register 7
+ 2994 0e96 7860     		str	r0, [r7, #4]
+ 603:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	entity->pos.x += entity->velocity.x;
+ 2995              		.loc 1 603 0
+ 2996 0e98 7B68     		ldr	r3, [r7, #4]
+ 2997 0e9a 9A68     		ldr	r2, [r3, #8]
+ 2998 0e9c 7B68     		ldr	r3, [r7, #4]
+ 2999 0e9e 1B69     		ldr	r3, [r3, #16]
+ 3000 0ea0 D218     		adds	r2, r2, r3
+ 3001 0ea2 7B68     		ldr	r3, [r7, #4]
+ 3002 0ea4 9A60     		str	r2, [r3, #8]
+ 604:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	entity->pos.y += entity->velocity.y;
+ 3003              		.loc 1 604 0
+ 3004 0ea6 7B68     		ldr	r3, [r7, #4]
+ 3005 0ea8 DA68     		ldr	r2, [r3, #12]
+ 3006 0eaa 7B68     		ldr	r3, [r7, #4]
+ 3007 0eac 5B69     		ldr	r3, [r3, #20]
+ 3008 0eae D218     		adds	r2, r2, r3
+ 3009 0eb0 7B68     		ldr	r3, [r7, #4]
+ 3010 0eb2 DA60     		str	r2, [r3, #12]
+ 605:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** }
+ 3011              		.loc 1 605 0
+ 3012 0eb4 C046     		nop
+ 3013 0eb6 BD46     		mov	sp, r7
+ 3014 0eb8 02B0     		add	sp, sp, #8
+ 3015              		@ sp needed
+ 3016 0eba 80BD     		pop	{r7, pc}
+ 3017              		.cfi_endproc
+ 3018              	.LFE32:
+ 3020              		.align	2
+ 3021              		.global	mirror_update_entity_pos
+ 3022              		.code	16
+ 3023              		.thumb_func
+ 3025              	mirror_update_entity_pos:
+ 3026              	.LFB33:
+ 606:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
+ 607:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** void mirror_update_entity_pos(Entity *entity)
+ 608:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {
+ 3027              		.loc 1 608 0
+ 3028              		.cfi_startproc
+ 3029 0ebc 80B5     		push	{r7, lr}
+ 3030              		.cfi_def_cfa_offset 8
+ 3031              		.cfi_offset 7, -8
+ 3032              		.cfi_offset 14, -4
+ 3033 0ebe 82B0     		sub	sp, sp, #8
+ 3034              		.cfi_def_cfa_offset 16
+ 3035 0ec0 00AF     		add	r7, sp, #0
+ 3036              		.cfi_def_cfa_register 7
+ 3037 0ec2 7860     		str	r0, [r7, #4]
+ 609:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	entity->pos.x -= entity->velocity.x;
+ 3038              		.loc 1 609 0
+ 3039 0ec4 7B68     		ldr	r3, [r7, #4]
+ 3040 0ec6 9A68     		ldr	r2, [r3, #8]
+ 3041 0ec8 7B68     		ldr	r3, [r7, #4]
+ 3042 0eca 1B69     		ldr	r3, [r3, #16]
+ 3043 0ecc D21A     		subs	r2, r2, r3
+ 3044 0ece 7B68     		ldr	r3, [r7, #4]
+ 3045 0ed0 9A60     		str	r2, [r3, #8]
+ 610:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	entity->pos.y -= entity->velocity.y;
+ 3046              		.loc 1 610 0
+ 3047 0ed2 7B68     		ldr	r3, [r7, #4]
+ 3048 0ed4 DA68     		ldr	r2, [r3, #12]
+ 3049 0ed6 7B68     		ldr	r3, [r7, #4]
+ 3050 0ed8 5B69     		ldr	r3, [r3, #20]
+ 3051 0eda D21A     		subs	r2, r2, r3
+ 3052 0edc 7B68     		ldr	r3, [r7, #4]
+ 3053 0ede DA60     		str	r2, [r3, #12]
+ 611:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** }
+ 3054              		.loc 1 611 0
+ 3055 0ee0 C046     		nop
+ 3056 0ee2 BD46     		mov	sp, r7
+ 3057 0ee4 02B0     		add	sp, sp, #8
+ 3058              		@ sp needed
+ 3059 0ee6 80BD     		pop	{r7, pc}
+ 3060              		.cfi_endproc
+ 3061              	.LFE33:
+ 3063              		.align	2
+ 3064              		.global	step_physics
+ 3065              		.code	16
+ 3066              		.thumb_func
+ 3068              	step_physics:
+ 3069              	.LFB34:
+ 612:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
+ 613:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** void step_physics(bool force)
+ 614:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {
+ 3070              		.loc 1 614 0
+ 3071              		.cfi_startproc
+ 3072 0ee8 80B5     		push	{r7, lr}
+ 3073              		.cfi_def_cfa_offset 8
+ 3074              		.cfi_offset 7, -8
+ 3075              		.cfi_offset 14, -4
+ 3076 0eea 84B0     		sub	sp, sp, #16
+ 3077              		.cfi_def_cfa_offset 24
+ 3078 0eec 00AF     		add	r7, sp, #0
+ 3079              		.cfi_def_cfa_register 7
+ 3080 0eee 0200     		movs	r2, r0
+ 3081 0ef0 FB1D     		adds	r3, r7, #7
+ 3082 0ef2 1A70     		strb	r2, [r3]
+ 3083              	.LBB27:
+ 615:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	for (int i = 0; i < num_entities; i++)
+ 3084              		.loc 1 615 0
+ 3085 0ef4 0023     		movs	r3, #0
+ 3086 0ef6 FB60     		str	r3, [r7, #12]
+ 3087 0ef8 84E0     		b	.L158
+ 3088              	.L166:
+ 616:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{
+ 617:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		if(entities[i].type == entity_type_enemy)
+ 3089              		.loc 1 617 0
+ 3090 0efa 4749     		ldr	r1, .L167
+ 3091 0efc FA68     		ldr	r2, [r7, #12]
+ 3092 0efe 2020     		movs	r0, #32
+ 3093 0f00 1300     		movs	r3, r2
+ 3094 0f02 DB00     		lsls	r3, r3, #3
+ 3095 0f04 9B18     		adds	r3, r3, r2
+ 3096 0f06 9B00     		lsls	r3, r3, #2
+ 3097 0f08 CB18     		adds	r3, r1, r3
+ 3098 0f0a 1B18     		adds	r3, r3, r0
+ 3099 0f0c 1B78     		ldrb	r3, [r3]
+ 3100 0f0e 022B     		cmp	r3, #2
+ 3101 0f10 3AD1     		bne	.L159
+ 3102              	.LBB28:
+ 618:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		{
+ 619:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 			for(int tp = 0; tp < TURN_POINTS; tp++)
+ 3103              		.loc 1 619 0
+ 3104 0f12 0023     		movs	r3, #0
+ 3105 0f14 BB60     		str	r3, [r7, #8]
+ 3106 0f16 34E0     		b	.L160
+ 3107              	.L162:
+ 620:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 			{
+ 621:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 				if(entities[i].pos.x == turnPoints[tp].pos.x && entities[i].pos.y == turnPoints[tp].pos.y)
+ 3108              		.loc 1 621 0
+ 3109 0f18 3F49     		ldr	r1, .L167
+ 3110 0f1a FA68     		ldr	r2, [r7, #12]
+ 3111 0f1c 1300     		movs	r3, r2
+ 3112 0f1e DB00     		lsls	r3, r3, #3
+ 3113 0f20 9B18     		adds	r3, r3, r2
+ 3114 0f22 9B00     		lsls	r3, r3, #2
+ 3115 0f24 CB18     		adds	r3, r1, r3
+ 3116 0f26 0833     		adds	r3, r3, #8
+ 3117 0f28 1A68     		ldr	r2, [r3]
+ 3118 0f2a 3C4B     		ldr	r3, .L167+4
+ 3119 0f2c B968     		ldr	r1, [r7, #8]
+ 3120 0f2e 0901     		lsls	r1, r1, #4
+ 3121 0f30 CB58     		ldr	r3, [r1, r3]
+ 3122 0f32 9A42     		cmp	r2, r3
+ 3123 0f34 22D1     		bne	.L161
+ 3124              		.loc 1 621 0 is_stmt 0 discriminator 1
+ 3125 0f36 3849     		ldr	r1, .L167
+ 3126 0f38 FA68     		ldr	r2, [r7, #12]
+ 3127 0f3a 1300     		movs	r3, r2
+ 3128 0f3c DB00     		lsls	r3, r3, #3
+ 3129 0f3e 9B18     		adds	r3, r3, r2
+ 3130 0f40 9B00     		lsls	r3, r3, #2
+ 3131 0f42 CB18     		adds	r3, r1, r3
+ 3132 0f44 0C33     		adds	r3, r3, #12
+ 3133 0f46 1A68     		ldr	r2, [r3]
+ 3134 0f48 3449     		ldr	r1, .L167+4
+ 3135 0f4a BB68     		ldr	r3, [r7, #8]
+ 3136 0f4c 1B01     		lsls	r3, r3, #4
+ 3137 0f4e CB18     		adds	r3, r1, r3
+ 3138 0f50 0433     		adds	r3, r3, #4
+ 3139 0f52 1B68     		ldr	r3, [r3]
+ 3140 0f54 9A42     		cmp	r2, r3
+ 3141 0f56 11D1     		bne	.L161
+ 622:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 				{
+ 623:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 					entities[i].velocity = turnPoints[tp].velocity;
+ 3142              		.loc 1 623 0 is_stmt 1
+ 3143 0f58 2F49     		ldr	r1, .L167
+ 3144 0f5a FA68     		ldr	r2, [r7, #12]
+ 3145 0f5c 1020     		movs	r0, #16
+ 3146 0f5e 1300     		movs	r3, r2
+ 3147 0f60 DB00     		lsls	r3, r3, #3
+ 3148 0f62 9B18     		adds	r3, r3, r2
+ 3149 0f64 9B00     		lsls	r3, r3, #2
+ 3150 0f66 CB18     		adds	r3, r1, r3
+ 3151 0f68 1818     		adds	r0, r3, r0
+ 3152 0f6a 2C4A     		ldr	r2, .L167+4
+ 3153 0f6c BB68     		ldr	r3, [r7, #8]
+ 3154 0f6e 0821     		movs	r1, #8
+ 3155 0f70 1B01     		lsls	r3, r3, #4
+ 3156 0f72 D318     		adds	r3, r2, r3
+ 3157 0f74 5A18     		adds	r2, r3, r1
+ 3158 0f76 0300     		movs	r3, r0
+ 3159 0f78 03CA     		ldmia	r2!, {r0, r1}
+ 3160 0f7a 03C3     		stmia	r3!, {r0, r1}
+ 3161              	.L161:
+ 619:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 			{
+ 3162              		.loc 1 619 0 discriminator 2
+ 3163 0f7c BB68     		ldr	r3, [r7, #8]
+ 3164 0f7e 0133     		adds	r3, r3, #1
+ 3165 0f80 BB60     		str	r3, [r7, #8]
+ 3166              	.L160:
+ 619:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 			{
+ 3167              		.loc 1 619 0 is_stmt 0 discriminator 1
+ 3168 0f82 BB68     		ldr	r3, [r7, #8]
+ 3169 0f84 172B     		cmp	r3, #23
+ 3170 0f86 C7DD     		ble	.L162
+ 3171              	.L159:
+ 3172              	.LBE28:
+ 624:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 				}
+ 625:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 			}
+ 626:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		}
+ 627:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		if(force || !wall_collision(&entities[i]))
+ 3173              		.loc 1 627 0 is_stmt 1
+ 3174 0f88 FB1D     		adds	r3, r7, #7
+ 3175 0f8a 1B78     		ldrb	r3, [r3]
+ 3176 0f8c 002B     		cmp	r3, #0
+ 3177 0f8e 0BD1     		bne	.L163
+ 3178              		.loc 1 627 0 is_stmt 0 discriminator 1
+ 3179 0f90 FA68     		ldr	r2, [r7, #12]
+ 3180 0f92 1300     		movs	r3, r2
+ 3181 0f94 DB00     		lsls	r3, r3, #3
+ 3182 0f96 9B18     		adds	r3, r3, r2
+ 3183 0f98 9B00     		lsls	r3, r3, #2
+ 3184 0f9a 1F4A     		ldr	r2, .L167
+ 3185 0f9c 9B18     		adds	r3, r3, r2
+ 3186 0f9e 1800     		movs	r0, r3
+ 3187 0fa0 FFF7FEFF 		bl	wall_collision
+ 3188 0fa4 031E     		subs	r3, r0, #0
+ 3189 0fa6 0AD1     		bne	.L164
+ 3190              	.L163:
+ 628:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		{
+ 629:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 			update_entity_pos(&entities[i]);
+ 3191              		.loc 1 629 0 is_stmt 1
+ 3192 0fa8 FA68     		ldr	r2, [r7, #12]
+ 3193 0faa 1300     		movs	r3, r2
+ 3194 0fac DB00     		lsls	r3, r3, #3
+ 3195 0fae 9B18     		adds	r3, r3, r2
+ 3196 0fb0 9B00     		lsls	r3, r3, #2
+ 3197 0fb2 194A     		ldr	r2, .L167
+ 3198 0fb4 9B18     		adds	r3, r3, r2
+ 3199 0fb6 1800     		movs	r0, r3
+ 3200 0fb8 FFF7FEFF 		bl	update_entity_pos
+ 3201 0fbc 1FE0     		b	.L165
+ 3202              	.L164:
+ 630:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 			//entities[i].pos.x += entities[i].velocity.x;
+ 631:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 			//entities[i].pos.y += entities[i].velocity.y;
+ 632:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		} 
+ 633:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		else //is currently stuck on wall
+ 634:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		{			
+ 635:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 			update_entity_pos(&entities[i]);
+ 3203              		.loc 1 635 0
+ 3204 0fbe FA68     		ldr	r2, [r7, #12]
+ 3205 0fc0 1300     		movs	r3, r2
+ 3206 0fc2 DB00     		lsls	r3, r3, #3
+ 3207 0fc4 9B18     		adds	r3, r3, r2
+ 3208 0fc6 9B00     		lsls	r3, r3, #2
+ 3209 0fc8 134A     		ldr	r2, .L167
+ 3210 0fca 9B18     		adds	r3, r3, r2
+ 3211 0fcc 1800     		movs	r0, r3
+ 3212 0fce FFF7FEFF 		bl	update_entity_pos
+ 636:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 			if(wall_collision(&entities[i]))
+ 3213              		.loc 1 636 0
+ 3214 0fd2 FA68     		ldr	r2, [r7, #12]
+ 3215 0fd4 1300     		movs	r3, r2
+ 3216 0fd6 DB00     		lsls	r3, r3, #3
+ 3217 0fd8 9B18     		adds	r3, r3, r2
+ 3218 0fda 9B00     		lsls	r3, r3, #2
+ 3219 0fdc 0E4A     		ldr	r2, .L167
+ 3220 0fde 9B18     		adds	r3, r3, r2
+ 3221 0fe0 1800     		movs	r0, r3
+ 3222 0fe2 FFF7FEFF 		bl	wall_collision
+ 3223 0fe6 031E     		subs	r3, r0, #0
+ 3224 0fe8 09D0     		beq	.L165
+ 637:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 				mirror_update_entity_pos(&entities[i]); //move back
+ 3225              		.loc 1 637 0
+ 3226 0fea FA68     		ldr	r2, [r7, #12]
+ 3227 0fec 1300     		movs	r3, r2
+ 3228 0fee DB00     		lsls	r3, r3, #3
+ 3229 0ff0 9B18     		adds	r3, r3, r2
+ 3230 0ff2 9B00     		lsls	r3, r3, #2
+ 3231 0ff4 084A     		ldr	r2, .L167
+ 3232 0ff6 9B18     		adds	r3, r3, r2
+ 3233 0ff8 1800     		movs	r0, r3
+ 3234 0ffa FFF7FEFF 		bl	mirror_update_entity_pos
+ 3235              	.L165:
+ 615:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{
+ 3236              		.loc 1 615 0 discriminator 2
+ 3237 0ffe FB68     		ldr	r3, [r7, #12]
+ 3238 1000 0133     		adds	r3, r3, #1
+ 3239 1002 FB60     		str	r3, [r7, #12]
+ 3240              	.L158:
+ 615:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	{
+ 3241              		.loc 1 615 0 is_stmt 0 discriminator 1
+ 3242 1004 064B     		ldr	r3, .L167+8
+ 3243 1006 1B68     		ldr	r3, [r3]
+ 3244 1008 FA68     		ldr	r2, [r7, #12]
+ 3245 100a 9A42     		cmp	r2, r3
+ 3246 100c 00DA     		bge	.LCB2764
+ 3247 100e 74E7     		b	.L166	@long jump
+ 3248              	.LCB2764:
+ 3249              	.LBE27:
+ 638:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		}
+ 639:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	}
+ 640:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** }
+ 3250              		.loc 1 640 0 is_stmt 1
+ 3251 1010 C046     		nop
+ 3252 1012 BD46     		mov	sp, r7
+ 3253 1014 04B0     		add	sp, sp, #16
+ 3254              		@ sp needed
+ 3255 1016 80BD     		pop	{r7, pc}
+ 3256              	.L168:
+ 3257              		.align	2
+ 3258              	.L167:
+ 3259 1018 C0440000 		.word	entities
+ 3260 101c 00000000 		.word	turnPoints
+ 3261 1020 C0560000 		.word	num_entities
+ 3262              		.cfi_endproc
+ 3263              	.LFE34:
+ 3265              		.align	2
+ 3266              		.global	entity_collision
+ 3267              		.code	16
+ 3268              		.thumb_func
+ 3270              	entity_collision:
+ 3271              	.LFB35:
+ 641:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
+ 642:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** bool entity_collision(Entity *a, Entity *b)
+ 643:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {
+ 3272              		.loc 1 643 0
+ 3273              		.cfi_startproc
+ 3274 1024 90B5     		push	{r4, r7, lr}
+ 3275              		.cfi_def_cfa_offset 12
+ 3276              		.cfi_offset 4, -12
+ 3277              		.cfi_offset 7, -8
+ 3278              		.cfi_offset 14, -4
+ 3279 1026 8DB0     		sub	sp, sp, #52
+ 3280              		.cfi_def_cfa_offset 64
+ 3281 1028 02AF     		add	r7, sp, #8
+ 3282              		.cfi_def_cfa 7, 56
+ 3283 102a 7860     		str	r0, [r7, #4]
+ 3284 102c 3960     		str	r1, [r7]
+ 644:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     int ax_min,ax_max,ay_min,ay_max;
+ 645:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     get_bounds(a,&ax_min,&ax_max,&ay_min,&ay_max);
+ 3285              		.loc 1 645 0
+ 3286 102e 1C23     		movs	r3, #28
+ 3287 1030 FC18     		adds	r4, r7, r3
+ 3288 1032 2023     		movs	r3, #32
+ 3289 1034 FA18     		adds	r2, r7, r3
+ 3290 1036 2423     		movs	r3, #36
+ 3291 1038 F918     		adds	r1, r7, r3
+ 3292 103a 7868     		ldr	r0, [r7, #4]
+ 3293 103c 1823     		movs	r3, #24
+ 3294 103e FB18     		adds	r3, r7, r3
+ 3295 1040 0093     		str	r3, [sp]
+ 3296 1042 2300     		movs	r3, r4
+ 3297 1044 FFF7FEFF 		bl	get_bounds
+ 646:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     
+ 647:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     int bx_min,bx_max,by_min,by_max;
+ 648:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     get_bounds(b,&bx_min,&bx_max,&by_min,&by_max);
+ 3298              		.loc 1 648 0
+ 3299 1048 0C23     		movs	r3, #12
+ 3300 104a FC18     		adds	r4, r7, r3
+ 3301 104c 1023     		movs	r3, #16
+ 3302 104e FA18     		adds	r2, r7, r3
+ 3303 1050 1423     		movs	r3, #20
+ 3304 1052 F918     		adds	r1, r7, r3
+ 3305 1054 3868     		ldr	r0, [r7]
+ 3306 1056 0823     		movs	r3, #8
+ 3307 1058 FB18     		adds	r3, r7, r3
+ 3308 105a 0093     		str	r3, [sp]
+ 3309 105c 2300     		movs	r3, r4
+ 3310 105e FFF7FEFF 		bl	get_bounds
+ 649:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****    
+ 650:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	if((ax_min <= bx_min && ax_max >= bx_min)||
+ 3311              		.loc 1 650 0
+ 3312 1062 7A6A     		ldr	r2, [r7, #36]
+ 3313 1064 7B69     		ldr	r3, [r7, #20]
+ 3314 1066 9A42     		cmp	r2, r3
+ 3315 1068 03DC     		bgt	.L170
+ 3316              		.loc 1 650 0 is_stmt 0 discriminator 1
+ 3317 106a 3A6A     		ldr	r2, [r7, #32]
+ 3318 106c 7B69     		ldr	r3, [r7, #20]
+ 3319 106e 9A42     		cmp	r2, r3
+ 3320 1070 07DA     		bge	.L171
+ 3321              	.L170:
+ 651:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****         (bx_min <= ax_min && bx_max >= ax_min))
+ 3322              		.loc 1 651 0 is_stmt 1 discriminator 3
+ 3323 1072 7A69     		ldr	r2, [r7, #20]
+ 3324 1074 7B6A     		ldr	r3, [r7, #36]
+ 650:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****         (bx_min <= ax_min && bx_max >= ax_min))
+ 3325              		.loc 1 650 0 discriminator 3
+ 3326 1076 9A42     		cmp	r2, r3
+ 3327 1078 15DC     		bgt	.L172
+ 3328              		.loc 1 651 0
+ 3329 107a 3A69     		ldr	r2, [r7, #16]
+ 3330 107c 7B6A     		ldr	r3, [r7, #36]
+ 3331 107e 9A42     		cmp	r2, r3
+ 3332 1080 11DB     		blt	.L172
+ 3333              	.L171:
+ 652:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     {
+ 653:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****         if((ay_min <= by_min && ay_max >= by_min)||
+ 3334              		.loc 1 653 0
+ 3335 1082 FA69     		ldr	r2, [r7, #28]
+ 3336 1084 FB68     		ldr	r3, [r7, #12]
+ 3337 1086 9A42     		cmp	r2, r3
+ 3338 1088 03DC     		bgt	.L173
+ 3339              		.loc 1 653 0 is_stmt 0 discriminator 1
+ 3340 108a BA69     		ldr	r2, [r7, #24]
+ 3341 108c FB68     		ldr	r3, [r7, #12]
+ 3342 108e 9A42     		cmp	r2, r3
+ 3343 1090 07DA     		bge	.L174
+ 3344              	.L173:
+ 654:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****            (by_min <= ay_min && by_max >= ay_min))
+ 3345              		.loc 1 654 0 is_stmt 1 discriminator 3
+ 3346 1092 FA68     		ldr	r2, [r7, #12]
+ 3347 1094 FB69     		ldr	r3, [r7, #28]
+ 653:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****            (by_min <= ay_min && by_max >= ay_min))
+ 3348              		.loc 1 653 0 discriminator 3
+ 3349 1096 9A42     		cmp	r2, r3
+ 3350 1098 05DC     		bgt	.L172
+ 3351              		.loc 1 654 0
+ 3352 109a BA68     		ldr	r2, [r7, #8]
+ 3353 109c FB69     		ldr	r3, [r7, #28]
+ 3354 109e 9A42     		cmp	r2, r3
+ 3355 10a0 01DB     		blt	.L172
+ 3356              	.L174:
+ 655:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****         {
+ 656:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****             return true;
+ 3357              		.loc 1 656 0
+ 3358 10a2 0123     		movs	r3, #1
+ 3359 10a4 00E0     		b	.L176
+ 3360              	.L172:
+ 657:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****         }
+ 658:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     }
+ 659:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     return false;
+ 3361              		.loc 1 659 0
+ 3362 10a6 0023     		movs	r3, #0
+ 3363              	.L176:
+ 660:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** }
+ 3364              		.loc 1 660 0 discriminator 1
+ 3365 10a8 1800     		movs	r0, r3
+ 3366 10aa BD46     		mov	sp, r7
+ 3367 10ac 0BB0     		add	sp, sp, #44
+ 3368              		@ sp needed
+ 3369 10ae 90BD     		pop	{r4, r7, pc}
+ 3370              		.cfi_endproc
+ 3371              	.LFE35:
+ 3373              		.global	ship_defn
+ 3374              		.section	.rodata
+ 3375              		.align	2
+ 3376              	.LC64:
+ 3377 0010 20202020 		.ascii	"      #           ###          ###      ###########"
+ 3377      20202320 
+ 3377      20202020 
+ 3377      20202020 
+ 3377      20202323 
+ 3378 0043 20232323 		.ascii	" ##################################################"
+ 3378      23232323 
+ 3378      23232323 
+ 3378      23232323 
+ 3378      23232323 
+ 3379 0076 232300   		.ascii	"##\000"
+ 3380              		.data
+ 3381              		.align	2
+ 3384              	ship_defn:
+ 3385 019c 10000000 		.word	.LC64
+ 3386              		.global	bullet_defn
+ 3387              		.section	.rodata
+ 3388 0079 000000   		.align	2
+ 3389              	.LC65:
+ 3390 007c 20202320 		.ascii	"  #   ### ##### ###   #  \000"
+ 3390      20202323 
+ 3390      23202323 
+ 3390      23232320 
+ 3390      23232320 
+ 3391              		.data
+ 3392              		.align	2
+ 3395              	bullet_defn:
+ 3396 01a0 7C000000 		.word	.LC65
+ 3397              		.global	enemy_defn
+ 3398              		.section	.rodata
+ 3399 0096 0000     		.align	2
+ 3400              	.LC66:
+ 3401 0098 20202320 		.ascii	"  #     #     #   #     #######    # ### #   ## ###"
+ 3401      20202020 
+ 3401      23202020 
+ 3401      20202320 
+ 3401      20202320 
+ 3402 00cb 20232320 		.ascii	" ## ############ ####### ## #     # #   #   #      "
+ 3402      23232323 
+ 3402      23232323 
+ 3402      23232323 
+ 3402      20232323 
+ 3403 00fe 20232023 		.ascii	" # #    \000"
+ 3403      20202020 
+ 3403      00
+ 3404              		.data
+ 3405              		.align	2
+ 3408              	enemy_defn:
+ 3409 01a4 98000000 		.word	.LC66
+ 3410              		.global	laser_defn
+ 3411              		.section	.rodata
+ 3412 0107 00       		.align	2
+ 3413              	.LC67:
+ 3414 0108 23232323 		.ascii	"###########\000"
+ 3414      23232323 
+ 3414      23232300 
+ 3415              		.data
+ 3416              		.align	2
+ 3419              	laser_defn:
+ 3420 01a8 08010000 		.word	.LC67
+ 3421              		.section	.rodata
+ 3422              		.align	2
+ 3423              	.LC1:
+ 3424 0114 1F000000 		.word	31
+ 3425 0118 04000000 		.word	4
+ 3426              		.align	2
+ 3427              	.LC2:
+ 3428 011c 06000000 		.word	6
+ 3429 0120 78000000 		.word	120
+ 3430              		.text
+ 3431              		.align	2
+ 3432              		.global	main
+ 3433              		.code	16
+ 3434              		.thumb_func
+ 3436              	main:
+ 3437              	.LFB36:
+ 661:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
+ 662:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** char *ship_defn=
+ 663:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** "      #      "
+ 664:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** "     ###     "
+ 665:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** "     ###     "
+ 666:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** " ########### "
+ 667:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** "#############"
+ 668:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** "#############"
+ 669:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** "#############"
+ 670:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** "#############";
+ 671:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****         
+ 672:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** char *bullet_defn =
+ 673:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** "  #  "
+ 674:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** " ### "
+ 675:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** "#####"
+ 676:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** " ### "
+ 677:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** "  #  ";
+ 678:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** char *enemy_defn = 
+ 679:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** "  #     #  "
+ 680:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** "   #   #   "
+ 681:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** "  #######  "
+ 682:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** "  # ### #  "
+ 683:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** " ## ### ## "
+ 684:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** "###########"
+ 685:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** "# ####### #"
+ 686:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** "# #     # #"
+ 687:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** "   #   #   "
+ 688:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** "    # #    ";
+ 689:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
+ 690:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
+ 691:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** char *laser_defn = "###########";
+ 692:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
+ 693:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** int main()
+ 694:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** {
+ 3438              		.loc 1 694 0
+ 3439              		.cfi_startproc
+ 3440 10b0 B0B5     		push	{r4, r5, r7, lr}
+ 3441              		.cfi_def_cfa_offset 16
+ 3442              		.cfi_offset 4, -16
+ 3443              		.cfi_offset 5, -12
+ 3444              		.cfi_offset 7, -8
+ 3445              		.cfi_offset 14, -4
+ 3446 10b2 98B0     		sub	sp, sp, #96
+ 3447              		.cfi_def_cfa_offset 112
+ 3448 10b4 02AF     		add	r7, sp, #8
+ 3449              		.cfi_def_cfa 7, 104
+ 695:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     { //init app
+ 696:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****         e->MODER = 0x55555555; //set write entire e
+ 3450              		.loc 1 696 0
+ 3451 10b6 9B4B     		ldr	r3, .L191
+ 3452 10b8 1B68     		ldr	r3, [r3]
+ 3453 10ba 9B4A     		ldr	r2, .L191+4
+ 3454 10bc 1A60     		str	r2, [r3]
+ 697:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		d->MODER = 0x55005555;
+ 3455              		.loc 1 697 0
+ 3456 10be 9B4B     		ldr	r3, .L191+8
+ 3457 10c0 1B68     		ldr	r3, [r3]
+ 3458 10c2 9B4A     		ldr	r2, .L191+12
+ 3459 10c4 1A60     		str	r2, [r3]
+ 698:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		d->OTYPER = 0x0000;     //set push-pull 
+ 3460              		.loc 1 698 0
+ 3461 10c6 994B     		ldr	r3, .L191+8
+ 3462 10c8 1B68     		ldr	r3, [r3]
+ 3463 10ca 0022     		movs	r2, #0
+ 3464 10cc 5A60     		str	r2, [r3, #4]
+ 699:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		d->PUPDR  = 0xAA000000; //set pull-down
+ 3465              		.loc 1 699 0
+ 3466 10ce 974B     		ldr	r3, .L191+8
+ 3467 10d0 1B68     		ldr	r3, [r3]
+ 3468 10d2 AA22     		movs	r2, #170
+ 3469 10d4 1206     		lsls	r2, r2, #24
+ 3470 10d6 DA60     		str	r2, [r3, #12]
+ 700:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     }
+ 701:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     graphics_initialize();
+ 3471              		.loc 1 701 0
+ 3472 10d8 FFF7FEFF 		bl	graphics_initialize
+ 702:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	set_all(0xff);
+ 3473              		.loc 1 702 0
+ 3474 10dc FF20     		movs	r0, #255
+ 3475 10de FFF7FEFF 		bl	set_all
+ 703:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     
+ 704:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
+ 705:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	Sprite *ship_sprite = make_sprite(ship_defn,13,8,1);
+ 3476              		.loc 1 705 0
+ 3477 10e2 944B     		ldr	r3, .L191+16
+ 3478 10e4 1868     		ldr	r0, [r3]
+ 3479 10e6 0123     		movs	r3, #1
+ 3480 10e8 0822     		movs	r2, #8
+ 3481 10ea 0D21     		movs	r1, #13
+ 3482 10ec FFF7FEFF 		bl	make_sprite
+ 3483 10f0 0300     		movs	r3, r0
+ 3484 10f2 BB64     		str	r3, [r7, #72]
+ 706:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	Sprite *bullet_sprite = make_sprite(bullet_defn,5,5,1);
+ 3485              		.loc 1 706 0
+ 3486 10f4 904B     		ldr	r3, .L191+20
+ 3487 10f6 1868     		ldr	r0, [r3]
+ 3488 10f8 0123     		movs	r3, #1
+ 3489 10fa 0522     		movs	r2, #5
+ 3490 10fc 0521     		movs	r1, #5
+ 3491 10fe FFF7FEFF 		bl	make_sprite
+ 3492 1102 0300     		movs	r3, r0
+ 3493 1104 7B64     		str	r3, [r7, #68]
+ 707:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     Sprite *laser_sprite = make_sprite(laser_defn,1,8,1);
+ 3494              		.loc 1 707 0
+ 3495 1106 8D4B     		ldr	r3, .L191+24
+ 3496 1108 1868     		ldr	r0, [r3]
+ 3497 110a 0123     		movs	r3, #1
+ 3498 110c 0822     		movs	r2, #8
+ 3499 110e 0121     		movs	r1, #1
+ 3500 1110 FFF7FEFF 		bl	make_sprite
+ 3501 1114 0300     		movs	r3, r0
+ 3502 1116 3B64     		str	r3, [r7, #64]
+ 708:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     Sprite *enemy_sprite = make_sprite(enemy_defn,11,10,1);
+ 3503              		.loc 1 708 0
+ 3504 1118 894B     		ldr	r3, .L191+28
+ 3505 111a 1868     		ldr	r0, [r3]
+ 3506 111c 0123     		movs	r3, #1
+ 3507 111e 0A22     		movs	r2, #10
+ 3508 1120 0B21     		movs	r1, #11
+ 3509 1122 FFF7FEFF 		bl	make_sprite
+ 3510 1126 0300     		movs	r3, r0
+ 3511 1128 FB63     		str	r3, [r7, #60]
+ 709:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
+ 710:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	int *player_id = make_entity(ship_sprite, entity_type_player,(Vec2){31,4},(Vec2){0,0});
+ 3512              		.loc 1 710 0
+ 3513 112a 3B1D     		adds	r3, r7, #4
+ 3514 112c 854A     		ldr	r2, .L191+32
+ 3515 112e 03CA     		ldmia	r2!, {r0, r1}
+ 3516 1130 03C3     		stmia	r3!, {r0, r1}
+ 3517 1132 0C23     		movs	r3, #12
+ 3518 1134 FB18     		adds	r3, r7, r3
+ 3519 1136 0022     		movs	r2, #0
+ 3520 1138 1A60     		str	r2, [r3]
+ 3521 113a 0C23     		movs	r3, #12
+ 3522 113c FB18     		adds	r3, r7, r3
+ 3523 113e 0022     		movs	r2, #0
+ 3524 1140 5A60     		str	r2, [r3, #4]
+ 3525 1142 3B1D     		adds	r3, r7, #4
+ 3526 1144 B86C     		ldr	r0, [r7, #72]
+ 3527 1146 0C22     		movs	r2, #12
+ 3528 1148 B918     		adds	r1, r7, r2
+ 3529 114a 6A46     		mov	r2, sp
+ 3530 114c 30C9     		ldmia	r1!, {r4, r5}
+ 3531 114e 30C2     		stmia	r2!, {r4, r5}
+ 3532 1150 1A68     		ldr	r2, [r3]
+ 3533 1152 5B68     		ldr	r3, [r3, #4]
+ 3534 1154 0021     		movs	r1, #0
+ 3535 1156 FFF7FEFF 		bl	make_entity
+ 3536 115a 0300     		movs	r3, r0
+ 3537 115c BB63     		str	r3, [r7, #56]
+ 711:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     
+ 712:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	set_all(0);
+ 3538              		.loc 1 712 0
+ 3539 115e 0020     		movs	r0, #0
+ 3540 1160 FFF7FEFF 		bl	set_all
+ 713:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
+ 714:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     int speed = 2;
+ 3541              		.loc 1 714 0
+ 3542 1164 0223     		movs	r3, #2
+ 3543 1166 7B63     		str	r3, [r7, #52]
+ 715:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	
+ 716:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 	int frames = 0;
+ 3544              		.loc 1 716 0
+ 3545 1168 0023     		movs	r3, #0
+ 3546 116a 7B65     		str	r3, [r7, #84]
+ 3547              	.L190:
+ 3548              	.LBB29:
+ 717:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     for(;;)
+ 718:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     {
+ 719:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		if(!(frames%4))
+ 3549              		.loc 1 719 0
+ 3550 116c 7B6D     		ldr	r3, [r7, #84]
+ 3551 116e 0322     		movs	r2, #3
+ 3552 1170 1340     		ands	r3, r2
+ 3553 1172 19D1     		bne	.L178
+ 720:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		{
+ 721:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 			make_entity(enemy_sprite,entity_type_enemy,(Vec2){Y_LOWER,120},(Vec2){ENIMY_SPEED,0});
+ 3554              		.loc 1 721 0
+ 3555 1174 1423     		movs	r3, #20
+ 3556 1176 FB18     		adds	r3, r7, r3
+ 3557 1178 734A     		ldr	r2, .L191+36
+ 3558 117a 03CA     		ldmia	r2!, {r0, r1}
+ 3559 117c 03C3     		stmia	r3!, {r0, r1}
+ 3560 117e 1C23     		movs	r3, #28
+ 3561 1180 FB18     		adds	r3, r7, r3
+ 3562 1182 0822     		movs	r2, #8
+ 3563 1184 1A60     		str	r2, [r3]
+ 3564 1186 1C23     		movs	r3, #28
+ 3565 1188 FB18     		adds	r3, r7, r3
+ 3566 118a 0022     		movs	r2, #0
+ 3567 118c 5A60     		str	r2, [r3, #4]
+ 3568 118e 1423     		movs	r3, #20
+ 3569 1190 FB18     		adds	r3, r7, r3
+ 3570 1192 F86B     		ldr	r0, [r7, #60]
+ 3571 1194 1C22     		movs	r2, #28
+ 3572 1196 B918     		adds	r1, r7, r2
+ 3573 1198 6A46     		mov	r2, sp
+ 3574 119a 30C9     		ldmia	r1!, {r4, r5}
+ 3575 119c 30C2     		stmia	r2!, {r4, r5}
+ 3576 119e 1A68     		ldr	r2, [r3]
+ 3577 11a0 5B68     		ldr	r3, [r3, #4]
+ 3578 11a2 0221     		movs	r1, #2
+ 3579 11a4 FFF7FEFF 		bl	make_entity
+ 3580              	.L178:
+ 722:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		}
+ 723:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		
+ 724:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****         char c = keyb();
+ 3581              		.loc 1 724 0
+ 3582 11a8 3323     		movs	r3, #51
+ 3583 11aa FC18     		adds	r4, r7, r3
+ 3584 11ac FFF7FEFF 		bl	keyb
+ 3585 11b0 0300     		movs	r3, r0
+ 3586 11b2 2370     		strb	r3, [r4]
+ 725:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		Entity *player = entity_from_id(player_id);
+ 3587              		.loc 1 725 0
+ 3588 11b4 BB6B     		ldr	r3, [r7, #56]
+ 3589 11b6 1800     		movs	r0, r3
+ 3590 11b8 FFF7FEFF 		bl	entity_from_id
+ 3591 11bc 0300     		movs	r3, r0
+ 3592 11be FB62     		str	r3, [r7, #44]
+ 726:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****         if(c == '6') player->velocity.x = 2;
+ 3593              		.loc 1 726 0
+ 3594 11c0 3323     		movs	r3, #51
+ 3595 11c2 FB18     		adds	r3, r7, r3
+ 3596 11c4 1B78     		ldrb	r3, [r3]
+ 3597 11c6 362B     		cmp	r3, #54
+ 3598 11c8 03D1     		bne	.L179
+ 3599              		.loc 1 726 0 is_stmt 0 discriminator 1
+ 3600 11ca FB6A     		ldr	r3, [r7, #44]
+ 3601 11cc 0222     		movs	r2, #2
+ 3602 11ce 1A61     		str	r2, [r3, #16]
+ 3603 11d0 0CE0     		b	.L180
+ 3604              	.L179:
+ 727:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****         else if(c == '4') player->velocity.x = -2;
+ 3605              		.loc 1 727 0 is_stmt 1
+ 3606 11d2 3323     		movs	r3, #51
+ 3607 11d4 FB18     		adds	r3, r7, r3
+ 3608 11d6 1B78     		ldrb	r3, [r3]
+ 3609 11d8 342B     		cmp	r3, #52
+ 3610 11da 04D1     		bne	.L181
+ 3611              		.loc 1 727 0 is_stmt 0 discriminator 1
+ 3612 11dc FB6A     		ldr	r3, [r7, #44]
+ 3613 11de 0222     		movs	r2, #2
+ 3614 11e0 5242     		rsbs	r2, r2, #0
+ 3615 11e2 1A61     		str	r2, [r3, #16]
+ 3616 11e4 02E0     		b	.L180
+ 3617              	.L181:
+ 728:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****         else player->velocity.x = 0;
+ 3618              		.loc 1 728 0 is_stmt 1
+ 3619 11e6 FB6A     		ldr	r3, [r7, #44]
+ 3620 11e8 0022     		movs	r2, #0
+ 3621 11ea 1A61     		str	r2, [r3, #16]
+ 3622              	.L180:
+ 729:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		if (c == '2') 
+ 3623              		.loc 1 729 0
+ 3624 11ec 3323     		movs	r3, #51
+ 3625 11ee FB18     		adds	r3, r7, r3
+ 3626 11f0 1B78     		ldrb	r3, [r3]
+ 3627 11f2 322B     		cmp	r3, #50
+ 3628 11f4 13D1     		bne	.L182
+ 730:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****         {
+ 731:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****             make_entity(laser_sprite, entity_type_bullet, player->pos, (Vec2) { 0, 10});
+ 3629              		.loc 1 731 0
+ 3630 11f6 2423     		movs	r3, #36
+ 3631 11f8 FB18     		adds	r3, r7, r3
+ 3632 11fa 0022     		movs	r2, #0
+ 3633 11fc 1A60     		str	r2, [r3]
+ 3634 11fe 2423     		movs	r3, #36
+ 3635 1200 FB18     		adds	r3, r7, r3
+ 3636 1202 0A22     		movs	r2, #10
+ 3637 1204 5A60     		str	r2, [r3, #4]
+ 3638 1206 FB6A     		ldr	r3, [r7, #44]
+ 3639 1208 386C     		ldr	r0, [r7, #64]
+ 3640 120a 2422     		movs	r2, #36
+ 3641 120c B918     		adds	r1, r7, r2
+ 3642 120e 6A46     		mov	r2, sp
+ 3643 1210 30C9     		ldmia	r1!, {r4, r5}
+ 3644 1212 30C2     		stmia	r2!, {r4, r5}
+ 3645 1214 9A68     		ldr	r2, [r3, #8]
+ 3646 1216 DB68     		ldr	r3, [r3, #12]
+ 3647 1218 0121     		movs	r1, #1
+ 3648 121a FFF7FEFF 		bl	make_entity
+ 3649              	.L182:
+ 732:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****         }
+ 733:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		
+ 734:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		step_physics(false);
+ 3650              		.loc 1 734 0
+ 3651 121e 0020     		movs	r0, #0
+ 3652 1220 FFF7FEFF 		bl	step_physics
+ 3653              	.LBB30:
+ 735:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****         for(int i = 0;i<num_entities;i++)
+ 3654              		.loc 1 735 0
+ 3655 1224 0023     		movs	r3, #0
+ 3656 1226 3B65     		str	r3, [r7, #80]
+ 3657 1228 6FE0     		b	.L183
+ 3658              	.L189:
+ 736:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****         {
+ 737:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****             if(wall_collision(&entities[i]))
+ 3659              		.loc 1 737 0
+ 3660 122a 3A6D     		ldr	r2, [r7, #80]
+ 3661 122c 1300     		movs	r3, r2
+ 3662 122e DB00     		lsls	r3, r3, #3
+ 3663 1230 9B18     		adds	r3, r3, r2
+ 3664 1232 9B00     		lsls	r3, r3, #2
+ 3665 1234 454A     		ldr	r2, .L191+40
+ 3666 1236 9B18     		adds	r3, r3, r2
+ 3667 1238 1800     		movs	r0, r3
+ 3668 123a FFF7FEFF 		bl	wall_collision
+ 3669 123e 031E     		subs	r3, r0, #0
+ 3670 1240 15D0     		beq	.L184
+ 738:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****             {
+ 739:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 				if (entities[i].type == entity_type_bullet)entities[i].destroy = true;
+ 3671              		.loc 1 739 0
+ 3672 1242 4249     		ldr	r1, .L191+40
+ 3673 1244 3A6D     		ldr	r2, [r7, #80]
+ 3674 1246 2020     		movs	r0, #32
+ 3675 1248 1300     		movs	r3, r2
+ 3676 124a DB00     		lsls	r3, r3, #3
+ 3677 124c 9B18     		adds	r3, r3, r2
+ 3678 124e 9B00     		lsls	r3, r3, #2
+ 3679 1250 CB18     		adds	r3, r1, r3
+ 3680 1252 1B18     		adds	r3, r3, r0
+ 3681 1254 1B78     		ldrb	r3, [r3]
+ 3682 1256 012B     		cmp	r3, #1
+ 3683 1258 09D1     		bne	.L184
+ 3684              		.loc 1 739 0 is_stmt 0 discriminator 1
+ 3685 125a 3C49     		ldr	r1, .L191+40
+ 3686 125c 3A6D     		ldr	r2, [r7, #80]
+ 3687 125e 1300     		movs	r3, r2
+ 3688 1260 DB00     		lsls	r3, r3, #3
+ 3689 1262 9B18     		adds	r3, r3, r2
+ 3690 1264 9B00     		lsls	r3, r3, #2
+ 3691 1266 CB18     		adds	r3, r1, r3
+ 3692 1268 1833     		adds	r3, r3, #24
+ 3693 126a 0122     		movs	r2, #1
+ 3694 126c 1A70     		strb	r2, [r3]
+ 3695              	.L184:
+ 740:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****             }
+ 741:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****             if (entities[i].type == entity_type_bullet)
+ 3696              		.loc 1 741 0 is_stmt 1
+ 3697 126e 3749     		ldr	r1, .L191+40
+ 3698 1270 3A6D     		ldr	r2, [r7, #80]
+ 3699 1272 2020     		movs	r0, #32
+ 3700 1274 1300     		movs	r3, r2
+ 3701 1276 DB00     		lsls	r3, r3, #3
+ 3702 1278 9B18     		adds	r3, r3, r2
+ 3703 127a 9B00     		lsls	r3, r3, #2
+ 3704 127c CB18     		adds	r3, r1, r3
+ 3705 127e 1B18     		adds	r3, r3, r0
+ 3706 1280 1B78     		ldrb	r3, [r3]
+ 3707 1282 012B     		cmp	r3, #1
+ 3708 1284 3ED1     		bne	.L185
+ 3709              	.LBB31:
+ 742:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****             {
+ 743:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****                 for(int j = 0;j<num_entities;j++)
+ 3710              		.loc 1 743 0
+ 3711 1286 0023     		movs	r3, #0
+ 3712 1288 FB64     		str	r3, [r7, #76]
+ 3713 128a 36E0     		b	.L186
+ 3714              	.L188:
+ 744:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****                 {
+ 745:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****                     if(entities[j].type == entity_type_enemy)
+ 3715              		.loc 1 745 0
+ 3716 128c 2F49     		ldr	r1, .L191+40
+ 3717 128e FA6C     		ldr	r2, [r7, #76]
+ 3718 1290 2020     		movs	r0, #32
+ 3719 1292 1300     		movs	r3, r2
+ 3720 1294 DB00     		lsls	r3, r3, #3
+ 3721 1296 9B18     		adds	r3, r3, r2
+ 3722 1298 9B00     		lsls	r3, r3, #2
+ 3723 129a CB18     		adds	r3, r1, r3
+ 3724 129c 1B18     		adds	r3, r3, r0
+ 3725 129e 1B78     		ldrb	r3, [r3]
+ 3726 12a0 022B     		cmp	r3, #2
+ 3727 12a2 27D1     		bne	.L187
+ 746:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****                     {
+ 747:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****                         if(entity_collision(&entities[i],&entities[j]))
+ 3728              		.loc 1 747 0
+ 3729 12a4 3A6D     		ldr	r2, [r7, #80]
+ 3730 12a6 1300     		movs	r3, r2
+ 3731 12a8 DB00     		lsls	r3, r3, #3
+ 3732 12aa 9B18     		adds	r3, r3, r2
+ 3733 12ac 9B00     		lsls	r3, r3, #2
+ 3734 12ae 274A     		ldr	r2, .L191+40
+ 3735 12b0 9818     		adds	r0, r3, r2
+ 3736 12b2 FA6C     		ldr	r2, [r7, #76]
+ 3737 12b4 1300     		movs	r3, r2
+ 3738 12b6 DB00     		lsls	r3, r3, #3
+ 3739 12b8 9B18     		adds	r3, r3, r2
+ 3740 12ba 9B00     		lsls	r3, r3, #2
+ 3741 12bc 234A     		ldr	r2, .L191+40
+ 3742 12be 9B18     		adds	r3, r3, r2
+ 3743 12c0 1900     		movs	r1, r3
+ 3744 12c2 FFF7FEFF 		bl	entity_collision
+ 3745 12c6 031E     		subs	r3, r0, #0
+ 3746 12c8 14D0     		beq	.L187
+ 748:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****                         {
+ 749:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****                             entities[j].destroy = true;
+ 3747              		.loc 1 749 0
+ 3748 12ca 2049     		ldr	r1, .L191+40
+ 3749 12cc FA6C     		ldr	r2, [r7, #76]
+ 3750 12ce 1300     		movs	r3, r2
+ 3751 12d0 DB00     		lsls	r3, r3, #3
+ 3752 12d2 9B18     		adds	r3, r3, r2
+ 3753 12d4 9B00     		lsls	r3, r3, #2
+ 3754 12d6 CB18     		adds	r3, r1, r3
+ 3755 12d8 1833     		adds	r3, r3, #24
+ 3756 12da 0122     		movs	r2, #1
+ 3757 12dc 1A70     		strb	r2, [r3]
+ 750:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****                             entities[i].destroy = true;
+ 3758              		.loc 1 750 0
+ 3759 12de 1B49     		ldr	r1, .L191+40
+ 3760 12e0 3A6D     		ldr	r2, [r7, #80]
+ 3761 12e2 1300     		movs	r3, r2
+ 3762 12e4 DB00     		lsls	r3, r3, #3
+ 3763 12e6 9B18     		adds	r3, r3, r2
+ 3764 12e8 9B00     		lsls	r3, r3, #2
+ 3765 12ea CB18     		adds	r3, r1, r3
+ 3766 12ec 1833     		adds	r3, r3, #24
+ 3767 12ee 0122     		movs	r2, #1
+ 3768 12f0 1A70     		strb	r2, [r3]
+ 751:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****                             break;
+ 3769              		.loc 1 751 0
+ 3770 12f2 07E0     		b	.L185
+ 3771              	.L187:
+ 743:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****                 {
+ 3772              		.loc 1 743 0 discriminator 2
+ 3773 12f4 FB6C     		ldr	r3, [r7, #76]
+ 3774 12f6 0133     		adds	r3, r3, #1
+ 3775 12f8 FB64     		str	r3, [r7, #76]
+ 3776              	.L186:
+ 743:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****                 {
+ 3777              		.loc 1 743 0 is_stmt 0 discriminator 1
+ 3778 12fa 154B     		ldr	r3, .L191+44
+ 3779 12fc 1B68     		ldr	r3, [r3]
+ 3780 12fe FA6C     		ldr	r2, [r7, #76]
+ 3781 1300 9A42     		cmp	r2, r3
+ 3782 1302 C3DB     		blt	.L188
+ 3783              	.L185:
+ 3784              	.LBE31:
+ 735:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****         {
+ 3785              		.loc 1 735 0 is_stmt 1 discriminator 2
+ 3786 1304 3B6D     		ldr	r3, [r7, #80]
+ 3787 1306 0133     		adds	r3, r3, #1
+ 3788 1308 3B65     		str	r3, [r7, #80]
+ 3789              	.L183:
+ 735:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****         {
+ 3790              		.loc 1 735 0 is_stmt 0 discriminator 1
+ 3791 130a 114B     		ldr	r3, .L191+44
+ 3792 130c 1B68     		ldr	r3, [r3]
+ 3793 130e 3A6D     		ldr	r2, [r7, #80]
+ 3794 1310 9A42     		cmp	r2, r3
+ 3795 1312 8ADB     		blt	.L189
+ 3796              	.LBE30:
+ 752:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****                         }
+ 753:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****                     }
+ 754:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****                 }
+ 755:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****             }
+ 756:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 
+ 757:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****         }
+ 758:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		render();
+ 3797              		.loc 1 758 0 is_stmt 1
+ 3798 1314 FFF7FEFF 		bl	render
+ 759:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		cleanup_entities();
+ 3799              		.loc 1 759 0
+ 3800 1318 FFF7FEFF 		bl	cleanup_entities
+ 760:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c **** 		frames++;
+ 3801              		.loc 1 760 0
+ 3802 131c 7B6D     		ldr	r3, [r7, #84]
+ 3803 131e 0133     		adds	r3, r3, #1
+ 3804 1320 7B65     		str	r3, [r7, #84]
+ 3805              	.LBE29:
+ 761:C:/Users/Arvid/Documents/GitHub/maskin_orienterad_space_invaders/space_invaders\startup.c ****     }
+ 3806              		.loc 1 761 0
+ 3807 1322 23E7     		b	.L190
+ 3808              	.L192:
+ 3809              		.align	2
+ 3810              	.L191:
+ 3811 1324 00000000 		.word	e
+ 3812 1328 55555555 		.word	1431655765
+ 3813 132c 00000000 		.word	d
+ 3814 1330 55550055 		.word	1426085205
+ 3815 1334 00000000 		.word	ship_defn
+ 3816 1338 00000000 		.word	bullet_defn
+ 3817 133c 00000000 		.word	laser_defn
+ 3818 1340 00000000 		.word	enemy_defn
+ 3819 1344 14010000 		.word	.LC1
+ 3820 1348 1C010000 		.word	.LC2
+ 3821 134c C0440000 		.word	entities
+ 3822 1350 C0560000 		.word	num_entities
+ 3823              		.cfi_endproc
+ 3824              	.LFE36:
+ 3826              		.bss
+ 3827              		.align	2
+ 3828              	id_counter.4410:
+ 3829 56c8 00000000 		.space	4
+ 3830              		.text
+ 3831              	.Letext0:
