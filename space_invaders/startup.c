@@ -70,16 +70,16 @@ uint8_t LCD_DISP_START =  0b11000000;
 uint8_t LCD_BUSY = 0b10000000;
 
 #define SIMULATOR
+#ifndef SIMULATOR
 void delay250xns(u32 num)
 {
-    #ifndef SIMULATOR
     sys_tick->STK_CTRL = 0;
     sys_tick->STK_LOAD = num*168/4-1;
     sys_tick->STK_VAL = 0;
     sys_tick->STK_CTRL = 5;
     while(!(sys_tick->STK_CTRL & 0x10000));
     sys_tick->STK_CTRL = 0;
-    #endif
+    
 }
 
 void delay250ns(void)
@@ -105,6 +105,13 @@ void delay_milli(u32 num)
         delay_micro(1000);
     }
 }
+#else
+void delay250xns(u32 num){}
+void delay250ns(void){}
+void delay500ns(void){}
+void delay_micro(u32 num){}
+void delay_milli(u32 num){}
+#endif
 
 u8 bit_E = 0b01000000;
 u8 bit_SELECT = 0b100;
@@ -454,19 +461,11 @@ Sprite *make_sprite(char *sprite, int w, int h, int num_frames)
 	return ret;
 }
 
-void step_physics()
-{
-	for (int i = 0; i < num_entities; i++)
-	{
-		entities[i].pos.x += entities[i].velocity.x;
-		entities[i].pos.y += entities[i].velocity.y;
-	}
-}
-
 void render()
 {
 	for (int i = 0; i < num_entities; i++)
 	{
+		//if(force || entities[i].velocity.x != 0 || entities[i].velocity.y != 0)
 		blit_sprite(entities[i].sprite, 
             entities[i].pos.x-entities[i].sprite->w/2,
             entities[i].pos.y-entities[i].sprite->h/2, 0);
@@ -474,6 +473,7 @@ void render()
 	flush_screen();
 	for (int i = 0; i < num_entities; i++)
 	{
+		//if(force || entities[i].velocity.x != 0 || entities[i].velocity.y != 0)
 		clear_sprite(entities[i].sprite, 
             entities[i].pos.x-entities[i].sprite->w/2, 
             entities[i].pos.y-entities[i].sprite->h/2, 0);
@@ -497,7 +497,6 @@ void cleanup_entities()
 		if (entities[i].destroy) entities[i] = entities[--num_entities];
 	}
 }
-
 
 
 
@@ -545,6 +544,37 @@ bool wall_collision(Entity *entity)
        y_min < 0) return true;
     
     return false;
+}
+
+void update_entity_pos(Entity *entity)
+{
+	entity->pos.x += entity->velocity.x;
+	entity->pos.y += entity->velocity.y;
+}
+
+void mirror_update_entity_pos(Entity *entity)
+{
+	entity->pos.x -= entity->velocity.x;
+	entity->pos.y -= entity->velocity.y;
+}
+
+void step_physics(bool force)
+{
+	for (int i = 0; i < num_entities; i++)
+	{
+		if(force || !wall_collision(&entities[i]))
+		{
+			update_entity_pos(&entities[i]);
+			//entities[i].pos.x += entities[i].velocity.x;
+			//entities[i].pos.y += entities[i].velocity.y;
+		} 
+		else //is currently stuck on wall
+		{			
+			update_entity_pos(&entities[i]);
+			if(wall_collision(&entities[i]))
+				mirror_update_entity_pos(&entities[i]); //move back
+		}
+	}
 }
 
 bool entity_collision(Entity *a, Entity *b)
@@ -608,8 +638,6 @@ int main()
     }
     graphics_initialize();
 	set_all(0xff);
-	
-
     
 
 	Sprite *ship_sprite = make_sprite(ship_defn,13,8,1);
@@ -634,7 +662,7 @@ int main()
             make_entity(laser_sprite, entity_type_bullet, player->pos, (Vec2) { 0, 10});
         }
 		
-		step_physics();
+		step_physics(false);
         for(int i = 0;i<num_entities;i++)
         {
             if(wall_collision(&entities[i]))
